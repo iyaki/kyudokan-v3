@@ -1,367 +1,93 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML>
-<HEAD>
-<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
-<META NAME="Author" CONTENT="Matrix way (www.matrixway.com.ar)">
-<META NAME="Keywords"
- CONTENT="Cristian Lugani, Karate Do Kyudokan, karate-do, estilo kyudokan, okinawa, japon, nipon, katas, torneos, deportivo, tradicional, fotos, familia higa, oscar higa, benito higa, minoru higa, jintatsu higa, yuchoku higa, karate and kobudo, world tournament, ca">
-<META NAME="Deportes - Artes Marciales" CONTENT="Centro de Enseñanza de Karate Do   Estilo Kyudokan Shorinryu de Okinawa. Profesor Cristian Lugani 2do. Dan, Campana, Buenos Aires, Argentina.">
-<TITLE>Internacionales</TITLE>
-<script language="JavaScript">
-<!--
-function MM_openBrWindow(theURL,winName,features) { //v2.0
-  window.open(theURL,winName,features);
-}
-//-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Internacionales â€” Kyudokan Campana</title>
+<meta name="generator" content="kyudokan-v3-restyle">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800&display=swap"></noscript>
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+<link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/android-chrome-192x192.png">
+<link rel="stylesheet" href="museo.css">
+</head>
+<body>
+
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+<header class="topbar">
+  <a class="marca" href="index.html">Kyudokan Campana</a>
+  <nav aria-label="Secciones">
+    <a href="index.html#historia">La historia</a>
+    <a href="html/escuela_estilo.html">La escuela</a>
+    <a href="html/sintesis_historica.html">Historia</a>
+    <a href="html/fotos_de_torneos.html">Fotos</a>
+    <a href="html/contacto.html">Contacto</a>
+  </nav>
+</header>
+
+<main id="contenido" class="pagina">
+<p class="kicker-pagina"><a href="index.html">â† Volver al inicio</a></p>
+<h1>Internacionales</h1>
+<div class="texto-pared">
+<p><a href="./todas_las_notic_.shtml"></a> Encuentre las noticias segÃºn su interÃ©s. Para ello agrupamos las novedades en tres grupos: <a href="./institucion.shtml">Noticias de nuestra INSTITUCION</a> <a href="./nacionales.shtml">Noticias NACIONALES (Argentina)</a> <a href="./internacionales.shtml">Noticias INTERNACIONALES</a></p>
+<p><em>(FunciÃ³n del sitio 2001 no disponible en esta versiÃ³n.)</em></p>
+</div>
+</main>
+
+<footer>
+  <div class="sitemap">
+    <nav class="sitemap-col" aria-label="El dojo">
+      <h2>El dojo</h2>
+      <a href="index.html#historia">La historia</a>
+      <a href="html/escuela_estilo.html">La escuela</a>
+      <a href="html/sintesis_historica.html">Historia del estilo</a>
+      <a href="html/como_llegar.html">CÃ³mo llegar</a>
+      <a href="html/contacto.html">Contacto</a>
+    </nav>
+    <nav class="sitemap-col" aria-label="El archivo">
+      <h2>El archivo</h2>
+      <a href="html/fotos_de_torneos.html">Torneos <small>1988â€“2000</small></a>
+      <a href="html/fotos_de_exhibiciones.html">Exhibiciones</a>
+      <a href="html/fotos_de_katas.html">Katas</a>
+      <a href="html/afiches.html">Afiches</a>
+      <a href="html/la_familia_higa.html">La familia Higa</a>
+      <a href="html/el_karate_y_el_nino.html">El karate y el niÃ±o</a>
+      <a href="html/el_karate_y_la_mujer.html">El karate y la mujer</a>
+      <a href="html/fotos_de_okinawa.html">Okinawa</a>
+    </nav>
+    <div class="sitemap-col dojo-datos-footer">
+      <h2>El dojo en Campana</h2>
+      <p>Jean Jaures 983 Â· Campana Â· Bs. As.</p>
+      <p><a href="mailto:cristian@karatelugani.com.ar">cristian@karatelugani.com.ar</a></p>
+    </div>
+  </div>
+  <div class="legal">
+    <p>Â© C. Lugani Â· Centro de EnseÃ±anza de Karate-do Estilo Shorinryu Kyudokan de Okinawa â€” Filial Campana</p>
+    <p class="fuente">Datos e imÃ¡genes: sitio 2001 (karatelugani.com.ar) â€” horarios y grados a confirmar.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var obras=[].slice.call(document.querySelectorAll('.obra'));
+  function mostrar(){obras.forEach(function(o){o.classList.remove('pre');});}
+  if(!('IntersectionObserver'in window))return;
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  obras.forEach(function(o){o.classList.add('pre');});
+  setTimeout(mostrar,3000); /* failsafe: nada queda oculto */
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(e.isIntersecting){e.target.classList.remove('pre');io.unobserve(e.target);}
+    });
+  },{threshold:.1});
+  obras.forEach(function(o){io.observe(o);});
+})();
 </script>
-<LINK REL=STYLESHEET TYPE="text/css" HREF="./style.css">
-<LINK REL=STYLESHEET TYPE="text/css" HREF="./site.css">
-<STYLE>
-</STYLE>
-</HEAD>
-<BODY NOF="(MB=(noticias, 143, 138, 154, 0), L=(InternacionalesLayout, 624, 381))" TOPMARGIN=0 LEFTMARGIN=0 MARGINWIDTH=0 MARGINHEIGHT=0>
-    <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 NOF=LY>
-        <TR VALIGN=TOP ALIGN=LEFT>
-            <TD WIDTH=747>
-                <TABLE ID="Table3" BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=747>
-                    <TR>
-                        <TD VALIGN=TOP WIDTH=747 STYLE="background-image: url('./assets/images/base_negra_sup.gif'); padding: 10px;" HEIGHT=62>
-                            <P STYLE="text-align: center;"><B><SPAN STYLE="font-size: xx-small; color: rgb(255,255,255);">CENTRO  DE  ENSEÑANZA&nbsp; DE&nbsp; KARATE&nbsp; DO&nbsp; -  ESTILO  SHORINRYU&nbsp; KYUDOKAN&nbsp; DE&nbsp; OKINAWA<BR>
-                                CRISTIAN LUGANI&nbsp;  -&nbsp; Jean Jaures 983  -&nbsp; Tel. (54) (03489) 431664&nbsp; -  Campana - Bs. As. - Argentina</SPAN></B></P>
-                        </TD>
-                    </TR>
-                </TABLE>
-            </TD>
-        </TR>
-    </TABLE>
-    <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 NOF=LY>
-        <TR VALIGN=TOP ALIGN=LEFT>
-            <TD WIDTH=16 HEIGHT=1><IMG SRC="./assets/images/autogen/clearpixel.gif" WIDTH=16 HEIGHT=1 BORDER=0 ALT=""></TD>
-            <TD WIDTH=137><IMG SRC="./assets/images/autogen/clearpixel.gif" WIDTH=137 HEIGHT=1 BORDER=0 ALT=""></TD>
-            <TD WIDTH=1><IMG SRC="./assets/images/autogen/clearpixel.gif" WIDTH=1 HEIGHT=1 BORDER=0 ALT=""></TD>
-            <TD WIDTH=8><IMG SRC="./assets/images/autogen/clearpixel.gif" WIDTH=8 HEIGHT=1 BORDER=0 ALT=""></TD>
-            <TD WIDTH=2><IMG SRC="./assets/images/autogen/clearpixel.gif" WIDTH=2 HEIGHT=1 BORDER=0 ALT=""></TD>
-            <TD WIDTH=7><IMG SRC="./assets/images/autogen/clearpixel.gif" WIDTH=7 HEIGHT=1 BORDER=0 ALT=""></TD>
-            <TD WIDTH=7><IMG SRC="./assets/images/autogen/clearpixel.gif" WIDTH=7 HEIGHT=1 BORDER=0 ALT=""></TD>
-            <TD WIDTH=436><IMG SRC="./assets/images/autogen/clearpixel.gif" WIDTH=436 HEIGHT=1 BORDER=0 ALT=""></TD>
-            <TD WIDTH=8><IMG SRC="./assets/images/autogen/clearpixel.gif" WIDTH=8 HEIGHT=1 BORDER=0 ALT=""></TD>
-            <TD WIDTH=7><IMG SRC="./assets/images/autogen/clearpixel.gif" WIDTH=7 HEIGHT=1 BORDER=0 ALT=""></TD>
-            <TD WIDTH=1><IMG SRC="./assets/images/autogen/clearpixel.gif" WIDTH=1 HEIGHT=1 BORDER=0 ALT=""></TD>
-            <TD WIDTH=15><IMG SRC="./assets/images/autogen/clearpixel.gif" WIDTH=15 HEIGHT=1 BORDER=0 ALT=""></TD>
-            <TD></TD>
-            <TD WIDTH=19><IMG SRC="./assets/images/autogen/clearpixel.gif" WIDTH=19 HEIGHT=1 BORDER=0 ALT=""></TD>
-        </TR>
-        <TR VALIGN=TOP ALIGN=LEFT>
-            <TD></TD>
-            <TD COLSPAN=2 ROWSPAN=11 WIDTH=138>
-                <TABLE ID="Table4" BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=138>
-                    <TR>
-                        <TD VALIGN=TOP WIDTH=138 STYLE="background-image: url('./assets/images/banners_izquierdo.gif');" HEIGHT=123>
-                            <P><A HREF="./index.html"><IMG ID="Picture9" HEIGHT=115 WIDTH=115 SRC="./assets/images/logo_anim_lugani.gif" VSPACE=0 HSPACE=4 ALIGN="TOP" BORDER=0 ALT="Volver al Home"></A></P>
-                        </TD>
-                    </TR>
-                    <TR>
-                        <TD WIDTH=138>
-                            <P>
-                                <TABLE WIDTH="100%" BORDER=0 CELLSPACING=0 CELLPADDING=0 NOF=TE>
-                                    <TR>
-                                        <TD ALIGN="LEFT">
-                                            <TABLE ID="NavigationBar1" BORDER=0 CELLSPACING=0 CELLPADDING=0 NOF=NB_UYVPNN026 WIDTH=130>
-                                                <TR VALIGN=TOP ALIGN=LEFT>
-                                                    <TD WIDTH=130 HEIGHT=34><A HREF="./index.html"><IMG ID="NavigationButton1" HEIGHT=34 WIDTH=130 SRC="./assets/images/autogen/Home_Np1.gif" BORDER=0 ALT="Home"></A></TD>
-                                                </TR>
-                                                <TR VALIGN=TOP ALIGN=LEFT>
-                                                    <TD WIDTH=130 HEIGHT=34><A HREF="./html/presentacion.html"><IMG ID="NavigationButton2" HEIGHT=34 WIDTH=130 SRC="./assets/images/autogen/Presentacion_Np1.gif" BORDER=0 ALT="Presentación"></A></TD>
-                                                </TR>
-                                                <TR VALIGN=TOP ALIGN=LEFT>
-                                                    <TD WIDTH=130 HEIGHT=34><A HREF="./html/pensamiento.html"><IMG ID="NavigationButton3" HEIGHT=34 WIDTH=130 SRC="./assets/images/autogen/Pensamiento_Np1.gif" BORDER=0 ALT="Pensamiento"></A></TD>
-                                                </TR>
-                                                <TR VALIGN=TOP ALIGN=LEFT>
-                                                    <TD WIDTH=130 HEIGHT=34><A HREF="./html/que_es_karate.html"><IMG ID="NavigationButton4" HEIGHT=34 WIDTH=130 SRC="./assets/images/autogen/Qu__es_Karate_Np1.gif" BORDER=0 ALT="Qué es Karate"></A></TD>
-                                                </TR>
-                                                <TR VALIGN=TOP ALIGN=LEFT>
-                                                    <TD WIDTH=130 HEIGHT=34><A HREF="./html/centro_de_ensenanza.html"><IMG ID="NavigationButton5" HEIGHT=34 WIDTH=130 SRC="./assets/images/autogen/C._Ense_anza_Np1.gif" BORDER=0 ALT="C. Enseñanza"></A></TD>
-                                                </TR>
-                                                <TR VALIGN=TOP ALIGN=LEFT>
-                                                    <TD WIDTH=130 HEIGHT=34><A HREF="./html/noticias.html"><IMG ID="NavigationButton6" HEIGHT=34 WIDTH=130 SRC="./assets/images/autogen/---_Noticias_---_Np1.gif" BORDER=0 ALT="--- Noticias ---"></A></TD>
-                                                </TR>
-                                                <TR VALIGN=TOP ALIGN=LEFT>
-                                                    <TD WIDTH=130 HEIGHT=34><A HREF="./html/libro_de_visitas.html"><IMG ID="NavigationButton7" HEIGHT=34 WIDTH=130 SRC="./assets/images/autogen/Libro_Visitas_Np1.gif" BORDER=0 ALT="Libro Visitas"></A></TD>
-                                                </TR>
-                                                <TR VALIGN=TOP ALIGN=LEFT>
-                                                    <TD WIDTH=130 HEIGHT=34><A HREF="./html/contacto.html"><IMG ID="NavigationButton8" HEIGHT=34 WIDTH=130 SRC="./assets/images/autogen/Contacto_Np1.gif" BORDER=0 ALT="Contacto"></A></TD>
-                                                </TR>
-                                                <TR VALIGN=TOP ALIGN=LEFT>
-                                                    <TD WIDTH=130 HEIGHT=34><A HREF="./html/links.html"><IMG ID="NavigationButton9" HEIGHT=34 WIDTH=130 SRC="./assets/images/autogen/Links_Np1.gif" BORDER=0 ALT="Links"></A></TD>
-                                                </TR>
-                                            </TABLE>
-                                        </TD>
-                                    </TR>
-                                </TABLE>
-                            </P>
-                        </TD>
-                    </TR>
-                    <TR>
-                        <TD VALIGN=BOTTOM WIDTH=138 HEIGHT=32>
-                            <P STYLE="text-align: center;">
-                                <TABLE WIDTH="100%" BORDER=0 CELLSPACING=0 CELLPADDING=0 NOF=TE>
-                                    <TR>
-                                        <TD ALIGN="LEFT">
-                                            <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=129 HEIGHT=30 NOF="LayoutRegion2">
-                                                <TR ALIGN=LEFT VALIGN=TOP>
-                                                    <TD>
-                                                        <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=129 NOF="LayoutRegion2">
-                                                            <TR VALIGN=TOP ALIGN=LEFT>
-                                                                <TD WIDTH=21 HEIGHT=12><IMG SRC="./assets/images/autogen/clearpixel.gif" WIDTH=21 HEIGHT=1 BORDER=0 ALT=""></TD>
-                                                                <TD></TD>
-                                                            </TR>
-                                                            <TR VALIGN=TOP ALIGN=LEFT>
-                                                                <TD HEIGHT=18></TD>
-                                                                <TD WIDTH=108><IMG ID="PopRocket5.01" HEIGHT=18 WIDTH=108 SRC="./assets/images/autogen/a_blank.gif" BORDER=0 ALT="Diseño: Matrix way"></TD>
-                                                            </TR>
-                                                        </TABLE>
-                                                    </TD>
-                                                </TR>
-                                            </TABLE>
-                                        </TD>
-                                    </TR>
-                                </TABLE>
-                            </P>
-                        </TD>
-                    </TR>
-                </TABLE>
-            </TD>
-            <TD COLSPAN=12 WIDTH=585>
-                <TABLE ID="Table5" BORDER=0 BACKGROUND="./assets/images/banners_arriba.gif" CELLSPACING=0 CELLPADDING=0 WIDTH=585>
-                    <COLGROUP>
-                    <COL WIDTH=65>
-                    <COL VALIGN=BOTTOM WIDTH=408>
-                    <COL WIDTH=112>
-                    </COLGROUP>
-                    <TR>
-                        <TD WIDTH=65 HEIGHT=80>
-                            <P><IMG ID="Picture1" HEIGHT=68 WIDTH=43 SRC="./assets/images/leon_izquierda.gif" VSPACE=0 HSPACE=11 ALIGN="TOP" BORDER=0 ALT=""></P>
-                        </TD>
-                        <TD VALIGN=BOTTOM WIDTH=408>
-                            <P STYLE="text-align: right;"><A HREF="http://translate.google.com/translate_c?hl=en&u=http://www.karatelugani.com.ar/index.html&prev=/search%3Fq%3Dkarate%2Blugani%26hl%3Den%26safe%3Doff" target="_blank">To English</A>
-                                <TABLE WIDTH="100%" BORDER=0 CELLSPACING=0 CELLPADDING=0 NOF=TE>
-                                    <TR>
-                                        <TD ALIGN="RIGHT"><IMG ID="Banner1" HEIGHT=52 WIDTH=390 SRC="./assets/images/autogen/Internacionales_Nbanner_texto.gif" BORDER=0 ALT="Internacionales" NOF=B_H></TD>
-                                    </TR>
-                                </TABLE>
-                            </P>
-                        </TD>
-                        <TD WIDTH=112>
-                            <P><IMG ID="Picture2" HEIGHT=68 WIDTH=43 SRC="./assets/images/leon_derecha.gif" VSPACE=0 HSPACE=21 ALIGN="TOP" BORDER=0 ALT=""></P>
-                        </TD>
-                    </TR>
-                </TABLE>
-            </TD>
-        </TR>
-        <TR VALIGN=TOP ALIGN=LEFT>
-            <TD HEIGHT=16></TD>
-            <TD COLSPAN=9></TD>
-            <TD ROWSPAN=8 WIDTH=74>
-                <TABLE ID="Table6" BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=74>
-                    <TR>
-                        <TD WIDTH=74 STYLE="background-image: url('./assets/images/banners_derecha.gif');" HEIGHT=326>
-                            <P>&nbsp;</P>
-                        </TD>
-                    </TR>
-                </TABLE>
-            </TD>
-            <TD></TD>
-        </TR>
-        <TR VALIGN=TOP ALIGN=LEFT>
-            <TD HEIGHT=60></TD>
-            <TD></TD>
-            <TD COLSPAN=7 WIDTH=468>
-                <OBJECT CLASSID="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" CODEBASE="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0" HEIGHT=60 WIDTH=468 ID="Shockwave1">
-                    <PARAM NAME="Movie" VALUE="./assets/applets/banner_vcn.swf">
-                    <PARAM NAME="Quality" VALUE="AutoHigh">
-                    <PARAM NAME="Loop" VALUE="1">
-                    <PARAM NAME="Play" VALUE="1">
-                    <PARAM NAME="Scale" VALUE="ShowAll">
-                    <PARAM NAME="SAlign" VALUE="L">
-                    <EMBED ID="Shockwave1" SRC="./assets/applets/banner_vcn.swf" HEIGHT=60 WIDTH=468 PALETTE=BACKGROUND Quality=AutoHigh Loop=TRUE Play=TRUE Scale=ShowAll SAlign=L ALT="" PLUGINSPAGE="http://www.macromedia.com/go/getflashplayer/">
-                </OBJECT>
-            </TD>
-            <TD></TD>
-            <TD></TD>
-        </TR>
-        <TR VALIGN=TOP ALIGN=LEFT>
-            <TD HEIGHT=22></TD>
-            <TD COLSPAN=9></TD>
-            <TD></TD>
-        </TR>
-        <TR VALIGN=TOP ALIGN=LEFT>
-            <TD></TD>
-            <TD COLSPAN=3></TD>
-            <TD COLSPAN=3 WIDTH=451>
-                <TABLE ID="Table11" BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=451>
-                    <TR>
-                        <TD WIDTH=451>
-                            <P>[an error occurred while processing this directive]&nbsp;</P>
-                        </TD>
-                    </TR>
-                </TABLE>
-            </TD>
-            <TD COLSPAN=3></TD>
-            <TD></TD>
-        </TR>
-        <TR VALIGN=TOP ALIGN=LEFT>
-            <TD HEIGHT=24></TD>
-            <TD COLSPAN=9></TD>
-            <TD></TD>
-        </TR>
-        <TR VALIGN=TOP ALIGN=LEFT>
-            <TD></TD>
-            <TD COLSPAN=4></TD>
-            <TD WIDTH=436 CLASS="TextObject">
-                <P>
-                    <TABLE WIDTH=141 BORDER=0 CELLSPACING=0 CELLPADDING=0 ALIGN=RIGHT NOF=TE>
-                        <TR>
-                            <TD>
-                                <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=141 HEIGHT=106 NOF="LayoutRegion3">
-                                    <TR ALIGN=LEFT VALIGN=TOP>
-                                        <TD>
-                                            <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=141 NOF="LayoutRegion3">
-                                                <TR VALIGN=TOP ALIGN=LEFT>
-                                                    <TD WIDTH=9 HEIGHT=96><IMG SRC="./assets/images/autogen/clearpixel.gif" WIDTH=9 HEIGHT=1 BORDER=0 ALT=""></TD>
-                                                    <TD WIDTH=132><A HREF="./todas_las_notic_.shtml"><IMG ID="Rectangle1" HEIGHT=96 WIDTH=132 SRC="./assets/images/autogen/a_Rectangle_47.gif" BORDER=0
-                                                         ALT="Click aquí 
-para ver las
-últimas Noticias
-publicadas"></A></TD>
-                                                </TR>
-                                            </TABLE>
-                                        </TD>
-                                    </TR>
-                                </TABLE>
-                            </TD>
-                        </TR>
-                    </TABLE>
-                    <SPAN CLASS="Normal_p">Encuentre las noticias según su interés. <BR>Para ello agrupamos las novedades en tres grupos:</SPAN></P>
-                <UL>
-                    <LI><A HREF="./institucion.shtml">Noticias de nuestra INSTITUCION</A></LI>
-                    <LI><A HREF="./nacionales.shtml">Noticias NACIONALES (Argentina)</A></LI>
-                    <LI><A HREF="./internacionales.shtml">Noticias INTERNACIONALES</A>
-                </UL>
-            </TD>
-            <TD COLSPAN=4></TD>
-            <TD></TD>
-        </TR>
-        <TR VALIGN=TOP ALIGN=LEFT>
-            <TD HEIGHT=25></TD>
-            <TD COLSPAN=9></TD>
-            <TD></TD>
-        </TR>
-        <TR VALIGN=TOP ALIGN=LEFT>
-            <TD HEIGHT=48></TD>
-            <TD COLSPAN=2></TD>
-            <TD COLSPAN=5 ROWSPAN=2 WIDTH=465>
-                <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=465 HEIGHT=77 STYLE="background-color: rgb(255,255,204);" NOF="LayoutRegion5">
-                    <TR ALIGN=LEFT VALIGN=TOP>
-                        <TD>
-                            <FORM NAME="LayoutRegion5FORM" ACTION="cgi-bin/viewnews.cgi?emaillist" METHOD=POST>
-                                <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=420 NOF="LayoutRegion5">
-                                    <TR VALIGN=TOP ALIGN=LEFT>
-                                        <TD WIDTH=43 HEIGHT=14><IMG SRC="./assets/images/autogen/clearpixel.gif" WIDTH=43 HEIGHT=1 BORDER=0 ALT=""></TD>
-                                        <TD WIDTH=1><IMG SRC="./assets/images/autogen/clearpixel.gif" WIDTH=1 HEIGHT=1 BORDER=0 ALT=""></TD>
-                                        <TD WIDTH=135><IMG SRC="./assets/images/autogen/clearpixel.gif" WIDTH=135 HEIGHT=1 BORDER=0 ALT=""></TD>
-                                        <TD WIDTH=23><IMG SRC="./assets/images/autogen/clearpixel.gif" WIDTH=23 HEIGHT=1 BORDER=0 ALT=""></TD>
-                                        <TD></TD>
-                                        <TD WIDTH=20><IMG SRC="./assets/images/autogen/clearpixel.gif" WIDTH=20 HEIGHT=1 BORDER=0 ALT=""></TD>
-                                        <TD></TD>
-                                        <TD WIDTH=2><IMG SRC="./assets/images/autogen/clearpixel.gif" WIDTH=2 HEIGHT=1 BORDER=0 ALT=""></TD>
-                                    </TR>
-                                    <TR VALIGN=TOP ALIGN=LEFT>
-                                        <TD COLSPAN=2></TD>
-                                        <TD COLSPAN=6 WIDTH=376 CLASS="TextObject" STYLE="background-color: rgb(204,51,51);">
-                                            <P STYLE="text-align: center;"><B><SPAN STYLE="color: rgb(255,255,255);"><A NAME="novedades"></A>RECIBA LAS NOVEDADES DEL KARATE EN SU EMAIL</SPAN></B></P>
-                                        </TD>
-                                    </TR>
-                                    <TR VALIGN=TOP ALIGN=LEFT>
-                                        <TD COLSPAN=8 HEIGHT=11></TD>
-                                    </TR>
-                                    <TR VALIGN=TOP ALIGN=LEFT>
-                                        <TD COLSPAN=4 HEIGHT=1></TD>
-                                        <TD ROWSPAN=3 WIDTH=109><INPUT TYPE=SUBMIT NAME="npsubscribe" VALUE="Suscribirse" ID="FormsButton1"></TD>
-                                        <TD></TD>
-                                        <TD ROWSPAN=3 WIDTH=87><INPUT TYPE=SUBMIT NAME="npunsubscribe" VALUE="Borrarse" ID="FormsButton2"></TD>
-                                        <TD></TD>
-                                    </TR>
-                                    <TR VALIGN=TOP ALIGN=LEFT>
-                                        <TD HEIGHT=22></TD>
-                                        <TD COLSPAN=2 WIDTH=136><INPUT ID="FormsEditField1" TYPE=TEXT NAME="npemail" VALUE="Su Email " SIZE=17 MAXLENGTH=100></TD>
-                                        <TD></TD>
-                                        <TD></TD>
-                                        <TD></TD>
-                                    </TR>
-                                    <TR VALIGN=TOP ALIGN=LEFT>
-                                        <TD COLSPAN=4 HEIGHT=1></TD>
-                                        <TD></TD>
-                                        <TD></TD>
-                                    </TR>
-                                </TABLE>
-                            </FORM>
-                        </TD>
-                    </TR>
-                </TABLE>
-            </TD>
-            <TD COLSPAN=2></TD>
-            <TD></TD>
-        </TR>
-        <TR VALIGN=TOP ALIGN=LEFT>
-            <TD HEIGHT=29></TD>
-            <TD COLSPAN=2></TD>
-            <TD COLSPAN=4></TD>
-        </TR>
-        <TR VALIGN=TOP ALIGN=LEFT>
-            <TD HEIGHT=26></TD>
-            <TD COLSPAN=11></TD>
-        </TR>
-    </TABLE>
-    <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 NOF=LY>
-        <TR VALIGN=TOP ALIGN=LEFT>
-            <TD WIDTH=746>
-                <TABLE ID="Table1" BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=746>
-                    <TR VALIGN=TOP>
-                        <TD VALIGN=TOP WIDTH=746 STYLE="background-image: url('./assets/images/base_negra_inf.gif');" HEIGHT=88>
-                            <P>
-                                <TABLE WIDTH="100%" BORDER=0 CELLSPACING=24 CELLPADDING=0 NOF=TE>
-                                    <TR>
-                                        <TD ALIGN="CENTER" NOWRAP NOF="NB_UYHTNN026">[<A HREF="./html/presentacion.html">Presentación</A>]&nbsp;[<A HREF="./html/pensamiento.html">Pensamiento</A>]&nbsp;[<A HREF="./html/que_es_karate.html">Que es Karate</A>]&nbsp;[<A
-                                             HREF="./html/centro_de_ensenanza.html">Centro de Ens.</A>]&nbsp;[<A HREF="./html/contacto.html">Contacto</A>]&nbsp;[<A HREF="./html/fotos.html">Fotos</A>]</TD>
-                                    </TR>
-                                </TABLE>
-                            </P>
-                        </TD>
-                    </TR>
-                    <TR VALIGN=MIDDLE>
-                        <TD WIDTH=746 STYLE="background-color: rgb(255,255,255);" HEIGHT=50>
-                            <P STYLE="text-align: center;">
-                                <TABLE WIDTH="100%" BORDER=0 CELLSPACING=0 CELLPADDING=0 NOF=TE>
-                                    <TR>
-                                        <TD ALIGN="CENTER">
-                                            <TABLE ID="Table10" BORDER=0 BGCOLOR="#FFFFFF" CELLSPACING=0 CELLPADDING=0 WIDTH="96%">
-                                                <TR>
-                                                    <TD WIDTH="100%" HEIGHT=27>
-                                                        <P STYLE="text-align: center;"><SPAN STYLE="font-size: 7pt;">&#169; C. Lugani 2001 | Optimizado p/ INTERNET EXPLORER 4+ | Pantalla en 800 X 600 px<BR>email: <A STYLE="font-size: 7pt;"
-                                                             HREF="mailto:cristian@karatelugani.com.ar">cristian@karatelugani.com.ar</A> </SPAN></P>
-                                                    </TD>
-                                                </TR>
-                                            </TABLE>
-                                        </TD>
-                                    </TR>
-                                </TABLE>
-                            </P>
-                        </TD>
-                    </TR>
-                </TABLE>
-            </TD>
-        </TR>
-    </TABLE>
-</BODY>
-</HTML>
- 
+</body>
+</html>
