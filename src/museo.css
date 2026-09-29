@@ -53,7 +53,7 @@ img{display:block;max-width:100%;height:auto}
 }
 .marca{
   font-weight:800;font-size:16px;letter-spacing:.12em;text-transform:uppercase;
-  text-decoration:none;
+  text-decoration:none;white-space:nowrap;
 }
 .topbar nav{display:flex;gap:16px;flex-wrap:wrap}
 .topbar nav a{
@@ -68,12 +68,9 @@ img{display:block;max-width:100%;height:auto}
 .titulo{
   padding:clamp(56px,9vh,120px) clamp(24px,5vw,64px) clamp(40px,6vh,64px);
   max-width:1200px;
-  display:grid;grid-template-columns:1fr;gap:clamp(40px,6vw,80px);align-items:center;
+  display:flex;flex-direction:column;align-items:center;text-align:center;
 }
-@media (min-width:980px){
-  .titulo{grid-template-columns:minmax(0,7fr) minmax(0,5fr)}
-}
-.titulo-texto{max-width:1200px}
+.titulo-texto{max-width:900px}
 .fecha-muestra{
   font-size:14px;font-weight:500;letter-spacing:.05em;
   color:var(--tinta-2);
@@ -82,15 +79,16 @@ img{display:block;max-width:100%;height:auto}
 .titulo h1{
   font-weight:800;
   font-size:clamp(38px,4.8vw,64px);
-  line-height:1;letter-spacing:-.025em;
-  max-width:17ch;
-  margin-bottom:26px;
+  line-height:1.06;letter-spacing:-.025em;
+  max-width:24ch;
+  text-wrap:balance;
+  margin:0 auto 26px;
 }
 .subtitulo{font-size:clamp(19px,2.2vw,25px);color:var(--tinta-2);margin-bottom:44px}
 
-/* la primera obra de la muestra: el pergamino del nombre, colgado como kakejiku */
-.obra-apertura{max-width:240px}
-.obra-apertura img{width:100%}
+/* el pergamino del nombre, colgado al centro del altar */
+.obra-apertura{margin-top:clamp(36px,5vh,56px)}
+.obra-apertura img{height:clamp(320px,42vh,430px);width:auto}
 .cta{
   display:inline-block;
   background:var(--rojo);color:var(--papel);
