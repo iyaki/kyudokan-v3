@@ -1,0 +1,234 @@
+/* Kyudokan Campana — "La Muestra"
+   Mundo: galería blanca de museo. El blanco carga la escala; las fotos de
+   época del archivo cuelgan chicas, con paspartú y marco, como en una
+   muestra histórica real. Tinta negra, un solo acento rojo para la acción. */
+
+:root{
+  --papel:#FDFCFA;
+  --papel-2:#F4F2EE;
+  --tinta:#141311;
+  --tinta-2:#57534B;
+  --hairline:rgba(20,19,17,.16);
+  --rojo:#C8331F;
+  --rojo-hondo:#9A2415;
+  --font:"Archivo",system-ui,sans-serif;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+body{
+  background:var(--papel);
+  color:var(--tinta);
+  font:400 17px/1.65 var(--font);
+  -webkit-font-smoothing:antialiased;
+}
+
+::selection{background:var(--rojo);color:var(--papel)}
+
+a{color:inherit;text-decoration-thickness:1px;text-underline-offset:3px}
+a:focus-visible{outline:2px solid var(--rojo);outline-offset:3px}
+
+img{display:block;max-width:100%;height:auto}
+
+/* ---------- topbar ---------- */
+
+.topbar{
+  display:flex;align-items:baseline;justify-content:space-between;gap:16px;
+  padding:22px clamp(24px,5vw,64px);
+  border-bottom:1px solid var(--hairline);
+}
+.marca{
+  font-weight:800;font-size:16px;letter-spacing:.12em;text-transform:uppercase;
+  text-decoration:none;
+}
+.topbar nav{display:flex;gap:22px;flex-wrap:wrap}
+.topbar nav a{
+  font-size:12.5px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;
+  text-decoration:none;color:var(--tinta-2);
+}
+.topbar nav a:hover{color:var(--rojo)}
+
+/* ---------- título de muestra ---------- */
+
+.titulo{
+  padding:clamp(90px,14vh,180px) clamp(24px,5vw,64px) clamp(70px,10vh,130px);
+  max-width:1200px;
+}
+.fecha-muestra{
+  font-size:14px;font-weight:500;letter-spacing:.05em;
+  color:var(--tinta-2);
+  padding-bottom:22px;
+}
+.titulo h1{
+  font-weight:800;
+  font-size:clamp(38px,6.2vw,84px);
+  line-height:1.02;letter-spacing:-.025em;
+  max-width:18ch;
+  text-wrap:balance;
+  margin-bottom:26px;
+}
+.subtitulo{font-size:clamp(19px,2.2vw,25px);color:var(--tinta-2);margin-bottom:44px}
+
+.cta{
+  display:inline-block;
+  background:var(--rojo);color:var(--papel);
+  font-weight:600;font-size:17px;letter-spacing:.01em;text-decoration:none;
+  padding:15px 30px;border-radius:6px;
+  box-shadow:0 2px 4px rgba(20,19,17,.18),0 10px 24px rgba(154,36,21,.22);
+  transition:transform .18s ease,box-shadow .18s ease,background-color .18s ease;
+}
+.cta:hover{background:var(--rojo-hondo);transform:translateY(-1px)}
+.cta:active{transform:translateY(1px);box-shadow:0 1px 2px rgba(20,19,17,.18)}
+
+/* ---------- salas ---------- */
+
+.sala{
+  padding:clamp(70px,10vh,120px) clamp(24px,5vw,64px);
+  border-top:1px solid var(--hairline);
+  max-width:1200px;margin:0 auto;
+}
+.sala-cabecera{display:flex;align-items:flex-start;gap:20px;margin-bottom:clamp(40px,6vh,70px)}
+.num{
+  font-weight:800;font-size:15px;letter-spacing:.08em;
+  color:var(--tinta-2);
+  border:1px solid var(--hairline);border-radius:50%;
+  width:40px;height:40px;flex:none;
+  display:inline-flex;align-items:center;justify-content:center;
+}
+.sala h2{
+  font-weight:800;
+  font-size:clamp(30px,4.4vw,54px);
+  line-height:1.02;letter-spacing:-.02em;
+}
+.sala-cuerpo{
+  display:grid;grid-template-columns:auto 1fr;gap:clamp(36px,6vw,90px);
+  align-items:start;
+}
+@media (max-width:760px){.sala-cuerpo{grid-template-columns:1fr}}
+
+/* las obras: foto de época, chica, paspartú y marco */
+.obra{
+  background:#fff;
+  border:1px solid var(--hairline);
+  padding:14px 14px 12px;
+  box-shadow:0 14px 30px rgba(20,19,17,.10),0 2px 6px rgba(20,19,17,.06);
+  margin:0;
+  justify-self:start;
+  opacity:1;transform:none;
+}
+.obra img{filter:grayscale(.12) contrast(1.03);background:var(--papel-2)}
+.obra figcaption{
+  padding-top:12px;
+  font-size:13px;line-height:1.6;color:var(--tinta-2);
+}
+.obra figcaption strong{
+  display:block;
+  color:var(--tinta);font-weight:600;font-size:15px;
+  letter-spacing:.01em;
+  padding-bottom:2px;
+}
+
+/* entrada de obra: una sola, discreta; visible sin JS y con failsafe de 3s */
+@media (prefers-reduced-motion:no-preference){
+  .obra{transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+  .obra.pre{opacity:.001;transform:translateY(14px)}
+}
+
+.texto-pared{
+  max-width:52ch;
+  font-size:clamp(17px,1.6vw,20px);
+  line-height:1.7;
+  color:var(--tinta);
+}
+.texto-pared p+p{margin-top:1em}
+
+.obra-dibujo{margin-top:34px}
+@media (min-width:761px){
+  .sala-2 .sala-cuerpo{grid-template-columns:auto auto}
+  .sala-2 .texto-pared{grid-column:1/-1;margin-top:8px;max-width:64ch}
+}
+
+/* salón de la familia: tres obras colgadas en fila */
+.salon-familia{display:flex;gap:clamp(20px,3vw,44px);flex-wrap:wrap;align-items:flex-end}
+.salon-familia .obra{flex:0 1 auto}
+.sala-3 .texto-pared{margin-top:40px}
+
+/* sala Campana */
+.obra-grande img{width:min(460px,100%)}
+.panel-dojo{max-width:440px}
+.direccion{font-size:15.5px;line-height:1.8;color:var(--tinta-2);margin-bottom:26px}
+.direccion a{color:var(--tinta)}
+
+.horarios{
+  width:100%;max-width:380px;
+  border-collapse:collapse;
+  margin-bottom:34px;
+  font-size:14.5px;
+  font-variant-numeric:tabular-nums;
+}
+.horarios caption{
+  caption-side:top;text-align:left;
+  font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--tinta-2);padding-bottom:10px;
+}
+.horarios caption span{text-transform:none;letter-spacing:.02em;font-weight:400}
+.horarios th,.horarios td{
+  text-align:left;padding:8px 18px 8px 0;
+  border-bottom:1px solid var(--hairline);
+}
+.horarios th{font-weight:500}
+.horarios tr:last-child th,.horarios tr:last-child td{border-bottom:none}
+
+/* ---------- recorrido / archivo ---------- */
+
+.recorrido{max-width:1200px}
+.texto-pared.margen,.recorrido .texto-pared{margin-bottom:36px}
+.indice{list-style:none;max-width:760px}
+.indice li{border-bottom:1px solid var(--hairline)}
+.indice li:first-child{border-top:1px solid var(--hairline)}
+.indice a{
+  display:flex;align-items:baseline;gap:14px;
+  padding:16px 4px;text-decoration:none;
+  transition:transform .18s ease,color .18s ease;
+}
+.indice a:hover{transform:translateX(10px);color:var(--rojo)}
+.indice a span{
+  font-weight:600;font-size:clamp(17px,2vw,21px);letter-spacing:-.01em;
+}
+.indice a small{font-size:13px;color:var(--tinta-2);font-variant-numeric:tabular-nums}
+.indice a::after{content:"→";margin-left:auto;opacity:0;transition:opacity .18s ease}
+.indice a:hover::after{opacity:1}
+
+/* ---------- sala final ---------- */
+
+.sala-final{text-align:left;padding-top:clamp(90px,14vh,170px);padding-bottom:clamp(90px,14vh,170px)}
+.sala-final h2{
+  font-weight:800;
+  font-size:clamp(40px,6.4vw,88px);
+  line-height:1;letter-spacing:-.025em;
+  max-width:14ch;
+  margin-bottom:38px;
+}
+.sala-final .cita{
+  margin-top:56px;max-width:56ch;
+  font-size:16.5px;line-height:1.75;color:var(--tinta-2);
+}
+.sala-final .cita strong{color:var(--tinta);font-weight:600}
+
+/* ---------- footer ---------- */
+
+footer{
+  padding:34px clamp(24px,5vw,64px) 44px;
+  border-top:1px solid var(--hairline);
+  font-size:12.5px;color:var(--tinta-2);
+  line-height:2;
+}
+footer .fuente{font-size:12px;opacity:.75}
+
+/* ---------- scrollbar ---------- */
+@supports (scrollbar-width:thin){
+  html{scrollbar-width:thin;scrollbar-color:rgba(20,19,17,.35) var(--papel-2)}
+}

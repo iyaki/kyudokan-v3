@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-29T00:00:00.000Z",
+  "title": "Design System: Kyudokan Campana — La Muestra",
+  "extensions": {
+    "colorMeta": {
+      "rojo": {
+        "role": "primary",
+        "displayName": "Rojo de acción",
+        "canonical": "#C8331F",
+        "tonalRamp": ["#9A2415", "#C8331F"]
+      },
+      "papel": {
+        "role": "neutral",
+        "displayName": "Papel de sala",
+        "canonical": "#FDFCFA",
+        "tonalRamp": ["#F4F2EE", "#FDFCFA"]
+      },
+      "tinta": {
+        "role": "neutral",
+        "displayName": "Tinta",
+        "canonical": "#141311",
+        "tonalRamp": ["#141311", "#57534B"]
+      },
+      "hairline": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "rgba(20,19,17,.16)"
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Archivo 800", "purpose": "H1 de muestra, H2 de sala, cierre de sala final. Tracking -.02em a -.025em, line-height ~1." },
+      "body": { "displayName": "Archivo 400", "purpose": "Texto de pared (máx 52ch) y prosa. 17–20px fluid." },
+      "caption": { "displayName": "Archivo 400/600", "purpose": "Cartelas de obra (13px), nav mayúscula 12.5px, horarios tabulares." }
+    },
+    "shadows": [
+      { "name": "obra-marco", "value": "0 14px 30px rgba(20,19,17,.10), 0 2px 6px rgba(20,19,17,.06)", "purpose": "Marco de obra colgado sobre la pared blanca: caída suave + contacto cercano." },
+      { "name": "cta-roja", "value": "0 2px 4px rgba(20,19,17,.18), 0 10px 24px rgba(154,36,21,.22)", "purpose": "Sombra teñida de rojo del CTA; se reduce a contacto (0 1px 2px) al :active." }
+    ],
+    "motion": [
+      { "name": "entrada-obra", "value": "opacity/transform .7s cubic-bezier(.16,1,.3,1)", "purpose": "Única animación del mundo: obras con .pre (opacity .001, +14px) reveladas por IntersectionObserver; failsafe de 3s las hace visibles. Solo con JS y prefers-reduced-motion: no-preference; sin JS todo visible." },
+      { "name": "hover-estado", "value": ".18s ease", "purpose": "Transiciones de estado (nav, índice, CTA). Sin animación de entrada para nada más." }
+    ],
+    "breakpoints": [
+      { "name": "mobile-collapse", "value": "760px" }
+    ],
+    "detectorIgnores": []
+  },
+  "components": [
+    {
+      "name": "CTA",
+      "kind": "button",
+      "refersTo": "cta",
+      "description": "Único componente de acción: enlace rojo pleno que levanta en hover y baja al presionar. Siempre <a> real.",
+      "html": "<a class=\"cta\" href=\"https://wa.me/543489431664?text=...\">Sumate al dojo<span aria-hidden=\"true\"> →</span></a>",
+      "css": ".cta{display:inline-block;background:var(--rojo);color:var(--papel);font-weight:600;font-size:17px;letter-spacing:.01em;text-decoration:none;padding:15px 30px;border-radius:6px;box-shadow:0 2px 4px rgba(20,19,17,.18),0 10px 24px rgba(154,36,21,.22);transition:transform .18s ease,box-shadow .18s ease,background-color .18s ease}.cta:hover{background:var(--rojo-hondo);transform:translateY(-1px)}.cta:active{transform:translateY(1px);box-shadow:0 1px 2px rgba(20,19,17,.18)}"
+    },
+    {
+      "name": "Sala",
+      "kind": "section",
+      "description": "Sala de la muestra: borde superior hairline, cabecera con numeral romano en badge circular de 40px + H2 display, cuerpo grid obra/texto (1 col <760px).",
+      "html": "<section class=\"sala sala-1\"><header class=\"sala-cabecera\"><span class=\"num\" aria-hidden=\"true\">I</span><h2>Los orígenes — Shuri</h2></header><div class=\"sala-cuerpo\">…</div></section>",
+      "css": ".sala{padding:clamp(70px,10vh,120px) clamp(24px,5vw,64px);border-top:1px solid var(--hairline);max-width:1200px;margin:0 auto}.num{font-weight:800;font-size:15px;letter-spacing:.08em;color:var(--tinta-2);border:1px solid var(--hairline);border-radius:50%;width:40px;height:40px;flex:none;display:inline-flex;align-items:center;justify-content:center}.sala h2{font-weight:800;font-size:clamp(30px,4.4vw,54px);line-height:1.02;letter-spacing:-.02em}.sala-cuerpo{display:grid;grid-template-columns:auto 1fr;gap:clamp(36px,6vw,90px);align-items:start}@media (max-width:760px){.sala-cuerpo{grid-template-columns:1fr}}"
+    },
+    {
+      "name": "Obra",
+      "kind": "figure",
+      "description": "Componente central: foto de época a escala nativa, matada en blanco (paspartú 14px) con marco hairline y doble sombra; cartela de 13px debajo. Jamás teñida (grayscale(.12) contrast(1.03)).",
+      "html": "<figure class=\"obra\"><img src=\"assets/images/autogen/a_yochoku_higa_1.jpg\" alt=\"Retrato del maestro Yuchoku Higa\" width=\"238\" loading=\"lazy\"><figcaption><strong>Yuchoku Higa</strong>Fundador del Karate-do Kyudokan · 10º Dan</figcaption></figure>",
+      "css": ".obra{background:#fff;border:1px solid var(--hairline);padding:14px 14px 12px;box-shadow:0 14px 30px rgba(20,19,17,.10),0 2px 6px rgba(20,19,17,.06);margin:0;justify-self:start}.obra img{filter:grayscale(.12) contrast(1.03);background:var(--papel-2)}.obra figcaption{padding-top:12px;font-size:13px;line-height:1.6;color:var(--tinta-2)}.obra figcaption strong{display:block;color:var(--tinta);font-weight:600;font-size:15px;letter-spacing:.01em;padding-bottom:2px}"
+    },
+    {
+      "name": "Texto de pared",
+      "kind": "prose",
+      "description": "Voz curatorial de cada sala: prosa de museo a ancho de lectura de cartel de pared.",
+      "html": "<div class=\"texto-pared\"><p>Una escuela tradicional…</p></div>",
+      "css": ".texto-pared{max-width:52ch;font-size:clamp(17px,1.6vw,20px);line-height:1.7;color:var(--tinta)}.texto-pared p+p{margin-top:1em}"
+    },
+    {
+      "name": "Horarios",
+      "kind": "table",
+      "description": "Tabla tabular de horarios con caption-fuente «sitio 2001 — confirmar por WhatsApp»; filas hairline, sin bordes verticales.",
+      "html": "<table class=\"horarios\"><caption>Horarios <span>(sitio 2001 — confirmar por WhatsApp)</span></caption><tbody><tr><th scope=\"row\">13:30</th><td>Mar · Jue</td><td>Karate</td></tr></tbody></table>",
+      "css": ".horarios{width:100%;max-width:380px;border-collapse:collapse;margin-bottom:34px;font-size:14.5px;font-variant-numeric:tabular-nums}.horarios caption{caption-side:top;text-align:left;font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--tinta-2);padding-bottom:10px}.horarios th,.horarios td{text-align:left;padding:8px 18px 8px 0;border-bottom:1px solid var(--hairline)}.horarios th{font-weight:500}.horarios tr:last-child th,.horarios tr:last-child td{border-bottom:none}"
+    },
+    {
+      "name": "Índice de recorrido",
+      "kind": "list",
+      "description": "Índice numerado del archivo: reglas horizontales hairline; hover corre el ítem 14px a la derecha, lo pinta rojo y revela una flecha.",
+      "html": "<ol class=\"indice\"><li><a href=\"html/fotos_de_torneos.html\"><span>Torneos</span><small>1988 — 2000</small></a></li></ol>",
+      "css": ".indice{list-style:none;max-width:760px}.indice li{border-bottom:1px solid var(--hairline)}.indice li:first-child{border-top:1px solid var(--hairline)}.indice a{display:flex;align-items:baseline;gap:14px;padding:16px 4px;text-decoration:none;transition:padding-left .18s ease,color .18s ease}.indice a:hover{padding-left:14px;color:var(--rojo)}.indice a span{font-weight:600;font-size:clamp(17px,2vw,21px);letter-spacing:-.01em}.indice a small{font-size:13px;color:var(--tinta-2);font-variant-numeric:tabular-nums}.indice a::after{content:\"→\";margin-left:auto;opacity:0;transition:opacity .18s ease}.indice a:hover::after{opacity:1}"
+    }
+  ],
+  "narrative": {
+    "northStar": "La Muestra — la home como galería de exhibición histórica",
+    "overview": "La página no ilustra el linaje: lo cuelga. La home es una muestra de museo — título de exposición, salas numeradas en romanos (I Shuri, II 1938 la llegada, III la familia Higa, IV Campana hoy, V el recorrido del archivo), obras de época matadas en blanco con cartela, textos de pared y sala final declarativa. La restricción que fundó el mundo: las fotos del archivo son diminutas en resolución nativa (~120–460px), así que la escala la cargan el blanco y la tipografía — las fotos cuelgan chicas y matadas, como en una muestra histórica real. Un solo acento rojo (#C8331F) para la única acción: «Sumate al dojo» (WhatsApp). Rehúsa el héroe-de-gym, el zen de bazar, las stock photos y el afiche de película: la autoridad se demuestra con fechas exactas, retratos reales jamás teñidos y datos legados marcados «sitio 2001».",
+    "keyCharacteristics": [
+      "Estructura de exposición real: título → salas I–IV → recorrido del archivo → sala final",
+      "El blanco y la tipografía cargan la escala; las fotos cuelgan pequeñas, matadas y jamás agrandadas ni teñidas",
+      "Rojo #C8331F como único acento, solo en acciones; hover #9A2415",
+      "Hairlines (tinta al 16%) como único recurso de separación; sin grises plenos ni sombras de bloque",
+      "Una sola animación: entrada de obras con IntersectionObserver, failsafe de 3s, degradable sin JS y con reduced-motion"
+    ],
+    "rules": [
+      { "name": "The One Accent Rule", "body": "El rojo aparece solo donde se puede actuar: CTA, hover de enlace, focus ring, selección. Si algo es rojo, lleva a algún lado.", "section": "colors" },
+      { "name": "The Untinted Photo Rule", "body": "Fotos del archivo con grayscale(.12) contrast(1.03) como máximo. Jamás teñidas, duotono ni overlay de color.", "section": "colors" },
+      { "name": "The Dated Source Rule", "body": "Cada dato legado lleva su fuente a la vista: «2º Dan (dato del sitio 2001)», «Horarios (sitio 2001 — confirmar por WhatsApp)». Nunca se actualiza por conjetura.", "section": "typography" },
+      { "name": "The Pressed Button Rule", "body": "El CTA responde como botón físico: hover levanta 1px, :active baja y aprieta su sombra.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do usar rojo (#C8331F) solo en CTA, hovers de enlace, focus ring (outline 2px, offset 3px) y selección",
+      "Do colgar toda foto de época en .obra: fondo blanco, paspartú 14px, borde hairline, doble sombra, cartela de 13px",
+      "Do mostrar las fotos a su escala nativa o menor; la escala la cargan el blanco y la tipografía",
+      "Do separar con hairlines, usar tabular-nums en fechas y marcar lo heredado «sitio 2001»",
+      "Do mantener la animación de obras degradable: sin JS y con prefers-reduced-motion, todo visible"
+    ],
+    "donts": [
+      "Don't introducir un segundo acento, gradiente de color o duotono sobre fotos",
+      "Don't agrandar las fotos del archivo más allá de su resolución nativa, ni teñirlas",
+      "Don't añadir sombras fuera del vocabulario obra/CTA, ni grises plenos en lugar de hairlines",
+      "Don't inventar grados, roles o fechas fuera de las fuentes del legado",
+      "Don't recurrir a estética gym-fitness, zen de bazar, stock photos o afiche de película"
+    ]
+  }
+}

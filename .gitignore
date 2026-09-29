@@ -1,0 +1,5 @@
+# Impeccable: estado de build y artefactos de sesión (máquina-local)
+.impeccable/build/
+.impeccable/review/
+.impeccable/decision/
+.impeccable/config.local.json
