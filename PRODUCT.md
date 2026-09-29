@@ -36,7 +36,7 @@ Direct local representation (sucursal Campana) of the Kyudokan school — the Ka
 - **Legacy site is the source of truth** for text and photos, migrated where relevant. Confirmed by user.
 - Dropped without replacement (dead artifacts): Flash applet banner, guestbook CGI (`cgi-sys/`), Google Custom Search form, martial-arts affiliate banner, "Designed by MatrixWay", "optimized for IE4+ / 800×600" claims.
 - Legacy `html/` contains ~250 pages: dojo info (presentación, centro de enseñanza, horarios, cómo llegar, contacto), articles (qué es karate, karate y el niño / la mujer, karate deportivo vs tradicional, acondicionamiento físico, credo del samurái, pensamiento), history (síntesis histórica, árbol genealógico, biografía Jintatsu Higa, la familia Higa, Okinawa), photo/afiche galleries (torneos 1988–2000, exhibiciones, katas, Hombu, Okinawa), noticias (nacionales/internacionales), links.
-- `src/` currently holds an identical copy of `legacy/` as the v3 working directory.
+- `src/` holds the v3 modernized site (world «La Línea», 2026 pass on `main_opt-2`): home hand-built + ~115 internal pages generated in place from the pristine `legacy/` sources by `tools/restyle.py`.
 - **Undecided / open facts (owner must supply; do not invent):** current rank of Cristian Lugani (legacy says 2nd Dan, 2001), current schedule, current phone/email, any post-2001 news or activity. Until supplied, legacy values are the record and must not be embellished.
 
 ## Brand Commitments
@@ -50,6 +50,7 @@ Direct local representation (sucursal Campana) of the Kyudokan school — the Ka
 - `legacy/` — complete 2001 site: all text content and ~250 pages.
 - `legacy/assets/images/` — photo archive: portraits of the Higa masters (Yuchoku, Jintatsu, Minoru, Oscar, Benito), Chibana Chosin, Cristian Lugani; kanji calligraphy; tournament/exhibition/Okinawa/Hombu photos in `legacy/html/fotos_*.html` galleries; tournament posters (afiches).
 - Absence that future work must not fabricate: no testimonials, no current news, no verified credentials beyond the legacy record.
+- **Photo archive recovery status (2026 pass):** of 196 locally-missing image references, 157 remain — the rest were restored: 16 more originals recovered this pass from Wayback Machine captures of `karatelugani.com.ar` (2001 snapshots, 8 more files inherited from the previous pass's recovery), plus 23 NOF thumbnails re-derived locally (ffmpeg) from recovered originals. Remaining references render as honest labeled placeholders (`.falta`), naming the original file; they are recoverable from the original server if it ever returns.
 
 ## Product Principles
 
