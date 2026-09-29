@@ -5,5 +5,44 @@
       "maxFindings": 5,
       "maxChars": 8000
     }
+  },
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "src/*.shtml",
+          "src/html/*.html",
+          "src/index.html",
+          "src/linea.css"
+        ],
+        "createdAt": "2026-09-29T21:28:21.685Z",
+        "reason": "Direction contract (surface brief src-index-html.md, mundo 'La Línea' elegido por el usuario): papel de notación #F5F1E8 es el material comprometido del mundo, no crema por reflejo"
+      },
+      {
+        "rule": "aphoristic-cadence",
+        "value": "*",
+        "files": [
+          "src/html/credo_del_samurai.html"
+        ],
+        "createdAt": "2026-09-29T21:28:21.728Z",
+        "reason": "Contenido legacy verbatim (mandato 100% preservación): el Credo del Samurái es material histórico del sitio 2001, no copy propio"
+      },
+      {
+        "rule": "wide-tracking",
+        "value": "*",
+        "files": [
+          "src/*.shtml",
+          "src/html/*.html",
+          "src/index.html",
+          "src/linea.css"
+        ],
+        "createdAt": "2026-09-29T21:29:22.830Z",
+        "reason": "Direction contract (RAISES de ukiyoe): sellos de fecha/estación con mayúsculas espaciadas — el tracking es el dispositivo del sello, mobiliario del mundo 'La Línea'"
+      }
+    ]
   }
 }
