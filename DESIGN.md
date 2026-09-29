@@ -12,9 +12,9 @@ colors:
 typography:
   display:
     fontFamily: "Archivo, system-ui, sans-serif"
-    fontSize: "clamp(38px, 6.2vw, 84px)"
+    fontSize: "clamp(38px, 4.8vw, 64px)"
     fontWeight: 800
-    lineHeight: 1.02
+    lineHeight: 1
     letterSpacing: "-0.025em"
   sala-h2:
     fontFamily: "Archivo, system-ui, sans-serif"
@@ -38,7 +38,7 @@ typography:
     fontWeight: 500
     letterSpacing: "0.08em"
     textTransform: "uppercase"
-  scale: [12, 12.5, 13, 14, 14.5, 15, 15.5, 16, 17, "clamp(17, 2vw, 21)", 19, "clamp(17, 1.6vw, 20)", "clamp(19, 2.2vw, 25)", "clamp(30, 4.4vw, 54)", "clamp(38, 6.2vw, 84)", "clamp(40, 6.4vw, 88)"]
+  scale: [11.5, 12, 12.5, 13, 14, 14.5, 15, 15.5, 16, 17, "clamp(17, 2vw, 21)", 19, "clamp(17, 1.6vw, 20)", "clamp(19, 2.2vw, 25)", "clamp(30, 4.4vw, 54)", "clamp(38, 4.8vw, 64)", "clamp(40, 6.4vw, 88)"]
   dateline:
     fontFamily: "Archivo, system-ui, sans-serif"
     fontSize: "14px"

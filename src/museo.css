@@ -16,6 +16,17 @@
 
 *{box-sizing:border-box;margin:0;padding:0}
 
+/* skip link: oculto hasta recibir focus */
+.skip{
+  position:fixed;left:16px;top:-64px;z-index:10;
+  background:var(--papel);color:var(--tinta);
+  font-weight:600;font-size:14px;text-decoration:none;
+  padding:12px 18px;border:1px solid var(--rojo);border-radius:6px;
+  transition:top .15s ease;
+}
+.skip:focus{top:12px;outline:2px solid var(--rojo);outline-offset:2px}
+@media (prefers-reduced-motion:reduce){.skip{transition:none}}
+
 html{scroll-behavior:smooth}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
@@ -44,19 +55,25 @@ img{display:block;max-width:100%;height:auto}
   font-weight:800;font-size:16px;letter-spacing:.12em;text-transform:uppercase;
   text-decoration:none;
 }
-.topbar nav{display:flex;gap:22px;flex-wrap:wrap}
+.topbar nav{display:flex;gap:16px;flex-wrap:wrap}
 .topbar nav a{
-  font-size:12.5px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;
-  text-decoration:none;color:var(--tinta-2);
+  font-size:11.5px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;
+  text-decoration:none;color:var(--tinta-2);white-space:nowrap;
+  padding:10px 0; /* target táctil ≥ WCAG 2.5.8 */
 }
 .topbar nav a:hover{color:var(--rojo)}
 
 /* ---------- título de muestra ---------- */
 
 .titulo{
-  padding:clamp(90px,14vh,180px) clamp(24px,5vw,64px) clamp(70px,10vh,130px);
+  padding:clamp(56px,9vh,120px) clamp(24px,5vw,64px) clamp(70px,10vh,130px);
   max-width:1200px;
+  display:grid;grid-template-columns:1fr;gap:clamp(40px,6vw,80px);align-items:center;
 }
+@media (min-width:980px){
+  .titulo{grid-template-columns:minmax(0,7fr) minmax(0,5fr)}
+}
+.titulo-texto{max-width:1200px}
 .fecha-muestra{
   font-size:14px;font-weight:500;letter-spacing:.05em;
   color:var(--tinta-2);
@@ -64,13 +81,20 @@ img{display:block;max-width:100%;height:auto}
 }
 .titulo h1{
   font-weight:800;
-  font-size:clamp(38px,6.2vw,84px);
-  line-height:1.02;letter-spacing:-.025em;
-  max-width:18ch;
-  text-wrap:balance;
+  font-size:clamp(38px,4.8vw,64px);
+  line-height:1;letter-spacing:-.025em;
+  max-width:17ch;
   margin-bottom:26px;
 }
 .subtitulo{font-size:clamp(19px,2.2vw,25px);color:var(--tinta-2);margin-bottom:44px}
+
+/* la primera obra de la muestra: el pergamino del nombre, colgado como kakejiku */
+.obra-apertura{max-width:240px}
+.obra-apertura img{width:100%}
+@media (min-width:761px){
+  .sala-1 .sala-cuerpo{grid-template-columns:auto auto}
+  .sala-1 .texto-pared{grid-column:1/-1;max-width:64ch}
+}
 
 .cta{
   display:inline-block;
@@ -217,6 +241,15 @@ img{display:block;max-width:100%;height:auto}
   font-size:16.5px;line-height:1.75;color:var(--tinta-2);
 }
 .sala-final .cita strong{color:var(--tinta);font-weight:600}
+
+/* kanji del cierre: cuelga junto a la cita; al hover se acerca para estudiarlo */
+.cierre{display:flex;gap:clamp(28px,4vw,64px);align-items:flex-end;flex-wrap:wrap;margin-top:60px}
+.cierre .cita{margin-top:0}
+.obra-kanji{transition:box-shadow .45s cubic-bezier(.16,1,.3,1)}
+.obra-kanji img{height:460px;width:auto;transition:transform .45s cubic-bezier(.16,1,.3,1)}
+.obra-kanji:hover img{transform:scale(1.12)}
+.obra-kanji:hover{box-shadow:0 22px 48px rgba(20,19,17,.16),0 4px 10px rgba(20,19,17,.08)}
+@media (max-width:760px){.obra-kanji img{height:340px}}
 
 /* ---------- footer ---------- */
 

@@ -7,10 +7,18 @@
 <meta name="description" content="Centro de Enseñanza de Karate-do Estilo Shorinryu Kyudokan de Okinawa, filial Campana. Profesor Cristian Lugani. Una escuela transmitida de generación en generación desde Shuri; el próximo capítulo puede ser tuyo.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800&display=swap"></noscript>
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+<link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/android-chrome-192x192.png">
 <link rel="stylesheet" href="museo.css">
 </head>
 <body>
+
+<a class="skip" href="#contenido">Saltar al contenido</a>
 
 <header class="topbar">
   <a class="marca" href="index.html">Kyudokan Campana</a>
@@ -23,14 +31,20 @@
   </nav>
 </header>
 
-<main>
+<main id="contenido">
 
   <!-- Apertura -->
   <section class="titulo" aria-labelledby="titulo-h">
-    <p class="fecha-muestra">Karate-do Shorinryu Kyudokan de Okinawa — filial Campana, Buenos Aires</p>
-    <h1 id="titulo-h">Una escuela que viene siendo transmitida de generación en generación desde Shuri.</h1>
-    <p class="subtitulo">Esta es su historia. El próximo capítulo puede ser tuyo.</p>
-    <a class="cta" href="https://wa.me/543489431664?text=Hola%2C%20quiero%20empezar%20a%20practicar%20karate%20en%20el%20dojo%20Kyudokan%20de%20Campana">Sumate al dojo<span aria-hidden="true"> →</span></a>
+    <div class="titulo-texto">
+      <p class="fecha-muestra">Karate-do Shorinryu Kyudokan de Okinawa — filial Campana, Buenos Aires</p>
+      <h1 id="titulo-h">Una escuela transmitida de generación en generación desde Shuri.</h1>
+      <p class="subtitulo">Esta es su historia. El próximo capítulo puede ser tuyo.</p>
+      <a class="cta" href="https://wa.me/543489431664?text=Hola%2C%20quiero%20empezar%20a%20practicar%20karate%20en%20el%20dojo%20Kyudokan%20de%20Campana">Sumate al dojo<span aria-hidden="true"> →</span></a>
+    </div>
+    <figure class="obra obra-apertura">
+      <img src="assets/images/nuevas/kyudokan_1.jpg" alt="Caligrafía vertical de los kanji Kyudokan: kyu, do, kan" width="220">
+      <figcaption><strong>Kyudokan</strong> — 極道館 · caligrafía del archivo</figcaption>
+    </figure>
   </section>
 
   <!-- I -->
@@ -41,10 +55,17 @@
     </header>
     <div class="sala-cuerpo">
       <figure class="obra">
-        <img src="assets/images/autogen/a_yochoku_higa_1.jpg" alt="Retrato del maestro Yuchoku Higa" width="238" loading="lazy">
+        <img src="assets/images/nuevas/Higa_Yuchoku_-_photo.jpg" alt="Retrato del maestro Yuchoku Higa ante un pergamino de caligrafía" width="256" loading="lazy">
         <figcaption>
           <strong>Yuchoku Higa</strong>
           Fundador del Karate-do Kyudokan · 10º Dan
+        </figcaption>
+      </figure>
+      <figure class="obra obra-castillo">
+        <img src="assets/images/nuevas/castillo-shuri-bn.png" alt="Ilustración en blanco y negro del castillo de Shuri" width="340" loading="lazy">
+        <figcaption>
+          <strong>Castillo de Shuri</strong>
+          Ilustración · Shuri, Okinawa
         </figcaption>
       </figure>
       <div class="texto-pared">
@@ -62,7 +83,7 @@
     </header>
     <div class="sala-cuerpo">
       <figure class="obra">
-        <img src="assets/images/autogen/a_jintatsu_higa_foto_grande_1.jpg" alt="Retrato del maestro Jintatsu Higa" width="206" loading="lazy">
+        <img src="assets/images/nuevas/jintatsu_higa.jpg" alt="El maestro Jintatsu Higa ejecutando una técnica" width="297" loading="lazy">
         <figcaption>
           <strong>Jintatsu Higa</strong>
           8º Dan · Kyoshi · representante en América de la escuela
@@ -90,7 +111,7 @@
     </header>
     <div class="salon-familia">
       <figure class="obra">
-        <img src="assets/images/autogen/a_minoru_higa_1.jpg" alt="Retrato del maestro Minoru Higa" width="240" loading="lazy">
+        <img src="assets/images/nuevas/minoru.jpg" alt="Retrato del maestro Minoru Higa" width="240" loading="lazy">
         <figcaption><strong>Minoru Higa</strong></figcaption>
       </figure>
       <figure class="obra">
@@ -158,8 +179,14 @@
   <!-- Cierre -->
   <section class="sala sala-final" aria-labelledby="s6">
     <h2 id="s6">El próximo capítulo es tuyo.</h2>
-    <a class="cta" href="https://wa.me/543489431664?text=Hola%2C%20quiero%20empezar%20a%20practicar%20karate%20en%20el%20dojo%20Kyudokan%20de%20Campana">Sumate al dojo<span aria-hidden="true"> →</span></a>
-    <p class="cita">«La Vía del estudio no tiene fin. La Vía del Karate es inmensamente amplia, profunda y alta como el cielo que continúa sin límites.» <strong>— Kuydo Mugen</strong></p>
+    <a class="cta" href="https://wa.me/543489431664?text=Hola%2C%20quiero%20empezar%20a%20practicar%20karate%20en%20el%20dojo%20Kyudokan%20de%20Campana">Sumarse al dojo<span aria-hidden="true"> →</span></a>
+    <div class="cierre">
+      <figure class="obra obra-kanji">
+        <img src="assets/images/nuevas/mugen.jpg" alt="Caligrafía vertical de los kanji Kuydo Mugen: kyu, do, mu, gen" width="170" loading="lazy">
+        <figcaption><strong>究道無限 — Kuydo Mugen</strong> · caligrafía del archivo</figcaption>
+      </figure>
+      <p class="cita">«La Vía del estudio no tiene fin. La Vía del Karate es inmensamente amplia, profunda y alta como el cielo que continúa sin límites.» <strong>— Kuydo Mugen</strong></p>
+    </div>
   </section>
 
 </main>

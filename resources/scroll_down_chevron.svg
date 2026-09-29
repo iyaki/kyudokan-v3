@@ -1,0 +1,35 @@
+<svg width="40" height="60" viewBox="0 0 40 60" xmlns="http://www.w3.org/2000/svg">
+  <g stroke="#ffffff" stroke-width="2" fill="none" stroke-linecap="round">
+    <!-- Primer chevron -->
+    <polyline points="10,20 20,30 30,20" opacity="0">
+      <animate attributeName="opacity"
+               values="0;1;1;0;0"
+               keyTimes="0;0.1;0.4;0.5;1"
+               dur="4s"
+               repeatCount="indefinite"/>
+      <animate attributeName="transform"
+               type="translate"
+               values="0,0;0,4;0,0"
+               keyTimes="0;0.5;1"
+               dur="4s"
+               repeatCount="indefinite"
+               additive="sum"/>
+    </polyline>
+
+    <!-- Segundo chevron -->
+    <polyline points="10,30 20,40 30,30" opacity="0">
+      <animate attributeName="opacity"
+               values="0;0;1;1;0;0"
+               keyTimes="0;0.3;0.4;0.7;0.8;1"
+               dur="4s"
+               repeatCount="indefinite"/>
+      <animate attributeName="transform"
+               type="translate"
+               values="0,0;0,4;0,0"
+               keyTimes="0;0.5;1"
+               dur="4s"
+               repeatCount="indefinite"
+               additive="sum"/>
+    </polyline>
+  </g>
+</svg>

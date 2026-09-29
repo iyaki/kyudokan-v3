@@ -48,7 +48,9 @@ Direct local representation (sucursal Campana) of the Kyudokan school — the Ka
 ## Evidence on Hand
 
 - `legacy/` — complete 2001 site: all text content and ~250 pages.
-- `legacy/assets/images/` — photo archive: portraits of the Higa masters (Yuchoku, Jintatsu, Minoru, Oscar, Benito), Chibana Chosin, Cristian Lugani; kanji calligraphy; tournament/exhibition/Okinawa/Hombu photos in `legacy/html/fotos_*.html` galleries; tournament posters (afiches).
+- `legacy/assets/images/` — photo archive: portraits of the Higa masters (Yuchoku, Jintatsu, Minoru, Oscar, Benito), Chibana Chosin, Cristian Lugani; kanji calligraphy; and small content thumbnails in `assets/images/autogen/`.
+- **Known gap:** the gallery pages (`legacy/html/fotos_*.html`, afiches) reference ~66 full-size photos (`assets/images/*.JPG`, posters, tournament photos) that are **not present** in the copied archive — only 13 files (772K) survived the 2001-era scrape. The gallery pages are broken until those files are recovered (original server or Wayback Machine). Do not substitute stock imagery for them (PRODUCT principle: no stock).
+- `resources/` — **new assets supplied by the owner** (2025): larger master portraits (`Higa_Yuchoku_-_photo.jpg` 256×390, `jintatsu_higa.jpg` 297×400, `minoru.jpg`), vertical calligraphy scrolls (`kyudokan_1/2.jpg` 932×2200 極道館, `mugen.jpg` 526×2218 究道無限), Shuri castle illustration set (AI-generated styles), school emblem, favicons (`favicon_io/`). The home now uses the portraits, scrolls, castle (labeled «ilustración») and favicons via `src/assets/images/nuevas/` + `src/assets/favicon/`. Unused-but-available: `dojo-campana.webp` (dōjō lettering), emblem patch, enso-with-bell (鐘 Campana pun — not used: enso is a banned cliché).
 - Absence that future work must not fabricate: no testimonials, no current news, no verified credentials beyond the legacy record.
 
 ## Product Principles
