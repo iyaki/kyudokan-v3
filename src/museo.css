@@ -66,7 +66,7 @@ img{display:block;max-width:100%;height:auto}
 /* ---------- título de muestra ---------- */
 
 .titulo{
-  padding:clamp(56px,9vh,120px) clamp(24px,5vw,64px) clamp(70px,10vh,130px);
+  padding:clamp(56px,9vh,120px) clamp(24px,5vw,64px) clamp(40px,6vh,64px);
   max-width:1200px;
   display:grid;grid-template-columns:1fr;gap:clamp(40px,6vw,80px);align-items:center;
 }
@@ -110,10 +110,12 @@ img{display:block;max-width:100%;height:auto}
 /* ---------- salas ---------- */
 
 .sala{
-  padding:clamp(70px,10vh,120px) clamp(24px,5vw,64px);
+  padding:clamp(64px,9vh,112px) clamp(24px,5vw,64px);
   border-top:1px solid var(--hairline);
   max-width:1200px;margin:0 auto;
 }
+/* el comienzo de la historia sigue pronto al compromiso del CTA */
+.sala-1{padding-top:clamp(44px,6vh,64px)}
 .sala-cabecera{display:flex;align-items:flex-start;gap:20px;margin-bottom:clamp(40px,6vh,70px)}
 .num{
   font-weight:800;font-size:15px;letter-spacing:.08em;
@@ -228,7 +230,8 @@ img{display:block;max-width:100%;height:auto}
 
 /* ---------- sala final ---------- */
 
-.sala-final{text-align:left;padding-top:clamp(90px,14vh,170px);padding-bottom:clamp(90px,14vh,170px)}
+/* crescendo: el aire crece al entrar al cierre */
+.sala-final{text-align:left;padding-top:clamp(120px,18vh,220px);padding-bottom:clamp(90px,14vh,170px)}
 .sala-final h2{
   font-weight:800;
   font-size:clamp(40px,6.4vw,88px);
