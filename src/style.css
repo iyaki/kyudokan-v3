@@ -1,0 +1,16 @@
+/* CSS definition file containing sitestyle stylesheets */
+BODY { background-image: url("./assets/images/backround_ok.gif"); background-repeat: repeat-y; background-attachment: scroll; background-position: 0pt 0%;}
+ A:active { font-family: Verdana,Tahoma,Arial,Helvetica,Sans-serif,sans-serif; font-size: x-small; color: rgb(255,255,0); font-weight: normal; font-style: normal;}
+ A:link { font-family: Verdana,Tahoma,Arial,Helvetica,Sans-serif,sans-serif; font-size: x-small; color: rgb(255,149,43); font-weight: normal; font-style: normal;}
+ UL { font-family: Verdana,Tahoma,Arial,Helvetica,Sans-serif,sans-serif; font-size: x-small; font-weight: normal; font-style: normal;}
+ A:visited { font-family: Verdana,Tahoma,Arial,Helvetica,Sans-serif,sans-serif; font-size: x-small; font-weight: normal; font-style: normal;}
+ .TextObject { font-family: Verdana,Tahoma,Arial,Helvetica,Sans-serif,sans-serif; font-size: x-small; color: rgb(255,149,43); font-weight: normal; font-style: normal;}
+ P { font-family: Verdana,Tahoma,Arial,Helvetica,Sans-serif,sans-serif; font-size: x-small; color: rgb(141,141,141); font-weight: normal; font-style: normal;}
+ LI { font-family: Verdana,Tahoma,Arial,Helvetica,Sans-serif,sans-serif; font-size: x-small; font-weight: normal; font-style: normal;}
+ OL { font-family: Verdana,Tahoma,Arial,Helvetica,Sans-serif,sans-serif; font-size: x-small; font-weight: normal; font-style: normal;}
+ A { font-family: Verdana,Tahoma,Arial,Helvetica,Sans-serif,sans-serif; font-size: x-small; color: rgb(170,170,170); font-weight: normal; font-style: normal;}
+ .TextNavBar { font-family: Verdana,Tahoma,Arial,Helvetica,Sans-serif,sans-serif; font-size: x-small; color: rgb(255,149,43); font-weight: normal; font-style: normal;}
+ ADDRESS { font-family: Verdana,Tahoma,Arial,Helvetica,Sans-serif,sans-serif; font-size: x-small; font-weight: normal; font-style: normal;}
+ PRE { font-family: Verdana,Tahoma,Arial,Helvetica,Sans-serif,sans-serif;}
+ A:hover { font-family: Verdana,Tahoma,Arial,Helvetica,Sans-serif,sans-serif; font-size: x-small; color: rgb(255,204,0); font-weight: normal; font-style: normal;}
+ 
