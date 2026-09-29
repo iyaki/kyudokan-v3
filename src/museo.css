@@ -91,11 +91,6 @@ img{display:block;max-width:100%;height:auto}
 /* la primera obra de la muestra: el pergamino del nombre, colgado como kakejiku */
 .obra-apertura{max-width:240px}
 .obra-apertura img{width:100%}
-@media (min-width:761px){
-  .sala-1 .sala-cuerpo{grid-template-columns:auto auto}
-  .sala-1 .texto-pared{grid-column:1/-1;max-width:64ch}
-}
-
 .cta{
   display:inline-block;
   background:var(--rojo);color:var(--papel);
@@ -129,11 +124,11 @@ img{display:block;max-width:100%;height:auto}
   font-size:clamp(30px,4.4vw,54px);
   line-height:1.02;letter-spacing:-.02em;
 }
-.sala-cuerpo{
-  display:grid;grid-template-columns:auto 1fr;gap:clamp(36px,6vw,90px);
-  align-items:start;
-}
-@media (max-width:760px){.sala-cuerpo{grid-template-columns:1fr}}
+.sala-cuerpo{display:flex;flex-direction:column;gap:clamp(30px,4.5vh,52px)}
+/* sala IV: obra y panel lado a lado */
+.sala-4 .sala-cuerpo{flex-direction:row;align-items:flex-start;gap:clamp(36px,6vw,90px);flex-wrap:wrap}
+/* riel de obras: los topes alineados, como cuadros colgados de un riel */
+.obras{display:flex;gap:clamp(24px,4vw,56px);align-items:flex-start;flex-wrap:wrap}
 
 /* las obras: foto de época, chica, paspartú y marco */
 .obra{
@@ -164,23 +159,17 @@ img{display:block;max-width:100%;height:auto}
 }
 
 .texto-pared{
-  max-width:52ch;
+  max-width:62ch;
   font-size:clamp(17px,1.6vw,20px);
   line-height:1.7;
   color:var(--tinta);
 }
 .texto-pared p+p{margin-top:1em}
 
-.obra-dibujo{margin-top:34px}
-@media (min-width:761px){
-  .sala-2 .sala-cuerpo{grid-template-columns:auto auto}
-  .sala-2 .texto-pared{grid-column:1/-1;margin-top:8px;max-width:64ch}
-}
-
 /* salón de la familia: tres obras colgadas en fila */
-.salon-familia{display:flex;gap:clamp(20px,3vw,44px);flex-wrap:wrap;align-items:flex-end}
+.salon-familia{display:flex;gap:clamp(20px,3vw,44px);flex-wrap:wrap;align-items:flex-start}
 .salon-familia .obra{flex:0 1 auto}
-.sala-3 .texto-pared{margin-top:40px}
+.sala-3 .texto-pared{margin-top:0}
 
 /* sala Campana */
 .obra-grande img{width:min(460px,100%)}
