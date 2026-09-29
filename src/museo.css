@@ -251,6 +251,18 @@ img{display:block;max-width:100%;height:auto}
 .obra-kanji:hover{box-shadow:0 22px 48px rgba(20,19,17,.16),0 4px 10px rgba(20,19,17,.08)}
 @media (max-width:760px){.obra-kanji img{height:340px}}
 
+/* ---------- epílogo: el archivo ---------- */
+
+.epilogo{
+  border-top:1px solid var(--hairline);
+  padding:30px clamp(24px,5vw,64px) 40px;
+  max-width:1200px;margin:0 auto;
+  font-size:14.5px;line-height:2.1;color:var(--tinta-2);
+}
+.epilogo strong{color:var(--tinta);font-weight:600}
+.epilogo a{color:var(--tinta-2)}
+.epilogo a:hover{color:var(--rojo)}
+
 /* ---------- footer ---------- */
 
 footer{
