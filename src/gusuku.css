@@ -33,6 +33,13 @@
   --mar: #0e668c;        /* mar Kerama, enlaces */
   --pelo: rgba(42, 37, 32, 0.25);
   --sombra: 0 2px 14px rgba(42, 37, 32, 0.16), 0 10px 34px rgba(42, 37, 32, 0.10);
+  /* escala tipográfica por rol: display, título, sección, cuerpo, secundario */
+  --fs-display: clamp(52px, 9vw, 104px);
+  --fs-titulo: clamp(28px, 4.5vw, 42px);
+  --fs-h2: 28px;
+  --fs-cuerpo: 16.5px;
+  --fs-secundario: 15px;
+  --fs-label: 12.5px;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -46,7 +53,7 @@ body {
   background: var(--cal) url('assets/texturas/encalado.jpg') repeat;
   background-size: 512px;
   line-height: 1.65;
-  font-size: 16.5px;
+  font-size: var(--fs-cuerpo);
 }
 
 ::selection { background: var(--teja); color: var(--hueso); }
@@ -92,14 +99,16 @@ img { max-width: 100%; display: block; }
 .titular h1 {
   font-family: 'Shippori Mincho', serif;
   font-weight: 600;
-  font-size: clamp(26px, 4.4vw, 44px);
-  line-height: 1.12;
+  font-size: var(--fs-titulo);
+  line-height: 1.15;
+  text-wrap: balance;
   margin: 6px 0 10px;
 }
 .titular .ficha {
   font-size: 13.5px;
   font-weight: 700;
   letter-spacing: 0.06em;
+  font-variant-numeric: tabular-nums;
   color: var(--tinta-2);
 }
 
@@ -121,7 +130,7 @@ img { max-width: 100%; display: block; }
 .riel a {
   font-weight: 700;
   font-size: 12.5px;
-  letter-spacing: 0.09em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   text-decoration: none;
   color: var(--tinta);
@@ -138,8 +147,8 @@ main { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
 .bienvenida .display {
   font-family: 'Shippori Mincho', serif;
   font-weight: 600;
-  font-size: clamp(52px, 9vw, 104px);
-  line-height: 1;
+  font-size: var(--fs-display);
+  line-height: 1.02;
   letter-spacing: 0.01em;
   display: flex;
   align-items: center;
@@ -166,8 +175,8 @@ main { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
 .escuela h2 {
   font-family: 'Shippori Mincho', serif;
   font-weight: 600;
-  font-size: 29px;
-  margin: 2px 0 20px;
+  font-size: var(--fs-h2);
+  margin: 0 0 14px;
 }
 .escuela .cuerpo p { margin-bottom: 16px; max-width: 66ch; }
 .escuela .cuerpo b { font-weight: 700; }
@@ -183,7 +192,7 @@ main { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
 .retrato figcaption {
   font-size: 12.5px;
   font-weight: 700;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--tinta-2);
   text-align: center;
@@ -238,7 +247,7 @@ main { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
 .linaje h2 {
   font-family: 'Shippori Mincho', serif;
   font-weight: 600;
-  font-size: 27px;
+  font-size: var(--fs-h2);
 }
 .linaje .nota {
   color: var(--tinta);
@@ -375,12 +384,13 @@ footer .pie-inner { text-align: center; padding-bottom: 42px; }
 .pagina-titulo {
   font-family: 'Shippori Mincho', serif;
   font-weight: 600;
-  font-size: clamp(30px, 4.6vw, 42px);
+  font-size: var(--fs-titulo);
   line-height: 1.15;
+  text-wrap: balance;
   margin-bottom: 22px;
 }
-.cuerpo { font-size: 16.5px; }
-.cuerpo p { margin-bottom: 16px; max-width: 68ch; }
+.cuerpo { font-size: var(--fs-cuerpo); }
+.cuerpo p { margin-bottom: 16px; max-width: 68ch; text-wrap: pretty; }
 .cuerpo b, .cuerpo strong { font-weight: 700; }
 .cuerpo ul, .cuerpo ol { margin: 0 0 16px 22px; }
 .vuelta { margin-top: 34px; font-size: 14px; font-weight: 700; letter-spacing: 0.04em; }
@@ -449,6 +459,7 @@ footer .pie-inner { text-align: center; padding-bottom: 42px; }
 
 .tabla-notacion {
   display: block;
+  font-variant-numeric: tabular-nums;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   border-collapse: collapse;
@@ -492,7 +503,7 @@ footer .pie-inner { text-align: center; padding-bottom: 42px; }
 
 /* --- móvil --- */
 @media (max-width: 760px) {
-  body { font-size: 15.5px; }
+  body { font-size: var(--fs-cuerpo); }
   .masthead-inner { flex-direction: row; gap: 20px; padding: 26px 20px 20px; }
   .crest { width: 64px; }
   .riel-inner, main, .linaje-inner, footer .pie-inner { padding-left: 20px; padding-right: 20px; }
