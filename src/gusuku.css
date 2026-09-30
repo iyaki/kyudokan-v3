@@ -249,6 +249,7 @@ main { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
   grid-template-columns: repeat(auto-fit, minmax(200px, 236px));
   gap: 34px;
   justify-content: center;
+  align-items: end;
 }
 /* retratos del linaje: paspartú ceñido a cada foto, nombre fuera, sobre el muro */
 .pared .retrato {
