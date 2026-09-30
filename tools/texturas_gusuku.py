@@ -44,7 +44,7 @@ def main():
     OUT.mkdir(parents=True, exist_ok=True)
     for nombre, args in {
         'encalado.jpg': ((512, 7, (233, 225, 208), 0.10, 0.0011, 0.14)),
-        'muro.jpg': ((512, 17, (206, 194, 171), 0.14, 0.0022, 0.20)),
+        'muro.jpg': ((512, 17, (219, 209, 190), 0.10, 0.0016, 0.16)),
     }.items():
         Image.fromarray(revoque(*args).astype(np.uint8)).save(OUT / nombre, quality=82)
         print('generado', OUT / nombre)
