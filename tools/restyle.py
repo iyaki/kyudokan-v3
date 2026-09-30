@@ -905,8 +905,8 @@ def template(page, main_html, html_dir_prefix, activa='inicio'):
   <div class="masthead-inner">
     <img class="crest" src="{r}assets/marca/kyudokan-crest.png" alt="Kyudokan">
     <div class="titular">
-      <p class="sobre">CENTRO DE ENSEÑANZA DE KARATE DO</p>
-      <h1>Karate Dojo Campana - Centro de enseñanza de Karate Do y Kobudo</h1>
+      <p class="sobre">Karate Dojo Campana - Centro de enseñanza de Karate Do y Kobudo</p>
+      <h1>Okinawa Shorin-Ryu Karate-Do Kyudokan Federation Argentina</h1>
       <p class="ficha">Sensei Cristian Lugani (8° Dan Kyoshi) - Campana - Bs. As. - Argentina</p>
     </div>
   </div>
