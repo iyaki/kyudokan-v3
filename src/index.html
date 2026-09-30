@@ -42,7 +42,7 @@
 
 <main id="contenido">
   <section class="bienvenida">
-    <h2 class="display"><img class="shisa" src="assets/marca/shisa-izq.png" width="258" height="408" alt="" aria-hidden="true">Bienvenidos<img class="shisa" src="assets/marca/shisa-der.png" width="258" height="408" alt="" aria-hidden="true"></h2>
+    <h2 class="display"><img class="shisa shisa-izq" src="assets/marca/shisa-izq.png" width="258" height="408" alt="" aria-hidden="true">Bienvenidos<img class="shisa shisa-der" src="assets/marca/shisa-der.png" width="258" height="408" alt="" aria-hidden="true"></h2>
     <div class="teja-flourish" aria-hidden="true"></div>
   </section>
 
@@ -148,6 +148,8 @@
 <script>
 var _riel=document.querySelector('.riel-inner');
 if(_riel){var _rielFin=function(){_riel.classList.toggle('fin',_riel.scrollLeft+_riel.clientWidth>=_riel.scrollWidth-4);};_riel.addEventListener('scroll',_rielFin,{passive:true});addEventListener('resize',_rielFin);_rielFin();}
+var _callig=document.querySelector('.callig');
+if(_callig&&'IntersectionObserver'in window){var _tr=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){_callig.classList.add('trazado');_tr.unobserve(_callig);}});},{threshold:.35});_tr.observe(_callig);}else{_callig.classList.add('trazado');}
 </script>
 
 </body>
