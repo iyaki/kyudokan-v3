@@ -964,14 +964,14 @@ def template(page, main_html, html_dir_prefix, activa='inicio'):
   </div>
   <div class="legal">
     <p>© C. Lugani · Centro de Enseñanza de Karate-do Estilo Shorinryu Kyudokan de Okinawa — Filial Campana</p>
-    <p class="fuente">Datos e imágenes: sitio 2001 (karatelugani.com.ar) — horarios y grados a confirmar.</p>
+    <p class="fuente">Datos e imágenes: sitio 2001 (karatelugani.com.ar) · Diseño: <a href="https://iyaki.ar">iyaki</a> — horarios y grados a confirmar.</p>
   </div>
 </footer>
 
 <script>
 {REVEAL_JS}
 var _riel=document.querySelector('.riel-inner');
-if(_riel){var _rielFin=function(){_riel.classList.toggle('fin',_riel.scrollLeft+_riel.clientWidth>=_riel.scrollWidth-4);};_riel.addEventListener('scroll',_rielFin,{passive:true});addEventListener('resize',_rielFin);_rielFin();}
+if(_riel){{var _rielFin=function(){{_riel.classList.toggle('fin',_riel.scrollLeft+_riel.clientWidth>=_riel.scrollWidth-4);}};_riel.addEventListener('scroll',_rielFin,{{passive:true}});addEventListener('resize',_rielFin);_rielFin();}}
 </script>
 </body>
 </html>
