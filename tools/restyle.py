@@ -737,7 +737,7 @@ def template(page, main_html, html_dir_prefix, activa='inicio'):
 {main_html}
 
 <footer>
-  <div class="teja" aria-hidden="true"></div>
+  <div class="olas" aria-hidden="true"></div>
   <div class="sitemap">
     <nav class="sitemap-col" aria-label="El dojo">
       <h2>El dojo</h2>
