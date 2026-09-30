@@ -190,11 +190,12 @@ main { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
 }
 .retrato figcaption b { color: var(--tinta); }
 
+.callig-wrap { text-align: center; padding: 0 0 64px; }
 .callig {
   mix-blend-mode: multiply;
+  display: inline-block;
   width: min(440px, 100%);
   height: auto;
-  margin-top: 22px;
 }
 
 /* --- el mar: banda seigaiha bajo las tejas --- */
