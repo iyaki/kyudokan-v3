@@ -496,7 +496,27 @@ footer .pie-inner { text-align: center; padding-bottom: 42px; }
   .masthead-inner { flex-direction: row; gap: 20px; padding: 26px 20px 20px; }
   .crest { width: 64px; }
   .riel-inner, main, .linaje-inner, footer .pie-inner { padding-left: 20px; padding-right: 20px; }
-  .riel a { padding: 12px 9px; font-size: 12px; }
+  .riel { position: sticky; top: 0; z-index: 5; box-shadow: 0 1px 0 var(--pelo); }
+  .riel-inner {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x proximity;
+    scrollbar-width: none;
+    padding: 0 12px;
+    gap: 0;
+  }
+  .riel-inner::-webkit-scrollbar { display: none; }
+  .riel .sep { display: none; }
+  .riel a {
+    flex: none;
+    padding: 14px 10px;
+    font-size: 12px;
+    scroll-snap-align: start;
+    border-bottom: 2px solid transparent;
+  }
+  .riel a[aria-current] { border-bottom-color: var(--teja); }
   .subnav a { padding: 8px 2px; }
   .hoja-foto nav a { padding: 8px 2px; }
   .vuelta a { display: inline-block; padding: 8px 0; }
