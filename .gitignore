@@ -5,3 +5,4 @@ __pycache__/
 resources/
 src/assets/texturas/_sheet.png
 *.pyc
+.swp
