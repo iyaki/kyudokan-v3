@@ -668,6 +668,7 @@ NO_LINK_NAMES = {
     'fotos.html', 'otras_fotos.html', 'noticias.html', 'todas_las_notic_.shtml',
     'nacionales.shtml', 'internacionales.shtml', 'institucion.shtml',
     'libro_de_visitas.html', 'links.html', 'promociones.html',
+    'credo_del_samurai.html', 'ventana_bushido.html',
 }
 
 
@@ -949,8 +950,6 @@ def template(page, main_html, html_dir_prefix, activa='inicio'):
       <a href="{p}acondicionamiento_fisico.html">Acondicionamiento físico</a>
       <a href="{p}el_karate_y_el_nino.html">El karate y el niño</a>
       <a href="{p}el_karate_y_la_mujer.html">El karate y la mujer</a>
-      <a href="{p}credo_del_samurai.html">Credo del samurai</a>
-      <a href="{p}ventana_bushido.html">Ventana Bushido</a>
       <a href="{p}pensamiento.html">Pensamiento</a>
     </nav>
     <div class="sitemap-col">
