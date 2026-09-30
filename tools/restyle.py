@@ -970,6 +970,8 @@ def template(page, main_html, html_dir_prefix, activa='inicio'):
 
 <script>
 {REVEAL_JS}
+var _riel=document.querySelector('.riel-inner');
+if(_riel){var _rielFin=function(){_riel.classList.toggle('fin',_riel.scrollLeft+_riel.clientWidth>=_riel.scrollWidth-4);};_riel.addEventListener('scroll',_rielFin,{passive:true});addEventListener('resize',_rielFin);_rielFin();}
 </script>
 </body>
 </html>
