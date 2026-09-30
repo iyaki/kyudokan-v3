@@ -248,7 +248,7 @@ main { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 236px));
   gap: 34px;
-  justify-content: start;
+  justify-content: center;
 }
 
 /* --- pie: banda de muro con sitemap --- */
