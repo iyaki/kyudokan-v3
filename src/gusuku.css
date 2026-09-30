@@ -452,6 +452,12 @@ footer .pie-inner { text-align: center; padding-bottom: 42px; }
   .sitemap { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
+@media (min-width: 1024px) {
+  /* HD en adelante: la fila de maestros nunca quiebra */
+  .pared { flex-wrap: nowrap; }
+  .pared .retrato { flex: 1 1 216px; max-width: 236px; }
+}
+
 /* --- móvil --- */
 @media (max-width: 760px) {
   body { font-size: 15.5px; }
