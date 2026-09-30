@@ -42,6 +42,18 @@
         ],
         "createdAt": "2026-09-29T21:29:22.830Z",
         "reason": "Direction contract (RAISES de ukiyoe): sellos de fecha/estación con mayúsculas espaciadas — el tracking es el dispositivo del sello, mobiliario del mundo 'La Línea'"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "*",
+        "files": [
+          "src/*.shtml",
+          "src/html/*.html",
+          "src/index.html",
+          "src/shomen.css"
+        ],
+        "createdAt": "2026-09-29T23:56:17.461Z",
+        "reason": "Direction contract (mundo 'El shomen del dojo' aprobado por el usuario): las capas rgba son luz de dojo y sombras del nicho (regla 'luz en CSS' de DESIGN.md), no colores de paleta"
       }
     ]
   }

@@ -1,121 +1,125 @@
 {
   "schemaVersion": 2,
   "generatedAt": "2026-09-29T00:00:00Z",
-  "title": "Design System: Kyudokan Campana — La Línea",
+  "title": "Design System: Kyudokan Campana — El shomen del dojo",
   "extensions": {
     "colorMeta": {
-      "linea": { "role": "primary", "displayName": "Línea índigo / ai-iro", "canonical": "#2E4D6B", "tonalRamp": ["rgba(46,77,107,.38)", "#2E4D6B", "#1F3648"] },
-      "sello": { "role": "secondary", "displayName": "Sello rojo", "canonical": "#B33A26", "tonalRamp": ["#E8B4A8", "#B33A26", "#8A2B1B"] },
-      "papel": { "role": "neutral", "displayName": "Papel", "canonical": "#F5F1E8", "tonalRamp": ["#FCFAF4", "#F5F1E8", "#EDE7D8"] },
-      "tinta": { "role": "neutral", "displayName": "Tinta", "canonical": "#1B1712", "tonalRamp": ["#1B1712", "#5D5546", "rgba(27,23,18,.18)"] }
+      "hueso": { "role": "primary", "displayName": "Hueso", "canonical": "#EDE1CC", "tonalRamp": ["#FFF6E6", "#EDE1CC", "#BCAB90"] },
+      "hinomaru": { "role": "secondary", "displayName": "Hinomaru", "canonical": "#C2311F", "tonalRamp": ["rgba(194,49,31,.25)", "#C2311F", "#8F2417"] },
+      "madera": { "role": "neutral", "displayName": "Madera", "canonical": "#1D140D", "tonalRamp": ["#150C06", "#1D140D", "#261A11"] },
+      "marco": { "role": "neutral", "displayName": "Marco", "canonical": "#3D2B1B", "tonalRamp": ["#2E1D12", "#3D2B1B", "#55402A"] },
+      "lamina-papel": { "role": "neutral", "displayName": "Mat de lámina", "canonical": "#EFE6D4", "tonalRamp": ["#F2EADA", "#EFE6D4", "#4A3E2C"] }
     },
     "typographyMeta": {
-      "display": { "displayName": "Mincho Display", "purpose": "h1 de páginas; Shippori Mincho 600 self-hosted, cubre kanji." },
-      "display-hero": { "displayName": "Mincho Hero", "purpose": "h1 de la apertura del home, a escala pared." },
-      "headline": { "displayName": "Mincho Headline", "purpose": "h2 de bloques del home." },
+      "display": { "displayName": "Mincho Display", "purpose": "Título del dojo y marca de barra; Shippori Mincho 600 self-hosted, cubre kanji." },
+      "headline": { "displayName": "Mincho Headline", "purpose": "h1 de páginas y del nicho, sobre la pared con text-shadow." },
       "body": { "displayName": "Gótica Body", "purpose": "Cuerpo verbatim 2001 y UI; Zen Kaku Gothic New 400/700 self-hosted." },
-      "label": { "displayName": "Gótica Label", "purpose": "Encabezados uppercase, sellos, numerales." }
+      "label": { "displayName": "Gótica Label", "purpose": "Placas del nav, encabezados de sitemap, sellos." }
     },
     "shadows": [
-      { "name": "montaje-lamina", "value": "0 1px 2px rgba(27,23,18,.05), 0 14px 34px -16px rgba(27,23,18,.22)", "purpose": "Montaje estático de láminas y fotos del linaje." },
-      { "name": "hover-secuencia", "value": "0 18px 40px -16px rgba(46,77,107,.35)", "purpose": "Sombra teñida de índigo, sólo hover en galerías (.secuencia)." }
+      { "name": "hondura-nicho", "value": "inset 0 26px 44px -16px rgba(0,0,0,.80), inset 34px 0 60px -30px rgba(0,0,0,.65), inset -34px 0 60px -30px rgba(0,0,0,.65), inset 0 -14px 34px -18px rgba(0,0,0,.55), inset 0 0 110px rgba(0,0,0,.30)", "purpose": "El tokonoma se ve excavado: techo y costados proyectan sombra adentro." },
+      { "name": "colgado", "value": "0 3px 6px rgba(0,0,0,.55), 0 30px 60px -14px rgba(0,0,0,.7)", "purpose": "Kakemono y caligrafía, colgados de la viga." },
+      { "name": "retrato", "value": "0 6px 10px -4px rgba(0,0,0,.7), 0 22px 34px -12px rgba(0,0,0,.6)", "purpose": "Cada maestro apoyado sobre el estante del kamidana." },
+      { "name": "lamina", "value": "0 4px 8px rgba(0,0,0,.45), 0 22px 44px -14px rgba(0,0,0,.6)", "purpose": "Foto enmarcada en páginas internas; hover de galería tiñe la capa externa de rojo." }
     ],
     "motion": [
-      { "name": "trazar", "value": "2s cubic-bezier(.25,.6,.3,1) .15s forwards", "purpose": "El embusen se dibuja solo al cargar (stroke-dashoffset); respeta prefers-reduced-motion." },
-      { "name": "reveal-lamina", "value": "opacity .55s ease-out, transform .55s ease-out", "purpose": "Láminas aparecen con translateY(12px) al entrar en viewport." },
-      { "name": "estado", "value": ".2s ease-out", "purpose": "Hover de CTA, enlaces y sombras de secuencia." }
+      { "name": "colgar", "value": "cubic-bezier(.2, .7, .3, 1) .7s", "purpose": "Kakemono y retratos caen 8px hasta asentarse, en cascada (delays .1s–.71s)." },
+      { "name": "estado", "value": "ease-out .2s–.25s", "purpose": "Hovers de placas, CTA y láminas." }
     ],
     "breakpoints": [
-      { "name": "riel-horizontal", "value": "999px", "purpose": "<1000px: riel vertical fijo → strip horizontal sticky; apertura a una columna." },
-      { "name": "movil", "value": "540px", "purpose": "CTA full-width, cuerpo 15.5px, linaje 2 columnas compactas." }
+      { "name": "md", "value": "760px" },
+      { "name": "sm", "value": "420px" }
     ]
   },
   "components": [
     {
-      "name": "CTA Sumate a la línea",
-      "kind": "button",
-      "refersTo": "cta-primary",
-      "description": "Única acción del sitio (WhatsApp); encendida sobre el punto de inicio del embusen.",
-      "html": "<a class=\"cta\" href=\"https://wa.me/543489431664\">Sumate a la línea</a>",
-      "css": ".cta { display:inline-block; background:#2E4D6B; color:#F5F1E8; text-decoration:none; font-weight:700; font-size:16.5px; padding:15px 26px 15px 20px; border-radius:3px; transition: background .2s ease-out, transform .2s ease-out; } .cta::before { content:\"▶\"; font-size:.72em; vertical-align:.12em; margin-right:10px; color:#E8B4A8; } .cta:hover, .cta:focus-visible { background:#1B1712; color:#F5F1E8; transform:translateY(-1px); }"
+      "name": "Kakemono con sello",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Caligrafía 空�u624b�u9053 del archivo enmarcada, colgada de la viga con cordón; sello vertical hinomaru en la esquina.",
+      "html": "<div class=\"kakemono\"><div class=\"cordon\"></div><figure class=\"caligrafia\"><img src=\"assets/airesu.jpg\" alt=\"空�u624b�u9053\"><div class=\"sello-dojo\">空�u624b�u9053道</div></figure></div>",
+      "css": ".cordon { position: absolute; top: -2px; left: 50%; width: 2px; height: 34px; transform: translateX(-50%); background: linear-gradient(180deg, #0F0905, #4A3826); } .caligrafia { background: #F2EADA; border: 12px solid #3D2B1B; outline: 1px solid rgba(237,225,204,.3); outline-offset: -13px; box-shadow: 0 3px 6px rgba(0,0,0,.55), 0 30px 60px -14px rgba(0,0,0,.7); } .sello-dojo { position: absolute; right: -14px; bottom: -14px; background: #C2311F; color: #F5E9D5; font: 600 13px/1.15 'Shippori Mincho', serif; writing-mode: vertical-rl; padding: 8px 5px; border-radius: 2px; }"
     },
     {
-      "name": "Riel de estaciones",
+      "name": "Placa de navegación",
       "kind": "nav",
-      "refersTo": "estacion",
-      "description": "Nav global como línea de estaciones; una sola activa por página (punto rojo + bold).",
-      "html": "<nav class=\"riel\"><ol class=\"estaciones\"><li><a class=\"estacion\" href=\"index.html\">Inicio</a></li><li><a class=\"estacion activo\" href=\"horarios.html\">Horarios</a></li></ol></nav>",
-      "css": ".estaciones::before { content:\"\"; position:absolute; left:5px; top:10px; bottom:10px; border-left:1.5px solid rgba(46,77,107,.38); } .estaciones li::before { content:\"\"; position:absolute; left:-.5px; top:.95em; width:8px; height:8px; transform:translateX(-50%); border-radius:50%; background:#F5F1E8; border:1.5px solid rgba(27,23,18,.42); } .estacion { display:block; padding:7px 0 7px 26px; text-decoration:none; font-size:14.5px; color:#5D5546; } .estacion:hover { color:#2E4D6B; } .estacion.activo { color:#1B1712; font-weight:700; } .estaciones li:has(.estacion.activo)::before { background:#B33A26; border-color:#B33A26; }"
+      "refersTo": "placa-nav",
+      "description": "Placa uppercase en la barra sticky; la activa es el único elemento rojo del nav.",
+      "html": "<a class=\"placa\" href=\"galeria/\">Galería</a> <a class=\"placa activo\" aria-current=\"page\" href=\"\">Historia</a>",
+      "css": ".placa { font: 700 12px/1 'Zen Kaku Gothic New', sans-serif; letter-spacing: .07em; text-transform: uppercase; color: #BCAB90; border: 1px solid rgba(237,225,204,.28); padding: 9px 12px; border-radius: 2px; transition: border-color .2s ease-out, color .2s ease-out; } .placa:hover { border-color: #EDE1CC; color: #EDE1CC; } .placa.activo { border-color: #C2311F; color: #EDE1CC; box-shadow: inset 0 -2px 0 #C2311F; }"
     },
     {
-      "name": "Lámina",
+      "name": "CTA de entrada",
+      "kind": "button",
+      "refersTo": "entrada-cta",
+      "description": "Placa de madera que abre la entrada al dojo; el rojo aparece sólo en hover/focus.",
+      "html": "<div class=\"entrada-dojo\"><a href=\"historia.html\">La escuela</a><a href=\"horarios.html\">Horarios</a></div>",
+      "css": ".entrada-dojo a { font: 700 13.5px/1 'Zen Kaku Gothic New', sans-serif; letter-spacing: .08em; text-transform: uppercase; text-decoration: none; color: #EDE1CC; border: 1px solid #55402A; background: #261A11; padding: 13px 18px; border-radius: 2px; transition: border-color .2s ease-out, color .2s ease-out, background .2s ease-out; } .entrada-dojo a:hover, .entrada-dojo a:focus-visible { border-color: #C2311F; color: #EDE1CC; background: #2E1D12; }"
+    },
+    {
+      "name": "Lámina enmarcada",
       "kind": "card",
       "refersTo": "lamina",
-      "description": "Foto montada como figura de notación con numeral Fig. N por contador CSS.",
-      "html": "<figure class=\"lamina\"><img src=\"assets/images/foto.jpg\" alt=\"\"><figcaption>Descripción de la figura.</figcaption></figure>",
-      "css": ".lamina { margin:34px 0; background:#FCFAF4; border:1px solid rgba(27,23,18,.18); padding:10px 10px 0; max-width:min(100%,560px); box-shadow:0 1px 2px rgba(27,23,18,.05),0 14px 34px -16px rgba(27,23,18,.22); counter-increment:lamina; } .lamina img { display:block; max-width:100%; height:auto; } .lamina figcaption { border-top:1px solid rgba(27,23,18,.18); margin-top:10px; padding:9px 2px 11px; font-size:13.5px; color:#5D5546; } .lamina figcaption::before { content:\"Fig. \" counter(lamina) \" — \"; font-weight:700; color:#1B1712; }"
+      "description": "Foto del archivo con marco de madera y mat de papel, numerada por contador CSS.",
+      "html": "<figure class=\"lamina\"><img src=\"galeria/foto.jpg\" alt=\"\"><figcaption>Pie de la figura</figcaption></figure>",
+      "css": ".lamina { width: fit-content; background: #EFE6D4; border: 8px solid #3D2B1B; outline: 1px solid rgba(237,225,204,.25); outline-offset: -9px; padding: 8px 8px 0; counter-increment: lamina; box-shadow: 0 4px 8px rgba(0,0,0,.45), 0 22px 44px -14px rgba(0,0,0,.6); } .lamina img { display: block; max-width: 100%; height: auto; max-height: 72vh; } .lamina figcaption { border-top: 1px solid rgba(27,23,18,.25); margin-top: 8px; padding: 8px 2px 10px; font: 400 13px/1.5 'Zen Kaku Gothic New', sans-serif; color: #4A3E2C; } .lamina figcaption::before { content: \"Fig. \" counter(lamina) \" — \"; font-weight: 700; }"
     },
     {
-      "name": "Falta (tramo punteado)",
+      "name": "Cartela de falta",
       "kind": "custom",
       "refersTo": "falta",
-      "description": "Foto ausente = tramo punteado rotulado con su nombre; jamás relleno.",
-      "html": "<div class=\"falta\"><strong>Falta en el archivo</strong>Esta fotografía no está en la copia local del sitio 2001; es recuperable del servidor original.<br><code>nombre.jpg</code></div>",
-      "css": ".falta { border:2px dashed rgba(27,23,18,.42); padding:22px 24px; margin:34px 0; max-width:min(100%,560px); color:#5D5546; font-size:14.5px; } .falta strong { color:#1B1712; display:block; margin-bottom:4px; } .falta code { font:700 12.5px/1.4 ui-monospace,monospace; background:#EDE7D8; padding:2px 6px; overflow-wrap:anywhere; }"
+      "description": "El tramo punteado rotulado: la ausencia se declara con su nombre de archivo, jamás se rellena.",
+      "html": "<div class=\"falta\"><strong>Falta en el archivo</strong> La foto de este tramo no fue digitalizada. <code>galeria/1985-examen.jpg</code></div>",
+      "css": ".falta { border: 2px dashed rgba(237,225,204,.45); background: rgba(0,0,0,.28); padding: 20px 22px; width: fit-content; color: #BCAB90; font-size: 14px; } .falta strong { color: #EDE1CC; display: block; margin-bottom: 4px; } .falta code { font: 700 12px/1.5 ui-monospace, monospace; background: rgba(0,0,0,.35); padding: 2px 6px; overflow-wrap: anywhere; }"
     },
     {
       "name": "Tabla de notación",
       "kind": "custom",
-      "refersTo": "tabla-notacion",
-      "description": "Horarios y datos con reglas de tinta editorial; números tabulares.",
-      "html": "<table class=\"tabla-notacion\"><thead><tr><th>Día</th><th>Horario</th></tr></thead><tbody><tr><td>Lunes y miércoles</td><td>20 a 21:30</td></tr></tbody></table>",
-      "css": ".tabla-notacion { border-collapse:collapse; margin:26px 0 34px; font-variant-numeric:tabular-nums; font-size:15.5px; } .tabla-notacion th, .tabla-notacion td { text-align:left; padding:9px 22px 9px 0; border-top:1px solid rgba(27,23,18,.18); } .tabla-notacion thead th { border-top:2px solid #1B1712; border-bottom:1px solid rgba(27,23,18,.42); font-weight:700; } .tabla-notacion tbody tr:last-child td { border-bottom:2px solid #1B1712; }"
+      "refersTo": null,
+      "description": "Horarios y datos en reglas de hueso sobre la pared; números tabulares.",
+      "html": "<table class=\"tabla-notacion\"><thead><tr><th>Día</th><th>Horario</th></tr></thead><tbody><tr><td>Lunes y jueves</td><td>20:30 a 22:00</td></tr></tbody></table>",
+      "css": ".tabla-notacion { border-collapse: collapse; font-variant-numeric: tabular-nums; font-size: 15px; color: #EDE1CC; } .tabla-notacion th, .tabla-notacion td { text-align: left; padding: 9px 22px 9px 0; border-top: 1px solid rgba(237,225,204,.22); } .tabla-notacion thead th { border-top: 2px solid #EDE1CC; border-bottom: 1px solid rgba(237,225,204,.4); font-weight: 700; } .tabla-notacion tbody tr:last-child td { border-bottom: 2px solid #EDE1CC; }"
     },
     {
-      "name": "Sello de fecha",
+      "name": "Retrato de maestro",
       "kind": "custom",
-      "refersTo": "sello-fecha",
-      "description": "Rojo funcional que rotula datos legacy («sitio 2001»); estampado levemente rotado.",
-      "html": "<p class=\"sello-fecha\">Sitio 2001</p>",
-      "css": ".sello-fecha { display:inline-block; margin-top:26px; font:700 12px/1 'Zen Kaku Gothic New',system-ui,sans-serif; letter-spacing:.09em; color:#B33A26; border:2px solid currentColor; border-radius:3px; padding:7px 11px; transform:rotate(-2.5deg); }"
-    },
-    {
-      "name": "Embusen",
-      "kind": "custom",
-      "refersTo": "embusen",
-      "description": "SVG del diagrama de la kata que se traza solo al cargar; kiai e inicio en rojo.",
-      "html": "<svg class=\"embusen\" viewBox=\"0 0 620 700\" role=\"img\" aria-label=\"Diagrama del embusen\"><path class=\"trazo\" d=\"…\"/><circle class=\"inicio-kata\" cx=\"60\" cy=\"640\" r=\"6\"/><g class=\"kiai\"><circle class=\"kiai-aro\" cx=\"310\" cy=\"350\" r=\"9\"/></g><text class=\"pie-linea\" x=\"60\" y=\"690\">Kihon kata — Shuri a Campana</text></svg>",
-      "css": ".embusen { width:min(100%,620px); max-height:82vh; } .embusen .trazo { fill:none; stroke:#2E4D6B; stroke-width:3; stroke-linecap:round; } .embusen .marca-paso { fill:#F5F1E8; stroke:#2E4D6B; stroke-width:1.5; } .embusen .kiai, .embusen .inicio-kata { fill:#B33A26; } .embusen .kiai-aro { fill:none; stroke:#B33A26; stroke-width:1.5; } @media (prefers-reduced-motion: no-preference) { .embusen .trazo { stroke-dasharray:1; stroke-dashoffset:1; animation:trazar 2s cubic-bezier(.25,.6,.3,1) .15s forwards; } } @keyframes trazar { to { stroke-dashoffset:0; } }"
+      "refersTo": null,
+      "description": "Retrato enmarcado en madera apoyado sobre el estante del kamidana; cuelga al cargar.",
+      "html": "<figure class=\"retrato\"><img src=\"assets/higa-yuchoku.png\" alt=\"Yuchoku Higa\"><figcaption>Yuchoku Higa</figcaption></figure>",
+      "css": ".retrato img { display: block; width: 100%; max-width: 195px; aspect-ratio: 3 / 4; object-fit: cover; background: #261A11; border: 7px solid #3D2B1B; outline: 1px solid rgba(237,225,204,.22); outline-offset: -8px; box-shadow: 0 6px 10px -4px rgba(0,0,0,.7), 0 22px 34px -12px rgba(0,0,0,.6); } .retrato img[src$=\".png\"] { object-fit: contain; } .retrato figcaption { margin: 10px 0 16px; font: 600 14px/1.3 'Shippori Mincho', serif; color: #BCAB90; }"
     }
   ],
   "narrative": {
-    "northStar": "La página de notación del dojo",
-    "overview": "Una escuela de karate es una línea que no se corta; el diagrama de esa línea es el embusen. El sitio es la página de notación del dojo — el lenguaje con que los libros de karate dibujan cada forma: trazos, huellas, puntos de kiai. Papel cálido, tinta económica, un único trazo índigo que cruza la portada y se convierte en riel de navegación para las ~116 páginas del archivo. El material de 2001 se rotula como tal, nunca se moderniza. La densidad es editorial; el movimiento es mínimo y diegético: la línea se traza sola al cargar y las láminas aparecen.",
+    "northStar": "El shomen del dojo",
+    "overview": "El sitio es el shomen — el frente ceremonial del dojo de Campana. Una pared de madera nobla oscura donde la luz cálida de la práctica de la tarde cae desde arriba; en el centro, un nicho hundido estilo tokonoma enmarca el kakemono con la caligrafía 空�u624b�u9053 del archivo, colgado de su viga con cordón y sellado en rojo. Sobre el piso elevado del kamidana, los cuatro maestros cuelgan como retratos enmarcados en madera. El contenido del sitio de 2001 se presenta verbatim, byte a byte — es el dojo mismo, no una restauración. La profundidad es arquitectónica: pared, nicho hundido, marcos adelantados, piso elevado. El rojo hinomaru es un sello que aparece dos veces por pantalla; las texturas de madera son procedurales (tools/texturas.py) y las fotos jamás se tiñen.",
     "keyCharacteristics": [
-      "Papel cálido + tinta sepia + un único acento índigo para línea e interacción",
-      "Rojo sello exclusivamente funcional: inicio, kiai, fecha, estación activa",
-      "Riel lateral de estaciones sobre una línea dibujada; un solo punto encendido por página",
-      "Ausencia honesta: foto faltante = tramo punteado rotulado, jamás relleno",
-      "Grilla keyline fija entre páginas; footer sitemap de tres columnas"
+      "Pared de madera procedural (pared/nicho/noble/piso.jpg), nunca gradiente plano ni periódico.",
+      "Luz de dojo: resplandor radial cálido arriba, sombras de nicho hacia adentro.",
+      "Tokonoma hundido con kakemono 空�u624b�u9053 + tokobashira (pilastras) en la home.",
+      "Rojo hinomaru sólo funcional: sello, marca activa, CTA-hover, foco, selección.",
+      "Fotos jamás teñidas: se montan como están, enmarcadas con mat de papel.",
+      "Falta = cartela honesta: tramo punteado rotulado, jamás relleno."
     ],
     "rules": [
-      { "name": "La Regla del Punto Encendido", "body": "Un solo elemento saturado por página: la estación activa del riel (punto rojo + tinta bold) — o en el home, la CTA encendida por el punto de inicio de la línea.", "section": "colors" },
-      { "name": "La Regla del Rojo Funcional", "body": "El rojo #B33A26 sólo marca: inicio, kiai, fecha. Si no rotula un dato o un hito, no lleva rojo.", "section": "colors" },
-      { "name": "La Regla del Cuerpo Verbatim", "body": "Los títulos se corrigen con TITULO_FIXES (acentos); el cuerpo del texto de 2001 no se reescribe.", "section": "typography" },
-      { "name": "La Regla Keyline", "body": "La grilla no se mueve entre páginas; las fronteras son hairlines de tinta, no sombras.", "section": "elevation" }
+      { "name": "La Regla del Rojo Funcional", "body": "El hinomaru sólo marca lo activo y lo autenticado: sello, placa activa, CTA-hover, foco, selección. Si no está marcando, no lleva rojo.", "section": "colors" },
+      { "name": "La Regla Contenido Verbatim", "body": "El texto del sitio 2001 se presenta byte a byte, sin restaurar ortografía. Lo que dice el archivo, dice la pared.", "section": "typography" },
+      { "name": "La Regla de la Luz, No del Tinte", "body": "La variación tonal proviene de resplandores radiales y sombras de luz de dojo; las fotos nunca se tiñen para integrarse.", "section": "elevation" },
+      { "name": "La Regla Madera Procedural", "body": "La madera viene de tools/texturas.py; nunca de gradientes periódicos ni planos. La luz es CSS.", "section": "colors" }
     ],
     "dos": [
-      "Do usar #2E4D6B para toda interacción: hover, foco, selección, CTA",
-      "Do marcar cada foto como lámina con numeral Fig. N y pie en tinta-2",
-      "Do rotular datos 2001 con .sello-fecha y archivos faltantes con .falta code",
-      "Do respetar prefers-reduced-motion: sin trazo animado ni reveal"
+      "Do usar texturas procedurales de tools/texturas.py para toda superficie de madera.",
+      "Do montar cada foto como lámina: marco --marco de 8px, mat #EFE6D4, numeral Fig. N.",
+      "Do reservar --hinomaru para sello, placa activa, CTA-hover, foco y selección.",
+      "Do rotular cada ausencia con .falta (tramo punteado + nombre de archivo en code).",
+      "Do presentar el cuerpo verbatim 2001 byte a byte; animar sólo el colgado/reveal, respetando prefers-reduced-motion."
     ],
     "donts": [
-      "Don't usar rojo decorativamente — sólo inicio, kiai, fecha, estación activa",
-      "Don't teñir, filtrar o modernizar fotos del archivo",
-      "Don't rellenar una foto ausente: siempre .falta (tramo punteado rotulado)",
-      "Don't reescribir el cuerpo verbatim de 2001 (sólo TITULO_FIXES en h1/title)",
-      "Don't sumar sombras más allá del montaje de lámina"
+      "Don't teñir, filtrar o modernizar fotos del archivo; se enmarcan como están.",
+      "Don't generar madera con gradientes periódicos o planos.",
+      "Don't usar rojo decorativamente.",
+      "Don't rellenar una foto ausente con placeholder gráfico: siempre cartela honesta.",
+      "Don't reescribir el cuerpo verbatim de 2001 (sólo TITULO_FIXES en h1/title).",
+      "Don't sumar sombras suaves de UI: las sombras son de habitación — negras, grandes, con dirección de luz."
     ]
   }
 }

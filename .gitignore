@@ -3,4 +3,5 @@ __pycache__/
 .impeccable/review/
 .impeccable/decision/
 resources/
+src/assets/texturas/_sheet.png
 *.pyc
