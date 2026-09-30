@@ -269,9 +269,8 @@ main { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
   border: 1px solid var(--pelo);
   box-shadow: var(--sombra);
   padding: 10px;
-  height: 260px;
-  width: auto;
-  max-width: 100%;
+  width: 100%;
+  height: auto;
 }
 .pared .retrato figcaption { padding: 0; text-align: center; max-width: 216px; }
 .pared .retrato figcaption span {
