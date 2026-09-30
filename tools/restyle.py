@@ -289,7 +289,7 @@ ORTO_FIXES = {
     'ao': 'año', 'ms': 'más', 'japn': 'japón', 'japon': 'japón', 'japons': 'japonés',
     'nipn': 'nipón', 'fsica': 'física', 'fisica': 'física', 'fsico': 'físico',
     'fsicas': 'físicas', 'nio': 'niño', 'nios': 'niños', 'poca': 'época',
-    'est': 'está', 'as': 'así', 'slo': 'solo', 'quizs': 'quizá',
+    'est': 'está', 'slo': 'solo', 'quizs': 'quizá',
     'prctica': 'práctica', 'prcticas': 'prácticas', 'psiquica': 'psíquica',
     'sinnimo': 'sinónimo', 'prdida': 'pérdida', 'espritu': 'espíritu',
     'tcnicas': 'técnicas', 'tcnica': 'técnica', 'tcnico': 'técnico',
@@ -995,7 +995,7 @@ def template(page, main_html, html_dir_prefix, activa='inicio'):
       <a href="{p}presentacion.html">Presentación</a>
       <a href="{p}centro_de_ensenanza.html">Centro de Enseñanza</a>
       <a href="{p}horarios.html">Horarios</a>
-      <a href="{p}como_llegar.html">Como llegar</a>
+      <a href="{p}como_llegar.html">Cómo llegar</a>
       <a href="{p}servicios.html">Servicios</a>
       <a href="{p}cupon_de_descuento.html">Cupn de descuento</a>
       <a href="{p}contacto.html">Contacto</a>
