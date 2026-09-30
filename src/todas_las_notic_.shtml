@@ -44,9 +44,7 @@
 <h2 class="pagina-titulo">Todas las Notic.</h2>
 <div class="cuerpo">
 <p>Encuentre las noticias según su interés. Para ello agrupamos las novedades en tres grupos:</p>
-<p><a>Noticias de nuestra INSTITUCION</a> <a>Noticias NACIONALES (Argentina)</a> <a>Noticias INTERNACIONALES</a></p>
 <p><em>(Función del sitio 2001 no disponible en esta versión.)</em></p>
-<p>[<a href="./html/presentacion.html">Presentación</a>] [<a href="./html/pensamiento.html">Pensamiento</a>] [<a href="./html/que_es_karate.html">Que es Karate</a>] [<a href="./html/centro_de_ensenanza.html">Centro de Ens.</a>] [<a href="./html/contacto.html">Contacto</a>] [<a>Fotos</a>]</p>
 </div>
 <p class="vuelta"><a href="index.html">← Volver al inicio</a></p>
 </main>

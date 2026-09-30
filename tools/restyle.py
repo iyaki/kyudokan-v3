@@ -377,6 +377,22 @@ def orto_fix(txt):
     return txt
 
 
+def _parse_fila_nav(txt):
+    """Fila nav legacy -> [(label, href|None)] en orden; None = destino inexistente."""
+    items = []
+    for m in re.finditer(r'<a href="([^"]+)">(.*?)</a>|<a>(.*?)</a>|([^|<]+)', txt, re.S):
+        if m.group(1) is not None:
+            label = re.sub(r'<[^>]+>', '', htmllib.unescape(m.group(2))).strip()
+            items.append((label, m.group(1)))
+        elif m.group(3) is not None:
+            items.append((htmllib.unescape(m.group(3)).strip(), None))
+        else:
+            suelto = re.sub(r'<[^>]+>', '', htmllib.unescape(m.group(4))).strip(' |')
+            if suelto:
+                items.append((suelto, None))
+    return [(l, h) for l, h in items if l]
+
+
 def orto_fix_html(txt):
     """orto_fix preservando tags/atributos (los esconde durante el pase)."""
     tags = []
@@ -482,6 +498,7 @@ def extract_content_tds(page):
 
 def content_blocks(page, tds, foms):
     """Párrafos/figuras/tablas de los TDs de contenido, en orden de documento."""
+    page.subnav = []
     blocks = []          # str html por bloque
     para = []            # buffer inline
     bare = []            # texto fuera de <a> (para detectar filas de links)
@@ -505,8 +522,23 @@ def content_blocks(page, tds, foms):
         nav_row = (nlinks >= 2 and len(bare_txt) < 3) or \
                   (nlinks == 1 and re.fullmatch(r'\[\s*[^\[\]]*\s*\]', plain))
         para, bare, nlinks, in_a = [], [], 0, False
-        if txt and len(txt) > 2 and not nav_row and not JUNK_TEXT.search(txt):
+        leading = not blocks
+        fila_subnav = False
+        if leading and '<a ' in txt and '<figure' not in txt and '<img' not in txt \
+                and not re.search(r'&lt;[a-zA-Z]', txt):
+            plano = htmllib.unescape(re.sub(r'<a(?: href="[^"]+")?>[^<]*</a>', '', txt))
+            rest = re.sub(r'<[^>]+>', '', plano)
+            fila_subnav = len(rest) <= 40
+        if txt and len(txt) > 2 and not nav_row and not fila_subnav and not JUNK_TEXT.search(txt):
             blocks.append(f'<p>{txt}</p>')
+        elif nav_row or fila_subnav:
+            # filas de navegacin del legacy: al inicio se unifican como
+            # subsecciones; en el pie se descartan
+            if leading:
+                for label, href in _parse_fila_nav(txt):
+                    if href and link_prohibido(href):
+                        continue
+                    page.subnav.append((label, href))
 
     def rec(n):
         nonlocal bare, nlinks, in_a
@@ -577,10 +609,11 @@ def content_blocks(page, tds, foms):
                     for c in n.children:
                         rec(c)
                     return
-                para.append('<a>')
+                nlinks += 0  # el enlace sigue contado para el filtro de nav-rows
+                in_a = True
                 for c in n.children:
                     rec(c)
-                para.append('</a>')
+                in_a = False
                 return
             local_ok = final_href.lower().startswith(('http', 'mailto')) or \
                 (page.path.parent / posixpath.normpath(final_href)).exists()
@@ -601,9 +634,11 @@ def content_blocks(page, tds, foms):
                     blocks[i] = f'<a href="{esc(final_href)}">{blocks[i]}</a>'
                 return
             para.append(f'<a href="{esc(final_href)}">')
+            in_a = True
             for c in n.children:
                 rec(c)
             para.append('</a>')
+            in_a = False
             return
         if t in ('b', 'strong', 'i', 'em'):
             tg = 'strong' if t in ('b', 'strong') else 'em'
@@ -744,8 +779,21 @@ def index_emit(page, foms, index_names):
 def page_main(page, inner, vuelta_href=None, vuelta_label=BACK_LABEL):
     if vuelta_href is None:
         vuelta_href = f'{page.rel}index.html'
+    pares = []
+    vistos = set()
+    for label, href in getattr(page, 'subnav', []):
+        clave = (href, label)
+        if clave in vistos:
+            continue
+        vistos.add(clave)
+        if href:
+            pares.append(f'<a href="{esc(href)}">{esc(label)}</a>')
+        else:
+            pares.append(f'<span class="sin-destino">{esc(label)}</span>')
+    subnav = f'<nav class="subnav" aria-label="Subsecciones">{" · ".join(pares)}</nav>\n' if pares else ''
     return (f'<main id="contenido" class="pagina">\n'
             f'<h2 class="pagina-titulo">{esc(page.title or page.name)}</h2>\n'
+            f'{subnav}'
             f'<div class="cuerpo">\n{inner}\n</div>\n'
             f'<p class="vuelta"><a href="{esc(vuelta_href)}">← {esc(vuelta_label)}</a></p>\n</main>')
 
@@ -959,7 +1007,7 @@ def main():
             else:  # articulo / utilitaria
                 tds = extract_content_tds(p)
                 blocks = content_blocks(p, tds, foms) if tds else []
-                if not blocks:
+                if not blocks and not getattr(p, 'subnav', []):
                     p.note('NEEDS_REVIEW sin contenido')
                     blocks = [f'<p>Esta página del sitio 2001 no tiene contenido en la copia local. '
                               f'<a href="{p.rel}index.html">Volver al inicio.</a></p>']
