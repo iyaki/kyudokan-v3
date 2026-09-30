@@ -65,6 +65,15 @@
         ],
         "createdAt": "2026-09-30T00:00:00.000Z",
         "reason": "Direction contract (mundo 'Gusuku' aprobado): rgba/gradientes son sombras de sol sobre muro y agua del panel Kerama (banda seigaiha), no colores de paleta ad-hoc"
+      },
+      {
+        "rule": "bounce-easing",
+        "value": "*",
+        "files": [
+          "src/gusuku.css"
+        ],
+        "createdAt": "2026-09-30T22:00:00.000Z",
+        "reason": "Direccin Gusuku (DESIGN.md): el posar de los shisas usa overshoot 1.15 como asentamiento intencional de piedra — es el momento autoral de entrada, no un bounce genrico"
       }
     ]
   }

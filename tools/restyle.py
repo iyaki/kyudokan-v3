@@ -384,7 +384,7 @@ ORTO_FIXES = {
     'elsticas': 'elásticas', 'lesin': 'lesión', 'construy': 'construyó',
     'reas': 'áreas', 'races': 'raíces', 'expresin': 'expresión',
     'poblacin': 'población', 'sublevacin': 'sublevación', 'tenan': 'tenían',
-    'recin': 'recién', 'estn': 'están', 'form': 'formó', 'termino': 'término', 'cersin': 'versión',
+    'recin': 'recién', 'estn': 'están', 'form': 'formó', 'termino': 'término', 'cersin': 'versión', 'cupn': 'cupón',
 
 }
 ORTO_FRASES = [('da a da', 'día a día'), ('el da y la noche', 'el día y la noche'),
