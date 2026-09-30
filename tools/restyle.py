@@ -239,7 +239,7 @@ class Page:
         self.title = ''
         if self.tree:
             t = find_all(self.tree, 'title')
-            self.title = titulo_limpio(collapse(get_text(t[0]))) if t else ''
+            self.title = orto_fix(titulo_limpio(collapse(get_text(t[0])))) if t else ''
         self.archetype = None
         self.log_notes = []
         self.imgs_ok = 0
@@ -281,6 +281,115 @@ def titulo_limpio(t):
     return t
 
 
+# Correccin ortogrfica del cuerpo (pedido del dueño, 2026-09-30): tildes
+# perdidas del 2001 y typos puntuales. Claves en minscula; se preserva el
+# caso de la palabra original. Solo palabras completas, nunca nombres propios.
+ORTO_FIXES = {
+    'tambin': 'también', 'travs': 'través', 'travz': 'través', 'aos': 'años',
+    'ao': 'año', 'ms': 'más', 'japn': 'japón', 'japon': 'japón', 'japons': 'japonés',
+    'nipn': 'nipón', 'fsica': 'física', 'fisica': 'física', 'fsico': 'físico',
+    'fsicas': 'físicas', 'nio': 'niño', 'nios': 'niños', 'poca': 'época',
+    'est': 'está', 'as': 'así', 'slo': 'solo', 'quizs': 'quizá',
+    'prctica': 'práctica', 'prcticas': 'prácticas', 'psiquica': 'psíquica',
+    'sinnimo': 'sinónimo', 'prdida': 'pérdida', 'espritu': 'espíritu',
+    'tcnicas': 'técnicas', 'tcnica': 'técnica', 'tcnico': 'técnico',
+    'tcticas': 'tácticas', 'pgina': 'página', 'generacin': 'generación',
+    'caractersticas': 'características', 'bsqueda': 'búsqueda',
+    'federacin': 'federación', 'ejecucin': 'ejecución', 'concentracin': 'concentración',
+    'concentracn': 'concentración', 'elecccin': 'elección', 'comprensin': 'comprensión',
+    'explicacin': 'explicación', 'aplicacin': 'aplicación', 'direccin': 'dirección',
+    'institucin': 'institución', 'asociacin': 'asociación', 'organizacin': 'organización',
+    'posicin': 'posición', 'discucin': 'discusión', 'informacin': 'información',
+    'participacin': 'participación', 'traduccin': 'traducción', 'formacin': 'formación',
+    'duracin': 'duración', 'funcin': 'función', 'contraposicin': 'contraposición',
+    'obligacin': 'obligación', 'prohibicin': 'prohibición', 'respiracin': 'respiración',
+    'confrontacin': 'confrontación', 'seccin': 'sección', 'reduccin': 'reducción',
+    'definicin': 'definición', 'exploracin': 'exploración', 'reaccin': 'reacción',
+    'sntesis': 'síntesis', 'sintesis': 'síntesis', 'histrica': 'histórica',
+    'genealgico': 'genealógico', 'arbol': 'árbol', 'telfono': 'teléfono',
+    'repblica': 'república', 'dolar': 'dólar', 'pennsula': 'península',
+    'asitico': 'asiático', 'mxima': 'máxima', 'eficz': 'eficaz', 'tena': 'tenía',
+    'atrados': 'atraídos', 'higinicas': 'higiénicas', 'trasnportable': 'transportable',
+    'corporl': 'corporal', 'trmico': 'térmico', 'trmicas': 'térmicas', 'nica': 'única',
+    'nico': 'único', 'unico': 'único', 'convirti': 'convirtió', 'realiz': 'realizó',
+    'lleg': 'llegó', 'fund': 'fundó', 'ejerci': 'ejerció', 'decret': 'decretó',
+    'finaliz': 'finalizó', 'invadi': 'invadió', 'actu': 'actuó', 'oscureci': 'oscureció',
+    'comenz': 'comenzó', 'cay': 'cayó', 'influy': 'influyó', 'dedico': 'dedicó',
+    'dirigi': 'dirigió', 'establecio': 'estableció', 'recibiendose': 'recibiéndose',
+    'socializarce': 'socializarse', 'fijandose': 'fijándose', 'convirtiendose': 'convirtiéndose',
+    'metdicamente': 'metódicamente', 'cacmaradera': 'camaradería', 'camaradera': 'camaradería',
+    'respato': 'respeto', 'felz': 'feliz', 'femeneidad': 'feminidad',
+    'corrresponde': 'corresponde', 'basicamente': 'básicamente', 'estto': 'esto',
+    'kuydo': 'kyudo', 'puetazo': 'puñetazo', 'puntapi': 'puntapié',
+    'obvimente': 'obviamente', 'commpleta': 'completa', 'gulpo': 'golpe',
+    'tratandose': 'tratándose', 'creadodo': 'creado', 'traido': 'traído',
+    'trado': 'traído', 'tamplo': 'templo', 'includo': 'incluido', 'ejemlos': 'ejemplos',
+    'vaariedad': 'variedad', 'mosico': 'mosaico', 'isleos': 'isleños',
+    'cultra': 'cultura', 'habre': 'abre', 'presentalo': 'preséntalo',
+    'enseaza': 'enseñanza', 'shorynryu': 'shorinryu', 'kyodokan': 'kyudokan',
+    'sita': 'sitúa', 'lasiones': 'lesiones', 'basdo': 'basado',
+    'recaeramos': 'recaeríamos', 'tengos': 'tengo', 'ees': 'es', 'sse': 'se',
+    'quere': 'querer', 'tico': 'ético', 'croju': 'goju', 'chiosin': 'choshin',
+    'gojushijo': 'gojushiho', 'fukiogata': 'fukyugata', 'an': 'aún', 'ahn': 'aún',
+    'inters': 'interés', 'valentia': 'valentía', 'valenta': 'valentía',
+    'volvi': 'volvió', 'vivi': 'vivió', 'acta': 'actúa', 'suscríbase': 'suscríbase',
+    'presidentede': 'Presidente de', 'xito': 'éxito',
+    'enseanza': 'enseñanza', 'pases': 'países', 'creacin': 'creación',
+    'invasin': 'invasión', 'repeticin': 'repetición', 'ensean': 'enseñan',
+    'enseada': 'enseñada', 'annimo': 'anónimo', 'origenes': 'orígenes',
+    'msica': 'música', 'msculos': 'músculos', 'ste': 'éste',
+    'yintatsu': 'jintatsu', 'krate': 'karate', 'entren': 'entrenó',
+    'extract': 'extrajo', 'discpulo': 'discípulo', 'mbito': 'ámbito',
+    'pblico': 'público', 'pblicas': 'públicas', 'fu': 'fue',
+}
+ORTO_FRASES = [('da a da', 'día a día'), ('el da y la noche', 'el día y la noche'),
+               ('se desarrollo', 'se desarrolló'), ('en esas pocas', 'en esas épocas'),
+               ('como llegar', 'cómo llegar')]
+ORTO_PROTEGE = ('Ping-an', 'Chang-Fu')
+_ORTO_RE = re.compile(
+    r'(?<![A-Za-zÁÉÍÓÚÑáéíóúñü])(' + '|'.join(
+        sorted(ORTO_FIXES, key=len, reverse=True)) + r')(?![A-Za-zÁÉÍÓÚÑáéíóúñü])',
+    re.IGNORECASE)
+_TAG_RE = re.compile(r'<[^>]+>')
+
+
+def _orto_case(w, fix):
+    if w.isupper():
+        return fix.upper()
+    if w[0].isupper():
+        return fix[0].upper() + fix[1:]
+    return fix
+
+
+def orto_fix(txt):
+    """Corrige ortografa en TEXTO PLANO (sin tags ni atributos)."""
+    for a, b in ORTO_FRASES:
+        txt = re.sub(re.escape(a), b, txt, flags=re.IGNORECASE)
+    # nombres con -an real (kata Ping-an) que la clave 'an' corrompera
+    marcados = []
+    for p in ORTO_PROTEGE:
+        if p.lower() in txt.lower():
+            marcados.append(p)
+            txt = re.sub(re.escape(p), f'\x01{len(marcados) - 1}\x01', txt, flags=re.IGNORECASE)
+    txt = _ORTO_RE.sub(lambda m: _orto_case(m.group(0), ORTO_FIXES[m.group(0).lower()]), txt)
+    for i, p in enumerate(marcados):
+        txt = txt.replace(f'\x01{i}\x01', p)
+    return txt
+
+
+def orto_fix_html(txt):
+    """orto_fix preservando tags/atributos (los esconde durante el pase)."""
+    tags = []
+
+    def guarda(m):
+        tags.append(m.group(0))
+        return f'\x00{len(tags) - 1}\x00'
+
+    plano = _TAG_RE.sub(guarda, txt)
+    plano = orto_fix(plano)
+    return re.sub(r'\x00(\d+)\x00', lambda m: tags[int(m.group(1))], plano)
+
+
 JUNK_TEXT = re.compile(
     r'(?i)(error occurred while processing|dise.o: matrixway|to english|'
     r'internet explorer|800 x 600|reciba las novedades|cristian lugani\s*-\s*jean\s+jaures|'
@@ -312,7 +421,7 @@ def emit_table(t):
     out = ['<table class="tabla-notacion"><tbody>']
     for i, r in enumerate(rows):
         tag = 'th' if i == 0 else 'td'
-        out.append('<tr>' + ''.join(f'<{tag}>{esc(get_text(c))}</{tag}>' for c in r) + '</tr>')
+        out.append('<tr>' + ''.join(f'<{tag}>{esc(orto_fix(get_text(c)))}</{tag}>' for c in r) + '</tr>')
     out.append('</tbody></table>')
     return ''.join(out)
 
@@ -334,12 +443,12 @@ def figure_html(page, img, lazy=True, alt_override=None, caption=None):
         page.note(f'IMG_FALTA {src}')
         return CARTELA.format(name=esc(fname))
     page.imgs_ok += 1
-    alt = alt_override if alt_override is not None else collapse(img.attrs.get('alt', '')).strip()
+    alt = orto_fix(alt_override if alt_override is not None else collapse(img.attrs.get('alt', '')).strip())
     ldy = ' loading="lazy"' if lazy else ''
     fig = [f'<figure class="lamina"><img src="{esc(src)}"{ldy} alt="{esc(alt)}">']
     cap = caption if caption is not None else alt
     if cap:
-        fig.append(f'<figcaption>{esc(cap)}</figcaption>')
+        fig.append(f'<figcaption>{esc(orto_fix(cap))}</figcaption>')
     fig.append('</figure>')
     return ''.join(fig)
 
@@ -387,7 +496,7 @@ def content_blocks(page, tds, foms):
 
     def _flush_para():
         nonlocal para, bare, nlinks, in_a
-        txt = ''.join(para)
+        txt = orto_fix_html(''.join(para))
         txt = collapse(re.sub(r'&nbsp;?', ' ', txt)).strip()
         # fila de navegación: ≥2 links y casi nada de texto fuera de ellos,
         # o un solo link con texto entre corchetes ([ Presentación ] etc.)
@@ -593,7 +702,7 @@ def index_emit(page, foms, index_names):
             if target.name not in index_names or target.name == page.name or not target.exists():
                 continue
             seen_h.add(href)
-            label = collapse(get_text(a)) or target.stem
+            label = orto_fix(collapse(get_text(a)) or target.stem)
             lis.append(f'<li><a href="{esc(href)}">{esc(label)}</a></li>')
         if lis:
             page.note('INDICE_DE_INDICES')
@@ -721,7 +830,7 @@ def template(page, main_html, html_dir_prefix, activa='inicio'):
   <div class="masthead-inner">
     <img class="crest" src="{r}assets/marca/kyudokan-crest.png" alt="Kyudokan">
     <div class="titular">
-      <p class="sobre">CENTRO DE ENSEANZA DE KARATE DO</p>
+      <p class="sobre">CENTRO DE ENSEÑANZA DE KARATE DO</p>
       <h1>Estilo Shorinryu Kyudokan de Okinawa</h1>
       <p class="ficha">Sensei Cristian Lugani (8° Dan Kyoshi) - Campana - Bs. As. - Argentina</p>
     </div>
@@ -742,10 +851,10 @@ def template(page, main_html, html_dir_prefix, activa='inicio'):
     <nav class="sitemap-col" aria-label="El dojo">
       <h2>El dojo</h2>
       <a href="{r}index.html">Inicio</a>
-      <a href="{p}presentacion.html">Presentacin</a>
-      <a href="{p}centro_de_ensenanza.html">Centro de Enseanza</a>
+      <a href="{p}presentacion.html">Presentación</a>
+      <a href="{p}centro_de_ensenanza.html">Centro de Enseñanza</a>
       <a href="{p}horarios.html">Horarios</a>
-      <a href="{p}como_llegar.html">Como llegar</a>
+      <a href="{p}como_llegar.html">Cómo llegar</a>
       <a href="{p}servicios.html">Servicios</a>
       <a href="{p}promociones.html">Promociones</a>
       <a href="{p}cupon_de_descuento.html">Cupn de descuento</a>
@@ -753,8 +862,8 @@ def template(page, main_html, html_dir_prefix, activa='inicio'):
     </nav>
     <nav class="sitemap-col" aria-label="Historia y estilo">
       <h2>Historia y estilo</h2>
-      <a href="{p}sintesis_historica.html">Sintesis histrica</a>
-      <a href="{p}arbol_genealogico.html">Arbol genealgico</a>
+      <a href="{p}sintesis_historica.html">Síntesis histórica</a>
+      <a href="{p}arbol_genealogico.html">Árbol genealógico</a>
       <a href="{p}biograf__jintatsu_higa.html">Jintatsu Higa</a>
       <a href="{p}la_familia_higa.html">La familia Higa</a>
       <a href="{p}okinawa.html">Okinawa</a>
@@ -763,8 +872,8 @@ def template(page, main_html, html_dir_prefix, activa='inicio'):
       <a href="{p}que_es_karate.html">Qu es Karate</a>
       <a href="{p}karate_deportivo.html">Karate deportivo</a>
       <a href="{p}karate_tradicional.html">Karate tradicional</a>
-      <a href="{p}acondicionamiento_fisico.html">Acondicionamiento fsico</a>
-      <a href="{p}el_karate_y_el_nino.html">El karate y el nio</a>
+      <a href="{p}acondicionamiento_fisico.html">Acondicionamiento físico</a>
+      <a href="{p}el_karate_y_el_nino.html">El karate y el niño</a>
       <a href="{p}el_karate_y_la_mujer.html">El karate y la mujer</a>
       <a href="{p}credo_del_samurai.html">Credo del samurai</a>
       <a href="{p}ventana_bushido.html">Ventana Bushido</a>
@@ -778,8 +887,8 @@ def template(page, main_html, html_dir_prefix, activa='inicio'):
       <a href="{p}fotos_de_katas.html">Katas</a>
       <a href="{p}fotos_de_okinawa.html">Okinawa</a>
       <a href="{p}fotos_con_maestros.html">Con maestros</a>
-      <a href="{p}fotos_acod__fisico.html">Acondicionamiento fsico</a>
-      <a href="{p}fotos_sintesis_historica.html">Sintesis histrica</a>
+      <a href="{p}fotos_acod__fisico.html">Acondicionamiento físico</a>
+      <a href="{p}fotos_sintesis_historica.html">Síntesis histórica</a>
       <a href="{p}fotos_recr__y_semin_.html">Recitales y seminarios</a>
       <a href="{p}afiches.html">Afiches</a>
       <a href="{p}otras_fotos.html">Otras fotos</a>
@@ -790,7 +899,7 @@ def template(page, main_html, html_dir_prefix, activa='inicio'):
       <a href="{r}todas_las_notic_.shtml">Todas las noticias</a>
       <a href="{r}nacionales.shtml">Nacionales</a>
       <a href="{r}internacionales.shtml">Internacionales</a>
-      <a href="{r}institucion.shtml">Institucin</a>
+      <a href="{r}institucion.shtml">Institución</a>
       <a href="{p}links.html">Links</a>
       <a href="{p}libro_de_visitas.html">Libro de visitas</a>
     </nav>
