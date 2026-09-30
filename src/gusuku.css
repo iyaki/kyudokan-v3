@@ -501,6 +501,18 @@ footer .pie-inner { text-align: center; padding-bottom: 42px; }
   .pared .retrato { flex: 1 1 216px; max-width: 236px; }
 }
 
+@media (min-width: 1920px) {
+  /* Full HD en adelante: un punto y medio más de cuerpo */
+  :root {
+    --fs-titulo: clamp(30px, 3vw, 46px);
+    --fs-h2: 30px;
+    --fs-cuerpo: 18.5px;
+    --fs-secundario: 16.5px;
+  }
+  .pagina, .hoja-foto { max-width: 1000px; }
+  .linaje .nota { font-size: 17.5px; }
+}
+
 /* --- móvil --- */
 @media (max-width: 760px) {
   body { font-size: var(--fs-cuerpo); }
