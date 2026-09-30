@@ -571,6 +571,17 @@ def content_blocks(page, tds, foms):
                 page.links_out.add(target)
                 final_href = target
             nlinks += 1
+            if link_prohibido(final_href):
+                # etapa: contenido sin enlace hacia galeras/noticias/etc.
+                if any(isinstance(x, Node) and x.tag in ('img', 'p') for x in walk(n)):
+                    for c in n.children:
+                        rec(c)
+                    return
+                para.append('<a>')
+                for c in n.children:
+                    rec(c)
+                para.append('</a>')
+                return
             local_ok = final_href.lower().startswith(('http', 'mailto')) or \
                 (page.path.parent / posixpath.normpath(final_href)).exists()
             if not local_ok:
@@ -615,6 +626,20 @@ def content_blocks(page, tds, foms):
 
 BACK_LABEL = 'Volver al inicio'
 
+# Enlaces fuera de esta etapa (pedido del dueño, 2026-09-30): su contenido
+# existe pero no se enlaza. El filtro aplica a riel, sitemap, nav de galeras
+# y anchors del cuerpo.
+NO_LINK_NAMES = {
+    'fotos.html', 'otras_fotos.html', 'noticias.html', 'todas_las_notic_.shtml',
+    'nacionales.shtml', 'internacionales.shtml', 'institucion.shtml',
+    'libro_de_visitas.html', 'links.html', 'promociones.html',
+}
+
+
+def link_prohibido(href):
+    n = posixpath.basename(posixpath.normpath(href or '')).lower()
+    return n in NO_LINK_NAMES or n.startswith(('fotos', 'foto_', 'afiches', 'afiche_'))
+
 
 def hoja_emit(page, refs, index_names):
     imgs = content_imgs(find_body(page.tree))
@@ -641,6 +666,8 @@ def hoja_emit(page, refs, index_names):
             continue
         if key != 'cerrar' and not (page.path.parent / href).exists():
             page.note(f'NAV_FALTA {key} {href}')
+            continue
+        if link_prohibido(href):
             continue
         page.links_out.add(href)
         links.append(f'<a href="{esc(href)}">{key.capitalize()}</a>')
@@ -686,7 +713,7 @@ def index_emit(page, foms, index_names):
         if not caption:
             caption = ''
         fig = figure_html(page, img, lazy=True)
-        if href and target_ok:
+        if href and target_ok and not link_prohibido(href):
             items.append(f'<a href="{esc(href)}">{fig}</a>')
         else:
             items.append(fig)
@@ -702,6 +729,8 @@ def index_emit(page, foms, index_names):
             if target.name not in index_names or target.name == page.name or not target.exists():
                 continue
             seen_h.add(href)
+            if link_prohibido(href):
+                continue
             label = orto_fix(collapse(get_text(a)) or target.stem)
             lis.append(f'<li><a href="{esc(href)}">{esc(label)}</a></li>')
         if lis:
@@ -770,8 +799,6 @@ ESTACIONES = (
     ('centro_de_ensenanza', 'Centro de Enseñanza', 'centro_de_ensenanza.html'),
     ('horarios', 'Horarios', 'horarios.html'),
     ('como_llegar', 'Cómo llegar', 'como_llegar.html'),
-    ('fotos', 'Fotos', 'fotos.html'),
-    ('noticias', 'Noticias', 'noticias.html'),
     ('contacto', 'Contacto', 'contacto.html'),
 )
 
@@ -854,9 +881,8 @@ def template(page, main_html, html_dir_prefix, activa='inicio'):
       <a href="{p}presentacion.html">Presentación</a>
       <a href="{p}centro_de_ensenanza.html">Centro de Enseñanza</a>
       <a href="{p}horarios.html">Horarios</a>
-      <a href="{p}como_llegar.html">Cómo llegar</a>
+      <a href="{p}como_llegar.html">Como llegar</a>
       <a href="{p}servicios.html">Servicios</a>
-      <a href="{p}promociones.html">Promociones</a>
       <a href="{p}cupon_de_descuento.html">Cupn de descuento</a>
       <a href="{p}contacto.html">Contacto</a>
     </nav>
@@ -878,30 +904,6 @@ def template(page, main_html, html_dir_prefix, activa='inicio'):
       <a href="{p}credo_del_samurai.html">Credo del samurai</a>
       <a href="{p}ventana_bushido.html">Ventana Bushido</a>
       <a href="{p}pensamiento.html">Pensamiento</a>
-    </nav>
-    <nav class="sitemap-col" aria-label="El archivo">
-      <h2>El archivo</h2>
-      <a href="{p}fotos.html">Fotos</a>
-      <a href="{p}fotos_de_torneos.html">Torneos <small>1988–2000</small></a>
-      <a href="{p}fotos_de_exhibiciones.html">Exhibiciones</a>
-      <a href="{p}fotos_de_katas.html">Katas</a>
-      <a href="{p}fotos_de_okinawa.html">Okinawa</a>
-      <a href="{p}fotos_con_maestros.html">Con maestros</a>
-      <a href="{p}fotos_acod__fisico.html">Acondicionamiento físico</a>
-      <a href="{p}fotos_sintesis_historica.html">Síntesis histórica</a>
-      <a href="{p}fotos_recr__y_semin_.html">Recitales y seminarios</a>
-      <a href="{p}afiches.html">Afiches</a>
-      <a href="{p}otras_fotos.html">Otras fotos</a>
-    </nav>
-    <nav class="sitemap-col" aria-label="Noticias">
-      <h2>Noticias</h2>
-      <a href="{p}noticias.html">Noticias</a>
-      <a href="{r}todas_las_notic_.shtml">Todas las noticias</a>
-      <a href="{r}nacionales.shtml">Nacionales</a>
-      <a href="{r}internacionales.shtml">Internacionales</a>
-      <a href="{r}institucion.shtml">Institución</a>
-      <a href="{p}links.html">Links</a>
-      <a href="{p}libro_de_visitas.html">Libro de visitas</a>
     </nav>
     <div class="sitemap-col">
       <h2>El dojo en Campana</h2>
