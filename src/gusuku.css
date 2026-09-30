@@ -145,9 +145,6 @@ main { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
 
 .bienvenida {
   padding: 64px 0 30px;
-  display: flex;
-  align-items: center;
-  gap: clamp(24px, 5vw, 64px);
 }
 .bienvenida .display {
   font-family: 'Shippori Mincho', serif;
@@ -155,16 +152,17 @@ main { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
   font-size: var(--fs-display);
   line-height: 1.02;
   letter-spacing: 0.01em;
+  display: flex;
+  align-items: center;
+  gap: clamp(18px, 4vw, 48px);
 }
-.bienvenida .retrato { width: clamp(170px, 16vw, 220px); flex: none; }
-.bienvenida .retrato figcaption { letter-spacing: 0.08em; }
+.shisa {
+  width: clamp(44px, 5vw, 72px);
+  height: auto;
+  flex: none;
+}
 .bienvenida .display::after {
-  content: '';
-  display: block;
-  width: 148px;
-  height: 6px;
-  margin-top: 26px;
-  background: var(--mar);
+  content: none;
 }
 
 /* --- la escuela: texto + retrato del sensei --- */
@@ -557,16 +555,10 @@ footer .pie-inner { text-align: center; padding-bottom: 42px; }
   .subnav a { padding: 8px 2px; }
   .hoja-foto nav a { padding: 8px 2px; }
   .vuelta a { display: inline-block; padding: 8px 0; }
-  .bienvenida {
-    padding: 44px 0 16px;
-    flex-direction: column-reverse;
-    align-items: flex-start;
-    gap: 20px;
-  }
-  .bienvenida .retrato { width: 200px; margin-left: 4px; }
-  .bienvenida .display::after { margin-top: 16px; }
+  .bienvenida { padding: 44px 0 16px; }
+  .bienvenida .display { font-size: clamp(38px, 11vw, 52px); gap: 12px; }
+  .shisa { width: 40px; }
   .escuela { grid-template-columns: 1fr; gap: 34px; padding: 30px 0 54px; }
-  .escuela .retrato { max-width: 300px; }
   .olas { height: 40px; }
   .pared { gap: 24px; }
   .pared .retrato img { height: 230px; padding: 8px; }
