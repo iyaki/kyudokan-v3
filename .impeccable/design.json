@@ -4,28 +4,30 @@
   "title": "Design System: Kyudokan Campana — Gusuku",
   "extensions": {
     "colorMeta": {
-      "cal": { "role": "primary", "displayName": "Encalado", "canonical": "#E9E1D0", "tonalRamp": ["#F6F1E6", "#E9E1D0", "#D9CFBA"] },
-      "tinta": { "role": "neutral", "displayName": "Tinta", "canonical": "#2A2520", "tonalRamp": ["#5C5347", "#2A2520", "#171310"] },
-      "teja": { "role": "secondary", "displayName": "Teja de Shuri", "canonical": "#A63E1C", "tonalRamp": ["rgba(166,62,28,.18)", "#A63E1C", "#7C2C12"] },
+      "cal": { "role": "primary", "displayName": "Encalado", "canonical": "#E9E1D0", "tonalRamp": ["#F6F1E6", "#E9E1D0", "#DBD1BE"] },
+      "tinta": { "role": "neutral", "displayName": "Tinta", "canonical": "#2A2520", "tonalRamp": ["#5C5347", "#3F3831", "#2A2520", "#171310"] },
+      "teja": { "role": "secondary", "displayName": "Teja de Shuri", "canonical": "#A63E1C", "tonalRamp": ["rgba(166,62,28,.18)", "#A63E1C", "#8F2F10", "#7C2C12"] },
       "mar": { "role": "secondary", "displayName": "Mar Kerama", "canonical": "#0E668C", "tonalRamp": ["#3F94AE", "#0E668C", "#0B5878"] },
-      "hueso": { "role": "neutral", "displayName": "Hueso", "canonical": "#F6F1E6", "tonalRamp": ["#FFFDF7", "#F6F1E6", "#D9CFBA"] }
+      "hueso": { "role": "neutral", "displayName": "Hueso", "canonical": "#F6F1E6", "tonalRamp": ["#FFFDF7", "#F6F1E6", "#DBD1BE"] }
     },
     "typographyMeta": {
-      "display": { "displayName": "Mincho Display", "purpose": "Bienvenidos, h1 de páginas y marca; Shippori Mincho 600 self-hosted." },
-      "body": { "displayName": "Gótica Body", "purpose": "Cuerpo verbatim 2001; Zen Kaku Gothic New 400 self-hosted." },
-      "label": { "displayName": "Gótica Sello", "purpose": "Riel de navegación, sobre, ficha, figcaptions y labels de sitemap: 700 uppercase con tracking de sello." }
+      "display": { "displayName": "Mincho Display", "purpose": "«Bienvenidos» en el home; Shippori Mincho 600, --fs-display clamp(52px, 9vw, 104px)." },
+      "titulo": { "displayName": "Mincho Título", "purpose": "h1 del masthead y títulos de página; --fs-titulo clamp(28px, 4.5vw, 42px) (46px en FHD+), balance." },
+      "h2": { "displayName": "Mincho Sección", "purpose": "h2 de secciones del home; --fs-h2 28px (30px en FHD+)." },
+      "body": { "displayName": "Gótica Body", "purpose": "Cuerpo corregido ortográficamente; Zen Kaku 400, --fs-cuerpo 16.5px (18.5 en FHD+, 16 piso en mobile), measure 68ch, pretty." },
+      "label": { "displayName": "Gótica Sello", "purpose": "Riel, subnav e ítems sin destino: 700, --fs-label 12.5px, uppercase, tracking 0.08em (0.2em el sello del masthead)." }
     },
     "shadows": [
-      { "name": "pasapartu", "value": "0 2px 14px rgba(42,37,32,.16), 0 10px 34px rgba(42,37,32,.10)", "purpose": "Tarjeta/retrato sobre el encalado: sombra corta de sol, no de habitación." },
-      { "name": "sobre-el-mar", "value": "0 3px 18px rgba(11,40,56,.4)", "purpose": "Láminas montadas sobre banda de mar." }
+      { "name": "pasapartu", "value": "0 2px 14px rgba(42,37,32,.16), 0 10px 34px rgba(42,37,32,.10)", "purpose": "Tarjeta/retrato sobre el encalado: sombra corta de sol." }
     ],
     "motion": [
-      { "name": "revelar", "value": "ease .5s", "purpose": "Láminas suben 10px y aparecen al entrar en viewport; failsafe 3s." },
+      { "name": "revelar", "value": "ease .5s", "purpose": "Láminas suben 10px al entrar en viewport; failsafe 3s; respeta prefers-reduced-motion." },
       { "name": "estado", "value": "ease-out .2s", "purpose": "Hovers de riel, enlaces y tarjetas." }
     ],
     "breakpoints": [
       { "name": "md", "value": "760px" },
-      { "name": "sm", "value": "420px" }
+      { "name": "lg", "value": "1024px" },
+      { "name": "fhd", "value": "1920px" }
     ]
   },
   "components": [
@@ -33,25 +35,33 @@
       "name": "Masthead encalado",
       "kind": "header",
       "refersTo": "masthead",
-      "description": "Crest de caligrafía vertical + sello superior en teja + nombre en mincho + ficha del dojo; la versión interna es compacta.",
-      "html": "<header class=\"masthead\"><div class=\"masthead-inner\"><img class=\"crest\" src=\"assets/marca/kyudokan-crest.png\" alt=\"Kyudokan\"><div class=\"titular\"><p class=\"sobre\">CENTRO DE ENSEANZA DE KARATE DO</p><h1>Estilo Shorinryu Kyudokan de Okinawa</h1><p class=\"ficha\">CRISTIAN LUGANI - Jean Jaures 983</p></div></div></header>",
-      "css": ".masthead-inner { max-width: 1080px; margin: 0 auto; padding: 34px 28px 26px; display: flex; align-items: center; gap: 30px; } .crest { width: 84px; } .titular .sobre { font: 700 13.5px/1 'Zen Kaku Gothic New', sans-serif; letter-spacing: .32em; color: #A63E1C; text-transform: uppercase; } .titular h1 { font: 600 clamp(26px,4.4vw,44px)/1.12 'Shippori Mincho', serif; } .titular .ficha { font: 700 13.5px/1.5 'Zen Kaku Gothic New', sans-serif; letter-spacing: .06em; color: #5C5347; }"
+      "description": "Crest de caligrafía vertical + sello superior en teja (nombre del dojo) + título mincho + ficha del sensei; idéntico en home e internas.",
+      "html": "<header class=\"masthead\"><div class=\"masthead-inner\"><img class=\"crest\" src=\"assets/marca/kyudokan-crest.png\" alt=\"Kyudokan\"><div class=\"titular\"><p class=\"sobre\">KARATE DOJO CAMPANA - CENTRO DE ENSEÑANZA DE KARATE DO Y KOBUDO</p><h1>Okinawa Shorin-Ryu Karate-Do Kyudokan Federation Argentina</h1><p class=\"ficha\">Sensei Cristian Lugani (8° Dan Kyoshi) - Campana - Bs. As. - Argentina</p></div></div></header>",
+      "css": ".masthead-inner { max-width: 1080px; margin: 0 auto; padding: 34px 28px 26px; display: flex; align-items: center; gap: 30px; } .crest { width: 84px; } .titular .sobre { font: 700 12.5px/1 'Zen Kaku Gothic New', sans-serif; letter-spacing: .2em; color: #A63E1C; text-transform: uppercase; } .titular h1 { font: 600 var(--fs-titulo)/1.15 'Shippori Mincho', serif; text-wrap: balance; } .titular .ficha { font: 700 13.5px/1.5 'Zen Kaku Gothic New', sans-serif; letter-spacing: .06em; font-variant-numeric: tabular-nums; color: #5C5347; }"
     },
     {
       "name": "Riel de navegación",
       "kind": "nav",
       "refersTo": "riel",
-      "description": "Banda translúcida con las secciones en mayúsculas espaciadas; la activa va en teja (aria-current).",
-      "html": "<nav class=\"riel\"><div class=\"riel-inner\"><a href=\"index.html\" aria-current=\"page\">Home</a><span class=\"sep\">●</span><a href=\"html/presentacion.html\">Presentacin</a></div></nav>",
-      "css": ".riel { border-bottom: 1px solid rgba(42,37,32,.25); background: rgba(246,241,230,.55); } .riel-inner { max-width: 1080px; margin: 0 auto; padding: 13px 28px; display: flex; flex-wrap: wrap; align-items: center; } .riel a { font: 700 12.5px/1 'Zen Kaku Gothic New', sans-serif; letter-spacing: .09em; text-transform: uppercase; text-decoration: none; color: #2A2520; padding: 2px 12px; } .riel a[aria-current] { color: #A63E1C; } .riel .sep { color: #A63E1C; font-size: 9px; }"
+      "description": "Banda translúcida con las secciones; la activa va en teja (aria-current). Mobile: sticky, fila deslizable con fade de affordance y pestaña activa.",
+      "html": "<nav class=\"riel\"><div class=\"riel-inner\"><a href=\"index.html\" aria-current=\"page\">Inicio</a><a href=\"html/presentacion.html\">Presentación</a></div></nav>",
+      "css": ".riel { border-bottom: 1px solid rgba(42,37,32,.25); background: rgba(246,241,230,.55); } .riel-inner { max-width: 1080px; margin: 0 auto; padding: 13px 28px; display: flex; flex-wrap: wrap; justify-content: center; } .riel a { font: 700 var(--fs-label)/1 'Zen Kaku Gothic New', sans-serif; letter-spacing: .08em; text-transform: uppercase; text-decoration: none; color: #2A2520; padding: 2px 12px; } .riel a[aria-current] { color: #A63E1C; } @media (max-width: 760px) { .riel { position: sticky; top: 0; z-index: 5; } .riel-inner { flex-wrap: nowrap; overflow-x: auto; scroll-snap-type: x proximity; scrollbar-width: none; -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 30px), transparent); mask-image: linear-gradient(90deg, #000 calc(100% - 30px), transparent); } .riel-inner.fin { -webkit-mask-image: none; mask-image: none; } .riel a { flex: none; padding: 14px 10px; border-bottom: 2px solid transparent; } .riel a[aria-current] { border-bottom-color: #A63E1C; } }"
+    },
+    {
+      "name": "Subnav de subsecciones",
+      "kind": "nav",
+      "refersTo": "subnav",
+      "description": "Fila de links del legacy inmediatamente bajo el título de página, unificada; ítems sin destino como texto muerto.",
+      "html": "<nav class=\"subnav\" aria-label=\"Subsecciones\"><a href=\"karate_tradicional.html\">Karate Tradicional</a> · <a href=\"karate_deportivo.html\">Karate Deportivo</a> <span class=\"sin-destino\">Que son los Katas</span></nav>",
+      "css": ".subnav { display: flex; flex-wrap: wrap; gap: 4px 8px; margin: -8px 0 26px; padding-bottom: 14px; border-bottom: 1px solid rgba(42,37,32,.25); } .subnav a { font: 700 var(--fs-label)/1 'Zen Kaku Gothic New', sans-serif; letter-spacing: .08em; text-transform: uppercase; color: #0E668C; text-decoration: none; } .subnav a:hover { color: #A63E1C; } .subnav > * + *::before { content: '· '; color: #A63E1C; } .subnav .sin-destino { font: 700 var(--fs-label)/1 'Zen Kaku Gothic New', sans-serif; text-transform: uppercase; color: #5C5347; }"
     },
     {
       "name": "Banda seigaiha bajo tejas",
       "kind": "custom",
       "refersTo": null,
-      "description": "Curso de tejas escalopadas (SVG) coronando el mar Kerama en olas concéntricas (SVG procedural). El mar es identidad de fondo, no foto.",
-      "html": "<div class=\"mar\" aria-hidden=\"true\"><div class=\"teja\"></div><div class=\"olas\"></div></div>",
-      "css": ".teja { height: 11px; background: url(\"data:image/svg+xml,...\") repeat-x; background-size: 26px 11px; } .olas { height: 104px; background: #0E668C url(\"data:image/svg+xml,...\") repeat; background-size: 40px 20px; }"
+      "description": "Curso de tejas escalopadas (SVG) coronando 2 filas de olas concéntricas en mar Kerama (40px). El mar como identidad de fondo.",
+      "html": "<div aria-hidden=\"true\"><div class=\"teja\"></div><div class=\"olas\"></div></div>",
+      "css": ".teja { height: 11px; background: url(\"data:image/svg+xml,...\") repeat-x; background-size: 26px 11px; } .olas { height: 40px; background: #0E668C url(\"data:image/svg+xml,...\") repeat; background-size: 40px 20px; }"
     },
     {
       "name": "Lámina con paspartú",
@@ -59,7 +69,7 @@
       "refersTo": "lamina",
       "description": "Foto del archivo montada como está: paspartú hueso, hairline, sombra de sol; reveal al entrar en viewport.",
       "html": "<figure class=\"lamina\"><img src=\"html/foto.jpg\" alt=\"\"><figcaption>Pie</figcaption></figure>",
-      "css": ".lamina { background: #F6F1E6; border: 1px solid rgba(42,37,32,.25); box-shadow: 0 2px 14px rgba(42,37,32,.16), 0 10px 34px rgba(42,37,32,.10); padding: 10px 10px 12px; width: fit-content; max-width: 100%; transition: opacity .5s ease, transform .5s ease; } .lamina.pre { opacity: 0; transform: translateY(10px); } .lamina figcaption { font: 700 12px/1.4 'Zen Kaku Gothic New', sans-serif; letter-spacing: .1em; text-transform: uppercase; color: #5C5347; padding-top: 10px; }"
+      "css": ".lamina { background: #F6F1E6; border: 1px solid rgba(42,37,32,.25); box-shadow: 0 2px 14px rgba(42,37,32,.16), 0 10px 34px rgba(42,37,32,.10); padding: 10px 10px 12px; width: fit-content; max-width: 100%; transition: opacity .5s ease, transform .5s ease; } .lamina.pre { opacity: 0; transform: translateY(10px); } .lamina figcaption { font: 700 12px/1.4 'Zen Kaku Gothic New', sans-serif; letter-spacing: .08em; color: #5C5347; padding-top: 10px; }"
     },
     {
       "name": "Cartela de falta",
@@ -67,39 +77,47 @@
       "refersTo": "falta",
       "description": "La ausencia se declara con tramo punteado teja y el nombre del archivo original; jamás se rellena.",
       "html": "<div class=\"falta\"><strong>Falta en el archivo</strong>Esta fotografía no está en la copia local del sitio 2001.<code>html/foto.jpg</code></div>",
-      "css": ".falta { border: 1px dashed #A63E1C; background: rgba(246,241,230,.65); padding: 16px 18px; font-size: 14px; max-width: 440px; } .falta strong { display: block; font: 700 12px/1 'Zen Kaku Gothic New', sans-serif; letter-spacing: .14em; text-transform: uppercase; color: #A63E1C; margin-bottom: 6px; } .falta code { font-size: 12px; color: #5C5347; }"
+      "css": ".falta { border: 1px dashed #A63E1C; background: rgba(246,241,230,.65); padding: 16px 18px; font-size: 14px; max-width: 440px; } .falta strong { display: block; font: 700 12px/1 'Zen Kaku Gothic New', sans-serif; letter-spacing: .14em; text-transform: uppercase; color: #A63E1C; margin-bottom: 6px; } .falta code { font-size: 12px; color: #5C5347; overflow-wrap: anywhere; }"
     },
     {
       "name": "Pared del linaje",
       "kind": "custom",
       "refersTo": null,
-      "description": "Banda de revoque poroso con los retratos de los maestros en paspartú y el fénix de Shuri recortado del textil como fantasma (opacity .16).",
-      "html": "<section class=\"linaje\"><div class=\"linaje-inner\"><h2>Linaje Higa</h2><div class=\"pared\"><figure class=\"retrato\">…</figure></div></div></section>",
-      "css": ".linaje { background: #D9CFBA url('assets/texturas/muro.jpg') repeat; position: relative; overflow: hidden; } .linaje::after { content: ''; position: absolute; right: 2%; bottom: 4%; width: min(380px, 42vw); aspect-ratio: 440 / 230; background: url('assets/marca/fenix-shuri.png') no-repeat right bottom / contain; opacity: .16; } .pared { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 236px)); gap: 34px; }"
+      "description": "Flex de retratos con paspartú ceñido y nombres fuera del marco; ancho uniforme, proporciones naturales, una sola línea; fénix de Shuri como fantasma.",
+      "html": "<section class=\"linaje\"><div class=\"linaje-inner\"><h2>Linaje Higa</h2><div class=\"pared\"><figure class=\"retrato\"><img src=\"assets/fotos/koyu_higa.jpg\" alt=\"Koyu Higa\"><figcaption><b>Koyu Higa</b> · Kaichou <span>Actual kaichou de la Kyudokan.</span></figcaption></figure></div></div></section>",
+      "css": ".linaje { background: #DBD1BE url('assets/texturas/muro.jpg') repeat; position: relative; overflow: hidden; } .linaje::after { content: ''; position: absolute; right: 2%; bottom: 4%; width: min(380px, 42vw); aspect-ratio: 440/230; background: url('assets/marca/fenix-shuri.png') no-repeat right bottom / contain; opacity: .16; } .pared { display: flex; flex-wrap: wrap; justify-content: center; gap: 34px; } @media (min-width: 1024px) { .pared { flex-wrap: nowrap; } .pared .retrato { flex: 1 1 216px; max-width: 236px; } }"
     },
     {
       "name": "Pie de muro con sitemap",
       "kind": "footer",
       "refersTo": null,
-      "description": "Curso de tejas + banda de muro con tres columnas (El dojo / El archivo / El dojo en Campana) y línea legal.",
-      "html": "<footer><div class=\"teja\"></div><div class=\"sitemap\"><nav class=\"sitemap-col\"><h2>El dojo</h2>…</nav>…</div><div class=\"legal\">…</div></footer>",
-      "css": "footer { background: #D9CFBA url('assets/texturas/muro.jpg') repeat; } .sitemap { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 36px; } .sitemap-col h2 { font: 700 12.5px/1 'Zen Kaku Gothic New', sans-serif; letter-spacing: .18em; text-transform: uppercase; color: #A63E1C; } .legal { max-width: 1080px; margin: 0 auto; border-top: 1px solid rgba(42,37,32,.25); font-size: 12.5px; color: #5C5347; }"
+      "description": "Curso de olas + banda de muro con tres columnas (El dojo / Historia y estilo / El dojo en Campana con teléfono y redes) y línea legal con crédito iyaki.",
+      "html": "<footer><div class=\"olas\"></div><div class=\"sitemap\"><nav class=\"sitemap-col\"><h2>El dojo</h2></nav></div><div class=\"legal\"><p class=\"fuente\">Datos e imágenes: sitio 2001 · Diseño: <a href=\"https://iyaki.ar\">iyaki</a></p></div></footer>",
+      "css": "footer { background: #DBD1BE url('assets/texturas/muro.jpg') repeat; } .sitemap { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 36px 28px; } .sitemap-col h2 { font: 700 12.5px/1 'Zen Kaku Gothic New', sans-serif; letter-spacing: .18em; text-transform: uppercase; color: #8F2F10; } .sitemap-col a { display: block; padding: 4px 0; font-size: 14.5px; color: #2A2520; } .legal { border-top: 1px solid rgba(42,37,32,.25); font-size: 12.5px; color: #3F3831; }"
+    },
+    {
+      "name": "Shisas ilustrados",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "GIFs 2001 mejorados (6× Lanczos + cuantización plana = look ilustrado) flanqueando «Bienvenidos», con flourish de tejas debajo.",
+      "html": "<h2 class=\"display\"><img class=\"shisa\" src=\"assets/marca/shisa-izq.png\" alt=\"\">Bienvenidos<img class=\"shisa\" src=\"assets/marca/shisa-der.png\" alt=\"\"></h2><div class=\"teja-flourish\"></div>",
+      "css": ".display { font: 600 var(--fs-display)/1.02 'Shippori Mincho', serif; display: flex; align-items: center; gap: clamp(18px, 4vw, 48px); } .shisa { width: clamp(44px, 5vw, 72px); height: auto; flex: none; } .teja-flourish { width: 78px; height: 11px; margin: 14px 0 22px; background: url(\"data:image/svg+xml,...\") repeat-x; background-size: 26px 11px; }"
     }
   ],
   "narrative": {
     "northStar": "Gusuku — la isla como prueba",
-    "overview": "El sitio son los muros encalados de un gusuku de Okinawa bajo el sol de la isla. El revoque calizo procedural muestra grano de llana y poros de coral; los cursos de tejas rojas de Shuri coronan las bandas; el mar Kerama aparece como banda de olas seigaiha, no como foto de folleto. Los shisas guardianes flanquean Bienvenidos, la caligrafía 空手道 del archivo se funde con el muro por multiply, y el fénix tejido del castillo reaparece como fantasma en la pared del linaje, donde los maestros Higa cuelgan con paspartú de hueso. El contenido de 2001 se presenta verbatim, byte a byte. Teja y mar son acentos funcionales; las fotos jamás se tiñen.",
+    "overview": "El sitio son los muros encalados de un gusuku de Okinawa bajo el sol de la isla. El revoque calizo procedural muestra grano de llana y poros de coral; los cursos de tejas rojas de Shuri coronan las bandas; el mar Kerama aparece como banda de olas seigaiha, no como foto de folleto. Los shisas 2001, mejorados con tratamiento ilustrado, flanquean Bienvenidos; la caligrafía 空手道 del archivo se funde con el muro por multiply, y el fénix tejido del castillo reaparece como fantasma en la pared del linaje, donde los maestros Higa cuelgan con paspartú de hueso. El texto del 2001 se presenta con ortografía corregida, sin reescribir la prosa. Teja y mar son acentos funcionales; las fotos jamás se tiñen.",
     "keyCharacteristics": [
       "Encalado procedural (encalado/muro.jpg) con grano, manchas de llana y poros: material, no pintura.",
-      "Cursos de tejas escalopadas SVG como corona de bandas y flourish de secciones.",
+      "Cursos de tejas escalopadas SVG como corona de bandas y flourish bajo títulos.",
       "Banda seigaiha en mar Kerama bajo las tejas: identidad como fondo, no como museo de fotos.",
-      "Shisas 2001 recortados (sin teñir) flanqueando el título; fénix de Shuri recortado como marca de agua.",
+      "Shisas 2001 con tratamiento ilustrado (6× + cuantización plana) flanqueando el título.",
       "Caligrafía kanji real integrada con mix-blend-mode multiply.",
       "Falta = cartela honesta rotulada con nombre de archivo; jamás placeholder."
     ],
     "rules": [
-      { "name": "La Regla del Acento Funcional", "body": "La teja marca sellos, flourish, hover y foco; el mar marca enlaces y la banda. Si no está marcando nada, no lleva acento.", "section": "colors" },
-      { "name": "La Regla Contenido Verbatim", "body": "El texto de 2001 queda byte a byte; sólo TITULO_FIXES toca title/h1. Lo que dice el archivo, dice el muro.", "section": "typography" },
+      { "name": "La Regla del Acento Funcional", "body": "La teja marca sellos, flourish, hover y foco; el mar marca enlaces y la banda. Si no está marcando nada, no lleva acento. Labels pequeños sobre muro usan teja-horno #8F2F10.", "section": "colors" },
+      { "name": "La Regla Contenido Corregido", "body": "El texto de 2001 se corrige ortográficamente (ORTO_FIXES en tools/restyle.py) pero no se reescribe la prosa. Lo que dice el archivo, dice el muro.", "section": "typography" },
       { "name": "La Regla del Material Procedural", "body": "Los revoques vienen de tools/texturas_gusuku.py; tejas y seigaiha son SVG. La única caligrafía es el archivo real.", "section": "elevation" },
       { "name": "La Regla de la Foto Intacta", "body": "Las fotos se montan como están, con paspartú hueso; recortar sí, teñir jamás.", "section": "elevation" }
     ],
@@ -108,14 +126,14 @@
       "Do coronar bandas con el curso de tejas antes de cambiar de material.",
       "Do montar fotos con paspartú hueso y hairline; rotular ausencias con .falta.",
       "Do reservar teja/mar para lo funcional: sellos, estados, enlaces, bandas de identidad.",
-      "Do presentar el cuerpo verbatim 2001; animar sólo el reveal, respetando prefers-reduced-motion."
+      "Do presentar el cuerpo con ortografía corregida; animar sólo el reveal, respetando prefers-reduced-motion."
     ],
     "donts": [
       "Don't teñir, filtrar o modernizar fotos del archivo.",
       "Don't usar el blanco liso de galería: el encalado siempre lleva textura.",
-      "Don't inflar el home con fotos grandes de archivo: la identidad entra como fondo y motivo, no como museo.",
+      "Don't inflar el home con fotos grandes de archivo: la identidad entra como fondo y motivo.",
       "Don't rellenar una foto ausente: siempre cartela honesta.",
-      "Don't reescribir el cuerpo verbatim de 2001 (sólo TITULO_FIXES en h1/title).",
+      "Don't reescribir la prosa de 2001 (sólo corrección ortográfica vía ORTO_FIXES).",
       "Don't sumar sombras de UI genéricas: la sombra es de sol sobre muro, corta y cálida."
     ]
   }
