@@ -114,6 +114,7 @@ img { max-width: 100%; display: block; }
   padding: 13px 28px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 4px 0;
   align-items: center;
 }
