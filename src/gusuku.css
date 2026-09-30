@@ -240,8 +240,8 @@ main { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
   font-size: 27px;
 }
 .linaje .nota {
-  color: var(--tinta-2);
-  font-size: 15px;
+  color: var(--tinta);
+  font-size: 16px;
   max-width: 62ch;
   margin: 8px 0 34px;
 }
@@ -272,16 +272,16 @@ main { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
   width: 100%;
   height: auto;
 }
-.pared .retrato figcaption { padding: 0; text-align: center; max-width: 216px; }
+.pared .retrato figcaption { padding: 0; text-align: center; max-width: 216px; color: var(--tinta); font-size: 14px; }
 .pared .retrato figcaption span {
   display: block;
   margin-top: 8px;
   font-weight: 400;
-  font-size: 13.5px;
+  font-size: 15px;
   letter-spacing: normal;
   text-transform: none;
-  line-height: 1.5;
-  color: var(--tinta-2);
+  line-height: 1.55;
+  color: #3f3831;
   max-width: 240px;
 }
 .pared .falta { max-width: 216px; height: 274px; display: flex; flex-direction: column; justify-content: center; font-size: 12.5px; }
