@@ -13,9 +13,9 @@ Higa, y nada de esto lo puede declarar un gimnasio vecino. El contenido del siti
 - **Encalado `--cal #E9E1D0`** — revoque calizo procedural (`tools/texturas_gusuku.py`:
   grano de llana + manchas + poros de coral, tileable). Nunca blanco plano de museo:
   el material tiene textura visible y temperatura.
-- **Muro `--cal-2 #D9CFBA`** (`muro.jpg`) — el mismo revoque más oscuro y poroso;
+- **Muro `--cal-2 #DBD1BE`** (`muro.jpg`, aclarado para legibilidad: peor caso de contraste ≥5:1) — el mismo revoque más oscuro y poroso;
   banda de la pared del linaje y del pie.
-- **Teja `--teja #A63E1C`** — los techos rojos de Shuri. Aparece como curso de tejas
+- **Teja `--teja #A63E1C`** (labels pequeños sobre muro usan teja-horno `#8F2F10`) — los techos rojos de Shuri. Aparece como curso de tejas
   escalopadas (SVG data-URI, jamás foto) coronando bandas y como flourish de secciones.
 - **Mar Kerama `--mar #0E668C`** — el mar real de la isla: enlaces, banda *seigaiha*
   (olas concéntricas SVG procedural) bajo el curso de tejas.
@@ -54,8 +54,9 @@ Higa, y nada de esto lo puede declarar un gimnasio vecino. El contenido del siti
 Home: masthead (crest + nombre + ficha) → riel de navegación → Bienvenidos (shisas) →
 La Escuela (texto verbatim + tarjeta de Lugani en Shuri + 空手道) → banda de mar bajo
 tejas → pared del linaje (retratos Higa + fénix) → pie de muro con tejas.
-Internas: mismo masthead compacto, riel con estación activa en teja, contenido y pie
-con sitemap (El dojo / El archivo / El dojo en Campana).
+Internas: mismo masthead, riel con estación activa en teja, subnav de subsecciones bajo el
+título, contenido y pie de muro con sitemap (El dojo / Historia y estilo / El dojo en Campana).
+Mobile: riel sticky deslizable con fade de affordance. FHD+: escala tipográfica +1.5px.
 
 ## Anti-referencias (mundos rechazados)
 
