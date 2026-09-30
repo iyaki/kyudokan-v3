@@ -333,21 +333,8 @@ footer .pie-inner { text-align: center; padding-bottom: 42px; }
 }
 .skip:focus { left: 12px; top: 12px; }
 
-.masthead-interno .masthead-inner { padding: 22px 28px 18px; gap: 20px; }
-.masthead-interno .crest { width: 58px; }
-.masthead-interno .sobre { font-size: 11.5px; }
-.titulo-pagina {
-  font-family: 'Shippori Mincho', serif;
-  font-weight: 600;
-  font-size: 23px;
-  margin: 3px 0 5px;
-}
-.titulo-pagina a { color: var(--tinta); text-decoration: none; }
-.titulo-pagina a:hover { color: var(--teja); }
-.masthead-interno .ficha { font-size: 12px; }
-
 .pagina { max-width: 920px; margin: 0 auto; padding: 52px 28px 46px; }
-.pagina h1 {
+.pagina-titulo {
   font-family: 'Shippori Mincho', serif;
   font-weight: 600;
   font-size: clamp(30px, 4.6vw, 42px);
@@ -467,7 +454,6 @@ footer .pie-inner { text-align: center; padding-bottom: 42px; }
   .olas { height: 40px; }
   .pared { gap: 24px; }
   .pared .retrato img { max-width: 200px; padding: 8px; }
-  .masthead-interno .ficha { display: none; }
   .pagina, .hoja-foto { padding: 36px 20px 38px; }
   .sitemap { grid-template-columns: 1fr; gap: 26px; }
   .legal { padding: 14px 20px 30px; }
