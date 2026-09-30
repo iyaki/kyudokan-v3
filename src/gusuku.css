@@ -327,12 +327,9 @@ footer .pie-inner { text-align: center; padding-bottom: 42px; }
   padding: 4px 0;
   font-size: 14.5px;
   color: var(--tinta);
-  text-decoration: underline;
-  text-decoration-color: rgba(14, 102, 140, 0.5);
-  text-decoration-thickness: 1px;
-  text-underline-offset: 3px;
+  text-decoration: none;
 }
-.sitemap-col a:hover { color: var(--teja); text-decoration-color: var(--teja); }
+.sitemap-col a:hover { color: var(--teja); }
 .sitemap-col p a {
   display: inline;
 }
