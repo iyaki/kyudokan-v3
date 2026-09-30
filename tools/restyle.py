@@ -723,7 +723,7 @@ def template(page, main_html, html_dir_prefix, activa='inicio'):
     <div class="titular">
       <p class="sobre">CENTRO DE ENSEANZA DE KARATE DO</p>
       <p class="titulo-pagina"><a href="{r}index.html">Kyudokan · Campana</a></p>
-      <p class="ficha">CRISTIAN LUGANI - Jean Jaures 983 - Tel. (54) (03489) 431664 - Campana - Bs. As. - Argentina</p>
+      <p class="ficha">CRISTIAN LUGANI - Campana - Bs. As. - Argentina</p>
     </div>
   </div>
 </header>
