@@ -447,7 +447,14 @@ footer .pie-inner { text-align: center; padding-bottom: 42px; }
 }
 .falta code { font-size: 12px; color: var(--tinta-2); overflow-wrap: anywhere; }
 
-.tabla-notacion { border-collapse: collapse; margin-bottom: 20px; font-size: 14.5px; }
+.tabla-notacion {
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  font-size: 14.5px;
+}
 .tabla-notacion th, .tabla-notacion td {
   text-align: left;
   padding: 7px 22px 7px 0;
@@ -489,7 +496,10 @@ footer .pie-inner { text-align: center; padding-bottom: 42px; }
   .masthead-inner { flex-direction: row; gap: 20px; padding: 26px 20px 20px; }
   .crest { width: 64px; }
   .riel-inner, main, .linaje-inner, footer .pie-inner { padding-left: 20px; padding-right: 20px; }
-  .riel a { padding: 2px 9px; font-size: 12px; }
+  .riel a { padding: 12px 9px; font-size: 12px; }
+  .subnav a { padding: 8px 2px; }
+  .hoja-foto nav a { padding: 8px 2px; }
+  .vuelta a { display: inline-block; padding: 8px 0; }
   .bienvenida { padding: 44px 0 16px; }
   .bienvenida .display { font-size: clamp(38px, 11vw, 52px); gap: 12px; }
   .shisa { width: 34px; }
