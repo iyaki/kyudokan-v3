@@ -36,8 +36,6 @@
     <a href="html/centro_de_ensenanza.html">Centro de Enseñanza</a>
     <a href="html/horarios.html">Horarios</a>
     <a href="html/como_llegar.html">Cómo llegar</a>
-    <a href="html/fotos.html">Fotos</a>
-    <a href="html/noticias.html">Noticias</a>
     <a href="html/contacto.html">Contacto</a>
   </div>
 </nav>
@@ -46,9 +44,9 @@
 <h2 class="pagina-titulo">Todas las Notic.</h2>
 <div class="cuerpo">
 <p>Encuentre las noticias según su interés. Para ello agrupamos las novedades en tres grupos:</p>
-<p><a href="./institucion.shtml">Noticias de nuestra INSTITUCION</a> <a href="./nacionales.shtml">Noticias NACIONALES (Argentina)</a> <a href="./internacionales.shtml">Noticias INTERNACIONALES</a></p>
+<p><a>Noticias de nuestra INSTITUCION</a> <a>Noticias NACIONALES (Argentina)</a> <a>Noticias INTERNACIONALES</a></p>
 <p><em>(Función del sitio 2001 no disponible en esta versión.)</em></p>
-<p>[<a href="./html/presentacion.html">Presentación</a>] [<a href="./html/pensamiento.html">Pensamiento</a>] [<a href="./html/que_es_karate.html">Que es Karate</a>] [<a href="./html/centro_de_ensenanza.html">Centro de Ens.</a>] [<a href="./html/contacto.html">Contacto</a>] [<a href="./html/fotos.html">Fotos</a>]</p>
+<p>[<a href="./html/presentacion.html">Presentación</a>] [<a href="./html/pensamiento.html">Pensamiento</a>] [<a href="./html/que_es_karate.html">Que es Karate</a>] [<a href="./html/centro_de_ensenanza.html">Centro de Ens.</a>] [<a href="./html/contacto.html">Contacto</a>] [<a>Fotos</a>]</p>
 </div>
 <p class="vuelta"><a href="index.html">← Volver al inicio</a></p>
 </main>
@@ -62,9 +60,8 @@
       <a href="html/presentacion.html">Presentación</a>
       <a href="html/centro_de_ensenanza.html">Centro de Enseñanza</a>
       <a href="html/horarios.html">Horarios</a>
-      <a href="html/como_llegar.html">Cómo llegar</a>
+      <a href="html/como_llegar.html">Como llegar</a>
       <a href="html/servicios.html">Servicios</a>
-      <a href="html/promociones.html">Promociones</a>
       <a href="html/cupon_de_descuento.html">Cupn de descuento</a>
       <a href="html/contacto.html">Contacto</a>
     </nav>
@@ -86,30 +83,6 @@
       <a href="html/credo_del_samurai.html">Credo del samurai</a>
       <a href="html/ventana_bushido.html">Ventana Bushido</a>
       <a href="html/pensamiento.html">Pensamiento</a>
-    </nav>
-    <nav class="sitemap-col" aria-label="El archivo">
-      <h2>El archivo</h2>
-      <a href="html/fotos.html">Fotos</a>
-      <a href="html/fotos_de_torneos.html">Torneos <small>1988–2000</small></a>
-      <a href="html/fotos_de_exhibiciones.html">Exhibiciones</a>
-      <a href="html/fotos_de_katas.html">Katas</a>
-      <a href="html/fotos_de_okinawa.html">Okinawa</a>
-      <a href="html/fotos_con_maestros.html">Con maestros</a>
-      <a href="html/fotos_acod__fisico.html">Acondicionamiento físico</a>
-      <a href="html/fotos_sintesis_historica.html">Síntesis histórica</a>
-      <a href="html/fotos_recr__y_semin_.html">Recitales y seminarios</a>
-      <a href="html/afiches.html">Afiches</a>
-      <a href="html/otras_fotos.html">Otras fotos</a>
-    </nav>
-    <nav class="sitemap-col" aria-label="Noticias">
-      <h2>Noticias</h2>
-      <a href="html/noticias.html">Noticias</a>
-      <a href="todas_las_notic_.shtml">Todas las noticias</a>
-      <a href="nacionales.shtml">Nacionales</a>
-      <a href="internacionales.shtml">Internacionales</a>
-      <a href="institucion.shtml">Institución</a>
-      <a href="html/links.html">Links</a>
-      <a href="html/libro_de_visitas.html">Libro de visitas</a>
     </nav>
     <div class="sitemap-col">
       <h2>El dojo en Campana</h2>

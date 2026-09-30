@@ -300,7 +300,7 @@ footer .sitemap {
 footer .pie-inner { text-align: center; padding-bottom: 42px; }
 .sitemap {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 36px 28px;
   padding-bottom: 26px;
 }
