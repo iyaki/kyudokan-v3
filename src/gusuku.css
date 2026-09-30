@@ -51,6 +51,18 @@ html { scroll-behavior: smooth; }
   to { opacity: 1; transform: none; }
 }
 .bienvenida .display { animation: aparecer .6s ease-out backwards; }
+@keyframes posar-izq {
+  from { opacity: 0; transform: translateY(-16px) rotate(-3deg); }
+  60% { opacity: 1; transform: translateY(2px) rotate(1.5deg); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes posar-der {
+  from { opacity: 0; transform: translateY(-16px) rotate(3deg); }
+  60% { opacity: 1; transform: translateY(2px) rotate(-1.5deg); }
+  to { opacity: 1; transform: none; }
+}
+.shisa-izq { animation: posar-izq .7s cubic-bezier(.2, .7, .3, 1.15) .15s backwards; }
+.shisa-der { animation: posar-der .7s cubic-bezier(.2, .7, .3, 1.15) .3s backwards; }
 /* descubrimiento: los guardianes vigilan */
 .shisa { transition: transform .35s ease; transform-origin: bottom center; }
 .shisa-izq:hover { transform: rotate(-2.5deg); }
@@ -71,7 +83,7 @@ html { scroll-behavior: smooth; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .bienvenida .display { animation: none; }
+  .bienvenida .display, .shisa { animation: none; }
   .callig, .callig.trazado { -webkit-mask-image: none; mask-image: none; transition: none; }
 }
 
