@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
-"""Restyle de las páginas internas NOF 2001 al mundo La Muestra.
+"""Restyle de las páginas internas NOF 2001 al mundo Gusuku.
 
-Una pasada sobre src/html/*.html y src/*.shtml: decodifica ISO-8859-1,
-clasifica por arquetipo (hoja de foto / índice de galería / utilitaria /
-artículo), extrae el contenido real y reescribe el archivo in place con la
-plantilla compartida. Idempotente vía meta generator. Log: tools/restyle-log.txt
+Okinawa, no Japón-genérico: muros encalados de coral, tejas rojas, mar
+Kerama, fénix de Shuri. Una pasada sobre src/html/*.html y src/*.shtml:
+decodifica ISO-8859-1, clasifica por arquetipo (hoja de foto / índice de
+galería / utilitaria / artículo), extrae el contenido real y reescribe el
+archivo in place con la plantilla compartida. Idempotente vía meta
+generator. Log: tools/restyle-log.txt
 """
 import html as htmllib
 import posixpath
@@ -281,7 +283,7 @@ def titulo_limpio(t):
 
 JUNK_TEXT = re.compile(
     r'(?i)(error occurred while processing|dise.o: matrixway|to english|'
-    r'internet explorer|800 x 600|reciba las novedades|jean\s+jaures|'
+    r'internet explorer|800 x 600|reciba las novedades|cristian lugani\s*-\s*jean\s+jaures|'
     r'cerrar ventana|lugani\s*2001|optimizado p/|pantalla en)')
 
 
@@ -442,6 +444,7 @@ def content_blocks(page, tds, foms):
             if href:
                 page.links_out.add(href)
             low = href.lower()
+            final_href = href
             if low.startswith(('javascript', '#')) or 'cgi' in low:
                 # popup F_OM (miniaturas que abren foto) o enlace real detrás del JS
                 target = foms.get(n.attrs.get('id', ''), '')
@@ -451,27 +454,36 @@ def content_blocks(page, tds, foms):
                             target = foms.get(i.attrs.get('id', ''), '')
                             if target:
                                 break
-                if target and not target.lower().startswith(('javascript', '#')) \
-                        and (page.path.parent / posixpath.normpath(target)).exists():
-                    page.links_out.add(target)
-                    nlinks += 1
-                    in_a = True
-                    para.append(f'<a href="{esc(target)}">')
-                    for c in n.children:
+                if not (target and not target.lower().startswith(('javascript', '#'))
+                        and (page.path.parent / posixpath.normpath(target)).exists()):
+                    for c in n.children:  # CGI del 2001: quedará como texto
                         rec(c)
-                    para.append('</a>')
-                    in_a = False
                     return
-                for c in n.children:  # CGI del 2001: quedará como texto
+                page.links_out.add(target)
+                final_href = target
+            nlinks += 1
+            local_ok = final_href.lower().startswith(('http', 'mailto')) or \
+                (page.path.parent / posixpath.normpath(final_href)).exists()
+            if not local_ok:
+                page.note(f'HOJA_FALTA {final_href}')
+                for c in n.children:  # destino inexistente: quedará como texto
                     rec(c)
                 return
-            nlinks += 1
-            in_a = True
-            para.append(f'<a href="{esc(href)}">')
+            if any(isinstance(x, Node) and x.tag in ('img', 'p') for x in walk(n)):
+                # anchor envolvente NOF (miniatura→hoja): envolver cada bloque
+                # emitido con el enlace; un <a> no puede cruzar límites de <p>
+                _flush_para()
+                marca = len(blocks)
+                for c in n.children:
+                    rec(c)
+                _flush_para()
+                for i in range(marca, len(blocks)):
+                    blocks[i] = f'<a href="{esc(final_href)}">{blocks[i]}</a>'
+                return
+            para.append(f'<a href="{esc(final_href)}">')
             for c in n.children:
                 rec(c)
             para.append('</a>')
-            in_a = False
             return
         if t in ('b', 'strong', 'i', 'em'):
             tg = 'strong' if t in ('b', 'strong') else 'em'
@@ -684,9 +696,9 @@ def template(page, main_html, html_dir_prefix, activa='inicio'):
     lis = []
     for key, label, archivo in ESTACIONES:
         href = f'{r}index.html' if key == 'inicio' else f'{p}{archivo}'
-        clase = ' activo' if key == activa else ''
-        lis.append(f'    <a class="placa{clase}" href="{href}">{esc(label)}</a>')
-    placas = '\n'.join(lis)
+        corriente = ' aria-current="page"' if key == activa else ''
+        lis.append(f'    <a href="{href}"{corriente}>{esc(label)}</a>')
+    riel = '\n'.join(lis)
     return f"""<!DOCTYPE html>
 <html lang="es">
 <head>
@@ -699,25 +711,33 @@ def template(page, main_html, html_dir_prefix, activa='inicio'):
 <link rel="icon" type="image/png" sizes="32x32" href="{r}assets/favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="{r}assets/favicon/favicon-16x16.png">
 <link rel="apple-touch-icon" href="{r}assets/favicon/apple-touch-icon.png">
-<link rel="stylesheet" href="{r}shomen.css">
+<link rel="stylesheet" href="{r}gusuku.css">
 </head>
 <body>
 
 <a class="skip" href="#contenido">Saltar al contenido</a>
 
-<header class="barra">
-  <a class="marca" href="{r}index.html">
-    <img src="{r}assets/marca/kyudokan-crest.png" alt="">
-    <span>Kyudokan<br>Campana</span>
-  </a>
-  <nav class="entrada-barra" aria-label="Secciones del sitio">
-{placas}
-  </nav>
+<header class="masthead masthead-interno">
+  <div class="masthead-inner">
+    <a href="{r}index.html"><img class="crest" src="{r}assets/marca/kyudokan-crest.png" alt="Kyudokan"></a>
+    <div class="titular">
+      <p class="sobre">CENTRO DE ENSEANZA DE KARATE DO</p>
+      <p class="titulo-pagina"><a href="{r}index.html">Kyudokan · Campana</a></p>
+      <p class="ficha">CRISTIAN LUGANI - Jean Jaures 983 - Tel. (54) (03489) 431664 - Campana - Bs. As. - Argentina</p>
+    </div>
+  </div>
 </header>
+
+<nav class="riel" aria-label="Secciones">
+  <div class="riel-inner">
+{riel}
+  </div>
+</nav>
 
 {main_html}
 
 <footer>
+  <div class="teja" aria-hidden="true"></div>
   <div class="sitemap">
     <nav class="sitemap-col" aria-label="El dojo">
       <h2>El dojo</h2>
@@ -738,7 +758,7 @@ def template(page, main_html, html_dir_prefix, activa='inicio'):
       <a href="{p}el_karate_y_la_mujer.html">El karate y la mujer</a>
       <a href="{p}fotos_de_okinawa.html">Okinawa</a>
     </nav>
-    <div class="sitemap-col dojo-datos-footer">
+    <div class="sitemap-col">
       <h2>El dojo en Campana</h2>
       <p>Jean Jaures 983 · Campana · Bs. As.</p>
       <p><a href="mailto:cristian@karatelugani.com.ar">cristian@karatelugani.com.ar</a></p>

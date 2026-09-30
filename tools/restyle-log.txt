@@ -7,7 +7,7 @@ OK afiches_3o_camp__campana.html arch=hoja imgs=1 faltan=0
 OK afiches_campionati_del_mondo.html arch=hoja imgs=1 faltan=0
 OK afiches_yuchoku_higa.html arch=hoja imgs=0 faltan=1 | IMG_FALTA ../assets/images/imagen_de_un_libro_folleto_en_japones.JPG
 OK arbol_genealogico.html arch=articulo imgs=2 faltan=0
-OK biograf__jintatsu_higa.html arch=articulo imgs=0 faltan=1 | IMG_FALTA ../assets/images/autogen/a_jintatsu_higa_1940_ba.jpg
+OK biograf__jintatsu_higa.html arch=articulo imgs=0 faltan=1 | IMG_FALTA ../assets/images/autogen/a_jintatsu_higa_1940_ba.jpg | HOJA_FALTA biograf__cristian_lugani.html | HOJA_FALTA biograf__cristian_lugani.html
 OK centro_de_ensenanza.html arch=articulo imgs=5 faltan=0
 OK como_llegar.html arch=utilitaria imgs=0 faltan=2 | IMG_FALTA ../assets/images/mapa_comollegar.jpg | IMG_FALTA ../assets/images/mapa_comollegar2.jpg
 OK contacto.html arch=utilitaria imgs=1 faltan=0
@@ -107,7 +107,7 @@ OK presentacion.html arch=utilitaria imgs=15 faltan=0
 OK promociones.html arch=utilitaria imgs=0 faltan=1 | IMG_FALTA ../assets/images/autogen/a_cupon_1clasegratis.gif
 OK que_es_karate.html arch=articulo imgs=3 faltan=0
 OK servicios.html arch=utilitaria imgs=0 faltan=1 | IMG_FALTA ../assets/images/autogen/a_gimnasio_piso_de_goma.jpg
-OK sintesis_historica.html arch=articulo imgs=1 faltan=6 | IMG_FALTA ../assets/images/autogen/a_sintesis_historica_item_quees_karate.jpg | IMG_FALTA ../assets/images/autogen/a_foto_historica_libro_2.jpg | IMG_FALTA ../assets/images/autogen/a_reseniahistorica2.jpg | IMG_FALTA ../assets/images/autogen/a_reseniahistorica1.jpg | IMG_FALTA ../assets/images/autogen/a_foto_sintesis_historica_libro_1.jpg | IMG_FALTA ../assets/images/autogen/a_foto_castillo_rey.jpg
+OK sintesis_historica.html arch=articulo imgs=1 faltan=6 | HOJA_FALTA que_son_los_katas.html | IMG_FALTA ../assets/images/autogen/a_sintesis_historica_item_quees_karate.jpg | IMG_FALTA ../assets/images/autogen/a_foto_historica_libro_2.jpg | IMG_FALTA ../assets/images/autogen/a_reseniahistorica2.jpg | IMG_FALTA ../assets/images/autogen/a_reseniahistorica1.jpg | IMG_FALTA ../assets/images/autogen/a_foto_sintesis_historica_libro_1.jpg | IMG_FALTA ../assets/images/autogen/a_foto_castillo_rey.jpg
 OK ventana_bushido.html arch=articulo imgs=0 faltan=0
 OK institucion.shtml arch=articulo imgs=0 faltan=0 | FORM_REEMPLAZADO
 OK internacionales.shtml arch=articulo imgs=0 faltan=0 | FORM_REEMPLAZADO

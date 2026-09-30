@@ -17,19 +17,10 @@
           "src/*.shtml",
           "src/html/*.html",
           "src/index.html",
-          "src/linea.css"
+          "src/gusuku.css"
         ],
-        "createdAt": "2026-09-29T21:28:21.685Z",
-        "reason": "Direction contract (surface brief src-index-html.md, mundo 'La Línea' elegido por el usuario): papel de notación #F5F1E8 es el material comprometido del mundo, no crema por reflejo"
-      },
-      {
-        "rule": "aphoristic-cadence",
-        "value": "*",
-        "files": [
-          "src/html/credo_del_samurai.html"
-        ],
-        "createdAt": "2026-09-29T21:28:21.728Z",
-        "reason": "Contenido legacy verbatim (mandato 100% preservación): el Credo del Samurái es material histórico del sitio 2001, no copy propio"
+        "createdAt": "2026-09-30T00:00:00.000Z",
+        "reason": "Direction contract (DESIGN.md, mundo 'Gusuku' aprobado por el usuario): el encalado #E9E1D0 es el material comprometido del mundo — revoque calizo de los muros gusuku con textura procedural, no crema por reflejo"
       },
       {
         "rule": "wide-tracking",
@@ -38,10 +29,30 @@
           "src/*.shtml",
           "src/html/*.html",
           "src/index.html",
-          "src/linea.css"
+          "src/gusuku.css"
         ],
-        "createdAt": "2026-09-29T21:29:22.830Z",
-        "reason": "Direction contract (RAISES de ukiyoe): sellos de fecha/estación con mayúsculas espaciadas — el tracking es el dispositivo del sello, mobiliario del mundo 'La Línea'"
+        "createdAt": "2026-09-30T00:00:00.000Z",
+        "reason": "Direction contract (DESIGN.md 'Gótica Sello'): riel de navegación, sellos, fichas y figcaptions con mayúsculas espaciadas — el tracking es el dispositivo del sello tallado, mobiliario del mundo"
+      },
+      {
+        "rule": "all-caps-body",
+        "value": "*",
+        "files": [
+          "src/*.shtml",
+          "src/html/*.html",
+          "src/index.html"
+        ],
+        "createdAt": "2026-09-30T00:00:00.000Z",
+        "reason": "Direction contract (DESIGN.md 'Gótica Sello'): es el sello de 5 palabras del masthead (CENTRO DE ENSEANZA DE KARATE DO, contenido verbatim del sitio 2001), no un pasaje de texto corrido — el uppercase es el dispositivo del sello"
+      },
+      {
+        "rule": "aphoristic-cadence",
+        "value": "*",
+        "files": [
+          "src/html/credo_del_samurai.html"
+        ],
+        "createdAt": "2026-09-30T00:00:00.000Z",
+        "reason": "Contenido legacy verbatim (mandato 100% preservación): el Credo del Samurái es material histórico del sitio 2001, no copy propio"
       },
       {
         "rule": "design-system-color",
@@ -50,10 +61,10 @@
           "src/*.shtml",
           "src/html/*.html",
           "src/index.html",
-          "src/shomen.css"
+          "src/gusuku.css"
         ],
-        "createdAt": "2026-09-29T23:56:17.461Z",
-        "reason": "Direction contract (mundo 'El shomen del dojo' aprobado por el usuario): las capas rgba son luz de dojo y sombras del nicho (regla 'luz en CSS' de DESIGN.md), no colores de paleta"
+        "createdAt": "2026-09-30T00:00:00.000Z",
+        "reason": "Direction contract (mundo 'Gusuku' aprobado): rgba/gradientes son sombras de sol sobre muro y agua del panel Kerama (banda seigaiha), no colores de paleta ad-hoc"
       }
     ]
   }
