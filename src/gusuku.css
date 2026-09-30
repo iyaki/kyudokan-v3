@@ -361,7 +361,7 @@ footer .pie-inner { text-align: center; padding-bottom: 42px; }
 }
 .sitemap-col a {
   display: block;
-  padding: 4px 0;
+  padding: 6px 0;
   font-size: 14.5px;
   color: var(--tinta);
   text-decoration: none;
@@ -381,6 +381,7 @@ footer .pie-inner { text-align: center; padding-bottom: 42px; }
   color: #3f3831;
 }
 .legal .fuente { margin-top: 4px; font-size: 12px; color: #3f3831; }
+.legal .fuente a { color: #8f2f10; font-weight: 700; }
 
 /* --- páginas internas: el mismo muro, salas contiguas --- */
 .skip {
@@ -413,7 +414,6 @@ footer .pie-inner { text-align: center; padding-bottom: 42px; }
   text-decoration: none;
 }
 .subnav a:hover { color: var(--teja); }
-.subnav > * + *::before { content: '· '; color: var(--teja); }
 .subnav .sin-destino {
   font-weight: 700;
   font-size: var(--fs-label);
@@ -434,7 +434,7 @@ footer .pie-inner { text-align: center; padding-bottom: 42px; }
 .cuerpo b, .cuerpo strong { font-weight: 700; }
 .cuerpo ul, .cuerpo ol { margin: 0 0 16px 22px; }
 .vuelta { margin-top: 34px; font-size: 14px; font-weight: 700; letter-spacing: 0.04em; }
-.vuelta a { color: var(--mar); text-decoration: none; }
+.vuelta a { color: var(--mar); text-decoration: none; display: inline-block; padding: 4px 0; }
 .vuelta a:hover { color: var(--teja); }
 
 .hoja-foto { max-width: 920px; margin: 0 auto; padding: 48px 28px 46px; }
@@ -448,7 +448,7 @@ footer .pie-inner { text-align: center; padding-bottom: 42px; }
   font-weight: 700;
   letter-spacing: 0.06em;
 }
-.hoja-foto nav a { color: var(--mar); text-decoration: none; }
+.hoja-foto nav a { color: var(--mar); text-decoration: none; padding: 4px 0; }
 .hoja-foto nav a:hover { color: var(--teja); }
 
 .lamina {
@@ -592,7 +592,7 @@ footer .pie-inner { text-align: center; padding-bottom: 42px; }
   .vuelta a { display: inline-block; padding: 8px 0; }
   .bienvenida { padding: 44px 0 16px; }
   .bienvenida .display { font-size: clamp(38px, 11vw, 52px); gap: 12px; }
-  .shisa { width: 40px; }
+  .shisa { width: 36px; }
   .escuela { grid-template-columns: 1fr; gap: 34px; padding: 30px 0 54px; }
   .olas { height: 40px; }
   .pared { gap: 24px; }

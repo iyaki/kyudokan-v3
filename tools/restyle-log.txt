@@ -1,120 +1,120 @@
-OK acondicionamiento_fisico.html arch=articulo imgs=1 faltan=6 | IMG_FALTA ../assets/images/autogen/a_foto_acond_fisico_lugani.jpg | IMG_FALTA ../assets/images/autogen/a_foto_acond_fisico_libro_museo.jpg | IMG_FALTA ../assets/images/autogen/a_foto_acond_fisico_libro_1.jpg | IMG_FALTA ../assets/images/autogen/a_ejercicio_jarrones.jpg | IMG_FALTA ../assets/images/autogen/a_ejercicio_tanrenho.jpg | IMG_FALTA ../assets/images/autogen/a_foto_acond_fisico_libro_2.jpg
-OK afiche_29o_camp__arg__cba_.html arch=hoja imgs=1 faltan=0 | NAV_FALTA anterior afiche_16o_camp__argentino.html
-OK afiches.html arch=index imgs=3 faltan=8 | IMG_FALTA ../assets/images/autogen/a_karate___kobudo_1997_world_tournament_1.jpg | IMG_FALTA ../assets/images/autogen/a_imagen_de_un_libro_folleto_en_japones_1.jpg | HOJA_FALTA ../html/afiches_campana__96_.html | IMG_FALTA ../assets/images/autogen/a_karate_trad_oct_96_campana_1.jpg | HOJA_FALTA ../html/afiches_3__world_tourn___97.html | IMG_FALTA ../assets/images/autogen/a_karate___kobudo_1997_world_tournament3_1.jpg | HOJA_FALTA ../html/afiche_16o_camp__argentino.html | IMG_FALTA ../assets/images/autogen/a_16_camp_ar_torneo_jintatsu_higa_1987_1.jpg | IMG_FALTA ../assets/images/autogen/a_karate___kobudo_1997_world_tournament2_1.jpg | HOJA_FALTA ../html/afiches_the_first_okinawa_trad.html | IMG_FALTA ../assets/images/autogen/a_the_first_okinawa_tradicional_1.jpg | IMG_FALTA ../assets/images/autogen/a_okinawa_kar___kobudo_pre-tournament_1995_1.jpg
-OK afiches_1__world_tourn___97.html arch=hoja imgs=0 faltan=1 | IMG_FALTA ../assets/images/karate___kobudo_1997_world_tournament.JPG | NAV_FALTA siguiente afiche_karate_y_kobudo_japon_1.html
-OK afiches_2__world_tourn___97.html arch=hoja imgs=0 faltan=1 | IMG_FALTA ../assets/images/karate___kobudo_1997_world_tournament2.JPG | NAV_FALTA anterior afiche_karate_y_kobudo_japon_1.html | NAV_FALTA siguiente afiches_3__world_tourn___97.html
-OK afiches_3o_camp__campana.html arch=hoja imgs=1 faltan=0
-OK afiches_campionati_del_mondo.html arch=hoja imgs=1 faltan=0
-OK afiches_yuchoku_higa.html arch=hoja imgs=0 faltan=1 | IMG_FALTA ../assets/images/imagen_de_un_libro_folleto_en_japones.JPG
-OK arbol_genealogico.html arch=articulo imgs=2 faltan=0
-OK biograf__jintatsu_higa.html arch=articulo imgs=0 faltan=1 | IMG_FALTA ../assets/images/autogen/a_jintatsu_higa_1940_ba.jpg | HOJA_FALTA biograf__cristian_lugani.html | HOJA_FALTA biograf__cristian_lugani.html
-OK centro_de_ensenanza.html arch=articulo imgs=5 faltan=0
-OK como_llegar.html arch=utilitaria imgs=0 faltan=2 | IMG_FALTA ../assets/images/mapa_comollegar.jpg | IMG_FALTA ../assets/images/mapa_comollegar2.jpg
-OK contacto.html arch=utilitaria imgs=1 faltan=0
-OK credo_del_samurai.html arch=articulo imgs=0 faltan=1 | IMG_FALTA ../assets/images/kanji_bushido.JPG
-OK cupon_de_descuento.html arch=utilitaria imgs=0 faltan=1 | IMG_FALTA ../assets/images/cupon_1clasegratis.gif
-OK el_karate_y_el_nino.html arch=articulo imgs=1 faltan=6 | IMG_FALTA ../assets/images/autogen/a_leoncito_boca_cerrada.gif | IMG_FALTA ../assets/images/autogen/a_leoncito_boca_abierta.gif | IMG_FALTA ../assets/images/autogen/a_kanji_dibujito_1.gif | IMG_FALTA ../assets/images/autogen/a_el_karate_y_el_ninio_campana.jpg | IMG_FALTA ../assets/images/autogen/a_kanji_dibujito_2.gif | IMG_FALTA ../assets/images/autogen/a_chicos_aprendiendo_en_la_escuela_libro.jpg
-OK el_karate_y_la_mujer.html arch=articulo imgs=1 faltan=2 | IMG_FALTA ../assets/images/autogen/a_foto_el_karate_y_la_mujer.jpg | IMG_FALTA ../assets/images/autogen/a_kata_kusanku_sho_1.jpg
-OK escuela_estilo.html arch=articulo imgs=0 faltan=2 | IMG_FALTA ../assets/images/autogen/a_la_via_del_estudio_no_tiene_fin.jpg | IMG_FALTA ../assets/images/autogen/a_Round_Rectangle_15.gif
-OK foto_acond__fisico_1.html arch=hoja imgs=0 faltan=1 | IMG_FALTA ../assets/images/foto_acond_fisico_libro_1.JPG
-OK foto_acond__fisico_2.html arch=hoja imgs=0 faltan=1 | IMG_FALTA ../assets/images/foto_acond_fisico_libro_2.JPG
-OK foto_acond__fisico_3.html arch=hoja imgs=0 faltan=1 | IMG_FALTA ../assets/images/foto_acond_fisico_libro_3.JPG
-OK foto_acond__fisico_lugani.html arch=hoja imgs=0 faltan=1 | IMG_FALTA ../assets/images/foto_acond_fisico_lugani.JPG | NAV_FALTA anterior foto_acond__fisico_museo_2.html
-OK foto_acond__fisico_museo_1.html arch=hoja imgs=0 faltan=1 | IMG_FALTA ../assets/images/foto_acond_fisico_libro_museo.jpg | NAV_FALTA siguiente foto_acond__fisico_museo_2.html
-OK foto_acond__sanchin_gami.html arch=hoja imgs=0 faltan=1 | IMG_FALTA ../assets/images/ejercicio_jarrones.jpg
-OK foto_acond__tanrenho.html arch=hoja imgs=0 faltan=1 | IMG_FALTA ../assets/images/ejercicio_tanrenho.jpg
-OK foto_kata_chinti.html arch=hoja imgs=1 faltan=0
-OK foto_kata_jion.html arch=hoja imgs=0 faltan=1 | IMG_FALTA ../assets/images/katas_kata_jion.JPG
-OK foto_kata_jitte.html arch=hoja imgs=0 faltan=1 | IMG_FALTA ../assets/images/jitte.JPG
-OK foto_kata_jondan.html arch=hoja imgs=0 faltan=1 | IMG_FALTA ../assets/images/pinnan_yondan.JPG
-OK foto_kata_kusanku_sho.html arch=hoja imgs=0 faltan=1 | IMG_FALTA ../assets/images/kata_kusanku_sho.JPG
-OK foto_kata_naihanchi.html arch=hoja imgs=0 faltan=1 | IMG_FALTA ../assets/images/autogen/a_naihanchi_1.jpg
-OK foto_kata_passai.html arch=hoja imgs=0 faltan=1 | IMG_FALTA ../assets/images/kata_passai.JPG
-OK foto_kata_passai_yuchoku.html arch=hoja imgs=0 faltan=1 | IMG_FALTA ../assets/images/autogen/a_kata_passai_con_yuchoku_higa_entero.jpg
-OK fotos.html arch=index imgs=0 faltan=0 | INDEX_VACIO
-OK fotos_acod__fisico.html arch=index imgs=0 faltan=6 | IMG_FALTA ../assets/images/autogen/a_foto_acond_fisico_libro_1_2.jpg | IMG_FALTA ../assets/images/autogen/a_foto_acond_fisico_libro_museo_2.jpg | HOJA_FALTA ../html/foto_acond__fisico_museo_2.html | IMG_FALTA ../assets/images/autogen/a_foto_acond_fisico_museo_2.jpg | IMG_FALTA ../assets/images/autogen/a_foto_acond_fisico_libro_3_2.jpg | IMG_FALTA ../assets/images/autogen/a_foto_acond_fisico_lugani_2.jpg | IMG_FALTA ../assets/images/autogen/a_foto_acond_fisico_libro_2_2.jpg
-OK fotos_con_maestros.html arch=index imgs=6 faltan=10 | IMG_FALTA ../assets/images/autogen/a_nobuko_sensei_1.jpg | IMG_FALTA ../assets/images/autogen/a_jintatsu_higa_foto_grande_2.jpg | IMG_FALTA ../assets/images/autogen/a_clugani_con_maestro_oscar_1.jpg | IMG_FALTA ../assets/images/autogen/a_clugani_con_maestro_toma_1.jpg | IMG_FALTA ../assets/images/autogen/a_jintatsu_higa_1.jpg | IMG_FALTA ../assets/images/autogen/a_clugani_cmaestro_minoru_higa_1.jpg | IMG_FALTA ../assets/images/autogen/a_oscar_higa_2.jpg | IMG_FALTA ../assets/images/autogen/a_clugani_castillo_shuri_1.jpg | IMG_FALTA ../assets/images/autogen/a_clugani_con_maestro_minoru_1.jpg | IMG_FALTA ../assets/images/autogen/a_hija_sensei_1.jpg
-OK fotos_de_exhibiciones.html arch=index imgs=0 faltan=6 | HOJA_FALTA ../html/fotos_exh_centro_okinahuense.html | IMG_FALTA ../assets/images/autogen/a_exib_centro_okinahuense_ar_1.jpg | IMG_FALTA ../assets/images/autogen/a_exib_facultad_arquitectura_uba_1.jpg | HOJA_FALTA ../html/fotos_exh_okinawa_prefecture_h.html | IMG_FALTA ../assets/images/autogen/a_exib_okinawa_prefecture_hall_1.jpg | HOJA_FALTA ../html/fotos_exh_ateneo_municipal.html | IMG_FALTA ../assets/images/autogen/a_exib_ateneo_municipal_1.jpg | HOJA_FALTA ../html/fotos_exh_vest__tipica_eku-bo.html | IMG_FALTA ../assets/images/autogen/a_exib_vestimenta_tipica_eku_bo_okinawa_1.jpg | IMG_FALTA ../assets/images/autogen/a_exib_esp_callejero_los_ninos_primero_2.jpg
-OK fotos_de_katas.html arch=index imgs=1 faltan=7 | IMG_FALTA ../assets/images/autogen/a_kata_passai_con_yuchoku_higa_entero_1.jpg | IMG_FALTA ../assets/images/autogen/a_pinnan_yondan_2.jpg | IMG_FALTA ../assets/images/autogen/a_kata_passai_1.jpg | IMG_FALTA ../assets/images/autogen/a_jitte_2.jpg | IMG_FALTA ../assets/images/autogen/a_naihanchi.jpg | IMG_FALTA ../assets/images/autogen/a_katas_kata_jion_1.jpg | IMG_FALTA ../assets/images/autogen/a_kata_kusanku_sho_3.jpg
-OK fotos_de_okinawa.html arch=index imgs=4 faltan=7 | IMG_FALTA ../assets/images/autogen/a_foto_de_una_escultura_para_presentacion_2.jpg | IMG_FALTA ../assets/images/autogen/a_ruinas_del_castillo_nakagusuku_1440.jpg | IMG_FALTA ../assets/images/autogen/a_representacion_del_rey_y_reina_de_ryukyu_2.jpg | HOJA_FALTA ../html/fotos_okw_vestimenta_tipica_2.html | IMG_FALTA ../assets/images/autogen/a_vestimenta_baile_ryukyu_2_1.jpg | IMG_FALTA ../assets/images/autogen/a_entrada_al_castillo_de_shuri_1.jpg | IMG_FALTA ../assets/images/autogen/a_mapa_de_okinawa_2.jpg | IMG_FALTA ../assets/images/autogen/a_cuidad_de_naha_rodeando_castillo_shuri_1.jpg
-OK fotos_de_torneos.html arch=index imgs=8 faltan=6 | IMG_FALTA ../assets/images/autogen/a_japan_world_cup_pretournament_ar_1998.jpg | IMG_FALTA ../assets/images/autogen/a_oki_kar_and_kob_world_tourn_1997_del_ar_uy_it.jpg | IMG_FALTA ../assets/images/autogen/a_metropolitano_river_bs.as_2000.jpg | IMG_FALTA ../assets/images/autogen/a_oki_karate_and_kobudo_world_tournament.jpg | IMG_FALTA ../assets/images/autogen/a_metropolitano_en_river_bs.as._2000.jpg | IMG_FALTA ../assets/images/autogen/a_iii_copa_campana_bs.as_ar_1995.jpg
-OK fotos_exh_espectaculo_callejer.html arch=hoja imgs=0 faltan=1 | IMG_FALTA ../assets/images/exib_esp_callejero_los_ninos_primero.jpg | NAV_FALTA anterior fotos_exh_centro_okinahuense.html
-OK fotos_exh_u_b_a__facultad_de_a.html arch=hoja imgs=0 faltan=1 | IMG_FALTA ../assets/images/exib_facultad_arquitectura_uba.JPG | NAV_FALTA siguiente fotos_exh_okinawa_prefecture_h.html
-OK fotos_hombu_entrada_hombu_dojo.html arch=hoja imgs=0 faltan=1 | IMG_FALTA ../assets/images/en_la_entrada_del_hombu_dojo.jpg
-OK fotos_hombu_hall_kobukan_kemri.html arch=hoja imgs=0 faltan=1 | IMG_FALTA ../assets/images/hall_of_kobukan_kemritsu.jpg
-OK fotos_hombu_museo_del_karate_o.html arch=hoja imgs=0 faltan=1 | IMG_FALTA ../assets/images/museo_del_karate_okinawa.JPG
-OK fotos_hombu_museo_del_karate_o1.html arch=hoja imgs=0 faltan=1 | IMG_FALTA ../assets/images/museo_del_karate_okinawa_kebudo.JPG
-OK fotos_o_foto_karate_trad_1.html arch=hoja imgs=0 faltan=1 | IMG_FALTA ../assets/images/autogen/a_definicion_lugani_1_1.jpg | NAV_FALTA anterior fotos_o_foto_karate_y_la_mujer.html | NAV_FALTA siguiente fotos_o_foto_karate_trad__2.html
-OK fotos_o_lugani_y_ninos_japon.html arch=hoja imgs=0 faltan=1 | IMG_FALTA ../assets/images/autogen/a_foto_el_karate_y_el_ninio.jpg | NAV_FALTA anterior fotos_o_foto_karate_y_el_nino.html | NAV_FALTA siguiente fotos_o_foto_karate_y_la_mujer.html
-OK fotos_okw_artesania_del_castil.html arch=hoja imgs=1 faltan=0 | NAV_FALTA anterior fotos_okw_vestimenta_tipica_2.html
-OK fotos_okw_avenida_intern__naha.html arch=hoja imgs=1 faltan=0
-OK fotos_okw_cuidad__de_naha_y_ca.html arch=hoja imgs=0 faltan=1 | IMG_FALTA ../assets/images/cuidad_de_naha_rodeando_castillo_shuri.JPG
-OK fotos_okw_entrada_al_castillo.html arch=hoja imgs=0 faltan=1 | IMG_FALTA ../assets/images/entrada_al_castillo_de_shuri.JPG
-OK fotos_okw_festival_de_ryukyu.html arch=hoja imgs=0 faltan=1 | IMG_FALTA ../assets/images/representacion_del_rey_y_reina_de_ryukyu.jpg
-OK fotos_okw_mapa_de_okinawa.html arch=hoja imgs=0 faltan=1 | IMG_FALTA ../assets/images/mapa_de_okinawa.JPG
-OK fotos_okw_playas_de_okinawa.html arch=hoja imgs=1 faltan=0
-OK fotos_okw_shisa_lion_s_den.html arch=hoja imgs=0 faltan=1 | IMG_FALTA ../assets/images/foto_de_una_escultura_para_presentacion.JPG
-OK fotos_okw_vestimenta_tipica_1.html arch=hoja imgs=1 faltan=0 | NAV_FALTA siguiente fotos_okw_vestimenta_tipica_2.html
-OK fotos_recr__y_semin_.html arch=index imgs=0 faltan=8 | IMG_FALTA ../assets/images/autogen/a_seminario_filial_campana_2.jpg | HOJA_FALTA ../html/fotos_rs_copa_yuchoku_higa.html | IMG_FALTA ../assets/images/autogen/a_san_luis_camp_intern_copa_yuchoku_higa_1.jpg | HOJA_FALTA ../html/fotos_rs_en_el_gimnasio.html | IMG_FALTA ../assets/images/autogen/a_clase_en_el_gimnasio_1.jpg | HOJA_FALTA ../html/fotos_rs_dia_de_la_primavera.html | IMG_FALTA ../assets/images/autogen/a_dia_de_la_primavera_est_la_herradura_1.jpg | HOJA_FALTA ../html/fotos_rs__arbit__san_luis.html | IMG_FALTA ../assets/images/autogen/a_arbitraje_en_san_luis_1.jpg | HOJA_FALTA ../html/fotos_rs_sem__s__francisco_-_c.html | IMG_FALTA ../assets/images/autogen/a_sem_semsei_oscar_higa_san_francisco_cba_1.jpg | HOJA_FALTA ../html/fotos_rs_encuentro_de_dojos.html | IMG_FALTA ../assets/images/autogen/a_encuentro_de_dojos_cap.fed_1.jpg | HOJA_FALTA ../html/fotos_rs_campana__triunfo_2000.html | IMG_FALTA ../assets/images/autogen/a_premio_triunfo_2000_mejor_comp_kar_siglo_camp_2.jpg
-OK fotos_rs_sem__filial_campana.html arch=hoja imgs=0 faltan=1 | IMG_FALTA ../assets/images/seminario_filial_campana.jpg | NAV_FALTA anterior fotos_rs_sem__s__francisco_-_c.html | NAV_FALTA siguiente fotos_rs__arbit__san_luis.html
-OK fotos_sh_castillo_de_shuri.html arch=hoja imgs=0 faltan=1 | IMG_FALTA ../assets/images/foto_castillo_rey.JPG
-OK fotos_sh_foto_antigua.html arch=hoja imgs=0 faltan=1 | IMG_FALTA ../assets/images/autogen/a_sintesis_historica_item_quees_karate_1.jpg
-OK fotos_sh_gran_poste_del_dragon.html arch=hoja imgs=0 faltan=1 | IMG_FALTA ../assets/images/foto_sintesis_historica_libro_1.JPG
-OK fotos_sh_trono_castle_shuri.html arch=hoja imgs=0 faltan=1 | IMG_FALTA ../assets/images/autogen/a_trono_interior_del_castillo_de_shuri.jpg
-OK fotos_sintesis_historica.html arch=index imgs=0 faltan=4 | IMG_FALTA ../assets/images/autogen/a_sintesis_historica_item_quees_karate_2.jpg | IMG_FALTA ../assets/images/autogen/a_trono_interior_del_castillo_de_shuri_1.jpg | IMG_FALTA ../assets/images/autogen/a_foto_castillo_rey_2.jpg | IMG_FALTA ../assets/images/autogen/a_foto_sintesis_historica_libro_1_2.jpg
-OK fotos_t_1__intern__san_luis.html arch=hoja imgs=1 faltan=0
-OK fotos_t_1__metrop__river_2000.html arch=hoja imgs=0 faltan=1 | IMG_FALTA ../assets/images/metropolitano_en_river_bs.as._2000.JPG
-OK fotos_t_2__intern__san_luis.html arch=hoja imgs=1 faltan=0
-OK fotos_t_2__metrop__2000.html arch=hoja imgs=0 faltan=1 | IMG_FALTA ../assets/images/metropolitano_river_bs.as_2000.JPG
-OK fotos_t_2do__world_champ.html arch=hoja imgs=1 faltan=0
-OK fotos_t_bermuda_institute.html arch=hoja imgs=1 faltan=0
-OK fotos_t_iii_copa_campana.html arch=hoja imgs=0 faltan=1 | IMG_FALTA ../assets/images/iii_copa_campana_bs.as_ar_1995.JPG
-OK fotos_t_karate___kobudo_world.html arch=hoja imgs=0 faltan=1 | IMG_FALTA ../assets/images/oki_karate_and_kobudo_world_tournament.JPG
-OK fotos_t_okinawa_97.html arch=hoja imgs=0 faltan=1 | IMG_FALTA ../assets/images/oki_kar_and_kob_world_tourn_1997_del_ar_uy_it.JPG
-OK fotos_t_open_intern_bsas_98.html arch=hoja imgs=1 faltan=0
-OK fotos_t_pretournament_98.html arch=hoja imgs=0 faltan=1 | IMG_FALTA ../assets/images/japan_world_cup_pretournament_ar_1998.JPG
-OK fotos_t_river_1988.html arch=hoja imgs=1 faltan=0
-OK fotos_t_torneo_amistad_95.html arch=hoja imgs=1 faltan=0
-OK fotos_t_world_karate_94.html arch=hoja imgs=1 faltan=0
-OK fotosm_con_el_maestro_toma.html arch=hoja imgs=0 faltan=1 | IMG_FALTA ../assets/images/autogen/a_clugani_con_maestro_toma.jpg
-OK fotosm_con_hija_sensei.html arch=hoja imgs=0 faltan=1 | IMG_FALTA ../assets/images/hija_sensei.JPG
-OK fotosm_con_meitoku_yagi_10_dan.html arch=hoja imgs=1 faltan=0
-OK fotosm_con_minoru_higa_1.html arch=hoja imgs=0 faltan=1 | IMG_FALTA ../assets/images/autogen/a_clugani_cmaestro_minoru_higa.jpg
-OK fotosm_con_minoru_higa_2.html arch=hoja imgs=1 faltan=0
-OK fotosm_con_minoru_higa_3.html arch=hoja imgs=0 faltan=1 | IMG_FALTA ../assets/images/autogen/a_clugani_con_maestro_minoru.jpg
-OK fotosm_con_minoru_y_oscar.html arch=hoja imgs=1 faltan=0
-OK fotosm_con_nobuko_sensei.html arch=hoja imgs=0 faltan=1 | IMG_FALTA ../assets/images/nobuko_sensei.JPG
-OK fotosm_con_oscar_higa_1.html arch=hoja imgs=0 faltan=1 | IMG_FALTA ../assets/images/autogen/a_clugani_con_maestro_oscar.jpg
-OK fotosm_con_simabukuro_sensei.html arch=hoja imgs=1 faltan=0
-OK fotosm_jintatsu_higa_1.html arch=hoja imgs=0 faltan=1 | IMG_FALTA ../assets/images/jintatsu_higa.JPG
-OK fotosm_jintatsu_higa_2.html arch=hoja imgs=0 faltan=1 | IMG_FALTA ../assets/images/jintatsu_higa_foto_grande.JPG
-OK fotosm_lugani_castle_shuri.html arch=hoja imgs=0 faltan=1 | IMG_FALTA ../assets/images/autogen/a_clugani_castillo_shuri.jpg
-OK fotosm_okinawa_vivienda_tipica.html arch=hoja imgs=1 faltan=0
-OK fotosm_oscar_higa.html arch=hoja imgs=0 faltan=1 | IMG_FALTA ../assets/images/oscar_higa.JPG
-OK fotosm_varios.html arch=hoja imgs=1 faltan=0
-OK horarios.html arch=utilitaria imgs=0 faltan=0 | TABLA_DATOS
-OK karate_deportivo.html arch=articulo imgs=1 faltan=1 | IMG_FALTA ../assets/images/autogen/a_oki_karate_and_kobudo_world_tournament_2.jpg
-OK karate_tradicional.html arch=articulo imgs=1 faltan=2 | IMG_FALTA ../assets/images/autogen/a_definicion_lugani_1.jpg | IMG_FALTA ../assets/images/autogen/a_karate_tradicional.jpg
-OK katas_esc__kyudokan.html arch=articulo imgs=0 faltan=0
-OK la_familia_higa.html arch=articulo imgs=1 faltan=1 | IMG_FALTA ../assets/images/autogen/a_la_familia_higa.jpg
-OK libro_de_visitas.html arch=utilitaria imgs=2 faltan=0
-OK links.html arch=utilitaria imgs=0 faltan=0
-OK noticias.html arch=utilitaria imgs=0 faltan=0 | FORM_REEMPLAZADO
-OK okinawa.html arch=articulo imgs=0 faltan=3 | IMG_FALTA ../assets/images/autogen/a_representacion_del_rey_y_reina_de_ryukyu_1.jpg | IMG_FALTA ../assets/images/autogen/a_foto_de_una_escultura_para_presentacion_1.jpg | IMG_FALTA ../assets/images/autogen/a_mapa_de_okinawa_1.jpg
-OK otras_fotos.html arch=index imgs=0 faltan=8 | HOJA_FALTA ../html/fotos_o_chicos_aprendiendo_1.html | IMG_FALTA ../assets/images/autogen/a_chicos_aprendiendo_en_la_escuela_libro_3.jpg | HOJA_FALTA ../html/fotos_o_foto_karate_y_la_mujer.html | IMG_FALTA ../assets/images/autogen/a_foto_el_karate_y_la_mujer_2.jpg | HOJA_FALTA ../html/fotos_o_chicos_aprendiendo_2.html | IMG_FALTA ../assets/images/autogen/a_chicos_aprendiendo_en_la_escuela_libro_2_2.jpg | IMG_FALTA ../assets/images/autogen/a_foto_el_karate_y_el_ninio_3.jpg | HOJA_FALTA ../html/fotos_o_foto_karate_y_el_nino.html | IMG_FALTA ../assets/images/autogen/a_el_karate_y_el_ninio_campana_2.jpg | IMG_FALTA ../assets/images/autogen/a_definicion_lugani_1_2.jpg | HOJA_FALTA ../html/fotos_o_foto_karate_trad__2.html | IMG_FALTA ../assets/images/autogen/a_definicion_lugani_2_2.jpg | HOJA_FALTA ../html/fotos_o_piso_de_goma.html | IMG_FALTA ../assets/images/autogen/a_gimnasio_piso_de_goma_1.jpg
-OK pensamiento.html arch=utilitaria imgs=7 faltan=0
-OK presentacion.html arch=utilitaria imgs=15 faltan=0
-OK promociones.html arch=utilitaria imgs=0 faltan=1 | IMG_FALTA ../assets/images/autogen/a_cupon_1clasegratis.gif
-OK que_es_karate.html arch=articulo imgs=3 faltan=0
-OK servicios.html arch=utilitaria imgs=0 faltan=1 | IMG_FALTA ../assets/images/autogen/a_gimnasio_piso_de_goma.jpg
-OK sintesis_historica.html arch=articulo imgs=1 faltan=6 | HOJA_FALTA que_son_los_katas.html | IMG_FALTA ../assets/images/autogen/a_sintesis_historica_item_quees_karate.jpg | IMG_FALTA ../assets/images/autogen/a_foto_historica_libro_2.jpg | IMG_FALTA ../assets/images/autogen/a_reseniahistorica2.jpg | IMG_FALTA ../assets/images/autogen/a_reseniahistorica1.jpg | IMG_FALTA ../assets/images/autogen/a_foto_sintesis_historica_libro_1.jpg | IMG_FALTA ../assets/images/autogen/a_foto_castillo_rey.jpg
-OK ventana_bushido.html arch=articulo imgs=0 faltan=0
-OK institucion.shtml arch=articulo imgs=0 faltan=0 | FORM_REEMPLAZADO
-OK internacionales.shtml arch=articulo imgs=0 faltan=0 | FORM_REEMPLAZADO
-OK nacionales.shtml arch=articulo imgs=0 faltan=0 | FORM_REEMPLAZADO
-OK todas_las_notic_.shtml arch=articulo imgs=0 faltan=0 | FORM_REEMPLAZADO
+SKIP acondicionamiento_fisico.html (ya convertida)
+SKIP afiche_29o_camp__arg__cba_.html (ya convertida)
+SKIP afiches.html (ya convertida)
+SKIP afiches_1__world_tourn___97.html (ya convertida)
+SKIP afiches_2__world_tourn___97.html (ya convertida)
+SKIP afiches_3o_camp__campana.html (ya convertida)
+SKIP afiches_campionati_del_mondo.html (ya convertida)
+SKIP afiches_yuchoku_higa.html (ya convertida)
+SKIP arbol_genealogico.html (ya convertida)
+SKIP biograf__jintatsu_higa.html (ya convertida)
+SKIP centro_de_ensenanza.html (ya convertida)
+SKIP como_llegar.html (ya convertida)
+SKIP contacto.html (ya convertida)
+SKIP credo_del_samurai.html (ya convertida)
+SKIP cupon_de_descuento.html (ya convertida)
+SKIP el_karate_y_el_nino.html (ya convertida)
+SKIP el_karate_y_la_mujer.html (ya convertida)
+SKIP escuela_estilo.html (ya convertida)
+SKIP foto_acond__fisico_1.html (ya convertida)
+SKIP foto_acond__fisico_2.html (ya convertida)
+SKIP foto_acond__fisico_3.html (ya convertida)
+SKIP foto_acond__fisico_lugani.html (ya convertida)
+SKIP foto_acond__fisico_museo_1.html (ya convertida)
+SKIP foto_acond__sanchin_gami.html (ya convertida)
+SKIP foto_acond__tanrenho.html (ya convertida)
+SKIP foto_kata_chinti.html (ya convertida)
+SKIP foto_kata_jion.html (ya convertida)
+SKIP foto_kata_jitte.html (ya convertida)
+SKIP foto_kata_jondan.html (ya convertida)
+SKIP foto_kata_kusanku_sho.html (ya convertida)
+SKIP foto_kata_naihanchi.html (ya convertida)
+SKIP foto_kata_passai.html (ya convertida)
+SKIP foto_kata_passai_yuchoku.html (ya convertida)
+SKIP fotos.html (ya convertida)
+SKIP fotos_acod__fisico.html (ya convertida)
+SKIP fotos_con_maestros.html (ya convertida)
+SKIP fotos_de_exhibiciones.html (ya convertida)
+SKIP fotos_de_katas.html (ya convertida)
+SKIP fotos_de_okinawa.html (ya convertida)
+SKIP fotos_de_torneos.html (ya convertida)
+SKIP fotos_exh_espectaculo_callejer.html (ya convertida)
+SKIP fotos_exh_u_b_a__facultad_de_a.html (ya convertida)
+SKIP fotos_hombu_entrada_hombu_dojo.html (ya convertida)
+SKIP fotos_hombu_hall_kobukan_kemri.html (ya convertida)
+SKIP fotos_hombu_museo_del_karate_o.html (ya convertida)
+SKIP fotos_hombu_museo_del_karate_o1.html (ya convertida)
+SKIP fotos_o_foto_karate_trad_1.html (ya convertida)
+SKIP fotos_o_lugani_y_ninos_japon.html (ya convertida)
+SKIP fotos_okw_artesania_del_castil.html (ya convertida)
+SKIP fotos_okw_avenida_intern__naha.html (ya convertida)
+SKIP fotos_okw_cuidad__de_naha_y_ca.html (ya convertida)
+SKIP fotos_okw_entrada_al_castillo.html (ya convertida)
+SKIP fotos_okw_festival_de_ryukyu.html (ya convertida)
+SKIP fotos_okw_mapa_de_okinawa.html (ya convertida)
+SKIP fotos_okw_playas_de_okinawa.html (ya convertida)
+SKIP fotos_okw_shisa_lion_s_den.html (ya convertida)
+SKIP fotos_okw_vestimenta_tipica_1.html (ya convertida)
+SKIP fotos_recr__y_semin_.html (ya convertida)
+SKIP fotos_rs_sem__filial_campana.html (ya convertida)
+SKIP fotos_sh_castillo_de_shuri.html (ya convertida)
+SKIP fotos_sh_foto_antigua.html (ya convertida)
+SKIP fotos_sh_gran_poste_del_dragon.html (ya convertida)
+SKIP fotos_sh_trono_castle_shuri.html (ya convertida)
+SKIP fotos_sintesis_historica.html (ya convertida)
+SKIP fotos_t_1__intern__san_luis.html (ya convertida)
+SKIP fotos_t_1__metrop__river_2000.html (ya convertida)
+SKIP fotos_t_2__intern__san_luis.html (ya convertida)
+SKIP fotos_t_2__metrop__2000.html (ya convertida)
+SKIP fotos_t_2do__world_champ.html (ya convertida)
+SKIP fotos_t_bermuda_institute.html (ya convertida)
+SKIP fotos_t_iii_copa_campana.html (ya convertida)
+SKIP fotos_t_karate___kobudo_world.html (ya convertida)
+SKIP fotos_t_okinawa_97.html (ya convertida)
+SKIP fotos_t_open_intern_bsas_98.html (ya convertida)
+SKIP fotos_t_pretournament_98.html (ya convertida)
+SKIP fotos_t_river_1988.html (ya convertida)
+SKIP fotos_t_torneo_amistad_95.html (ya convertida)
+SKIP fotos_t_world_karate_94.html (ya convertida)
+SKIP fotosm_con_el_maestro_toma.html (ya convertida)
+SKIP fotosm_con_hija_sensei.html (ya convertida)
+SKIP fotosm_con_meitoku_yagi_10_dan.html (ya convertida)
+SKIP fotosm_con_minoru_higa_1.html (ya convertida)
+SKIP fotosm_con_minoru_higa_2.html (ya convertida)
+SKIP fotosm_con_minoru_higa_3.html (ya convertida)
+SKIP fotosm_con_minoru_y_oscar.html (ya convertida)
+SKIP fotosm_con_nobuko_sensei.html (ya convertida)
+SKIP fotosm_con_oscar_higa_1.html (ya convertida)
+SKIP fotosm_con_simabukuro_sensei.html (ya convertida)
+SKIP fotosm_jintatsu_higa_1.html (ya convertida)
+SKIP fotosm_jintatsu_higa_2.html (ya convertida)
+SKIP fotosm_lugani_castle_shuri.html (ya convertida)
+SKIP fotosm_okinawa_vivienda_tipica.html (ya convertida)
+SKIP fotosm_oscar_higa.html (ya convertida)
+SKIP fotosm_varios.html (ya convertida)
+SKIP horarios.html (ya convertida)
+SKIP karate_deportivo.html (ya convertida)
+SKIP karate_tradicional.html (ya convertida)
+SKIP katas_esc__kyudokan.html (ya convertida)
+SKIP la_familia_higa.html (ya convertida)
+SKIP libro_de_visitas.html (ya convertida)
+SKIP links.html (ya convertida)
+SKIP noticias.html (ya convertida)
+SKIP okinawa.html (ya convertida)
+SKIP otras_fotos.html (ya convertida)
+SKIP pensamiento.html (ya convertida)
+SKIP presentacion.html (ya convertida)
+SKIP promociones.html (ya convertida)
+SKIP que_es_karate.html (ya convertida)
+SKIP servicios.html (ya convertida)
+SKIP sintesis_historica.html (ya convertida)
+SKIP ventana_bushido.html (ya convertida)
+SKIP institucion.shtml (ya convertida)
+SKIP internacionales.shtml (ya convertida)
+SKIP nacionales.shtml (ya convertida)
+SKIP todas_las_notic_.shtml (ya convertida)
 ---
 páginas: 115
-arquetipos: articulo=20, hoja=73, index=11, utilitaria=11
+arquetipos: 
 NEEDS_REVIEW: 0
 errores: 0
