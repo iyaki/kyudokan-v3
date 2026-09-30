@@ -685,8 +685,8 @@ def template(page, main_html, html_dir_prefix, activa='inicio'):
     for key, label, archivo in ESTACIONES:
         href = f'{r}index.html' if key == 'inicio' else f'{p}{archivo}'
         clase = ' activo' if key == activa else ''
-        lis.append(f'    <li><a class="estacion{clase}" href="{href}">{esc(label)}</a></li>')
-    riel = '\n'.join(lis)
+        lis.append(f'    <a class="placa{clase}" href="{href}">{esc(label)}</a>')
+    placas = '\n'.join(lis)
     return f"""<!DOCTYPE html>
 <html lang="es">
 <head>
@@ -699,22 +699,21 @@ def template(page, main_html, html_dir_prefix, activa='inicio'):
 <link rel="icon" type="image/png" sizes="32x32" href="{r}assets/favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="{r}assets/favicon/favicon-16x16.png">
 <link rel="apple-touch-icon" href="{r}assets/favicon/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="192x192" href="{r}assets/favicon/android-chrome-192x192.png">
-<link rel="stylesheet" href="{r}linea.css">
+<link rel="stylesheet" href="{r}shomen.css">
 </head>
 <body>
 
 <a class="skip" href="#contenido">Saltar al contenido</a>
 
-<nav class="riel" aria-label="Estaciones del sitio">
+<header class="barra">
   <a class="marca" href="{r}index.html">
-    <img src="{r}assets/marca/kyudokan_kanjis.svg" alt="">
+    <img src="{r}assets/marca/kyudokan-crest.png" alt="">
     <span>Kyudokan<br>Campana</span>
   </a>
-  <ol class="estaciones">
-{riel}
-  </ol>
-</nav>
+  <nav class="entrada-barra" aria-label="Secciones del sitio">
+{placas}
+  </nav>
+</header>
 
 {main_html}
 
@@ -722,7 +721,7 @@ def template(page, main_html, html_dir_prefix, activa='inicio'):
   <div class="sitemap">
     <nav class="sitemap-col" aria-label="El dojo">
       <h2>El dojo</h2>
-      <a href="{r}index.html#linaje">La historia</a>
+      <a href="{r}index.html">Inicio</a>
       <a href="{p}escuela_estilo.html">La escuela</a>
       <a href="{p}sintesis_historica.html">Historia del estilo</a>
       <a href="{p}como_llegar.html">Cómo llegar</a>

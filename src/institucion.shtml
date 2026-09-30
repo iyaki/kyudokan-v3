@@ -10,31 +10,30 @@
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
 <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/android-chrome-192x192.png">
-<link rel="stylesheet" href="linea.css">
+<link rel="stylesheet" href="shomen.css">
 </head>
 <body>
 
 <a class="skip" href="#contenido">Saltar al contenido</a>
 
-<nav class="riel" aria-label="Estaciones del sitio">
+<header class="barra">
   <a class="marca" href="index.html">
-    <img src="assets/marca/kyudokan_kanjis.svg" alt="">
+    <img src="assets/marca/kyudokan-crest.png" alt="">
     <span>Kyudokan<br>Campana</span>
   </a>
-  <ol class="estaciones">
-    <li><a class="estacion" href="index.html">Inicio</a></li>
-    <li><a class="estacion activo" href="html/presentacion.html">Presentación</a></li>
-    <li><a class="estacion" href="html/que_es_karate.html">Qué es Karate</a></li>
-    <li><a class="estacion" href="html/sintesis_historica.html">Historia</a></li>
-    <li><a class="estacion" href="html/centro_de_ensenanza.html">Centro de Enseñanza</a></li>
-    <li><a class="estacion" href="html/horarios.html">Horarios</a></li>
-    <li><a class="estacion" href="html/como_llegar.html">Cómo llegar</a></li>
-    <li><a class="estacion" href="html/fotos.html">Fotos</a></li>
-    <li><a class="estacion" href="html/noticias.html">Noticias</a></li>
-    <li><a class="estacion" href="html/contacto.html">Contacto</a></li>
-  </ol>
-</nav>
+  <nav class="entrada-barra" aria-label="Secciones del sitio">
+    <a class="placa" href="index.html">Inicio</a>
+    <a class="placa activo" href="html/presentacion.html">Presentación</a>
+    <a class="placa" href="html/que_es_karate.html">Qué es Karate</a>
+    <a class="placa" href="html/sintesis_historica.html">Historia</a>
+    <a class="placa" href="html/centro_de_ensenanza.html">Centro de Enseñanza</a>
+    <a class="placa" href="html/horarios.html">Horarios</a>
+    <a class="placa" href="html/como_llegar.html">Cómo llegar</a>
+    <a class="placa" href="html/fotos.html">Fotos</a>
+    <a class="placa" href="html/noticias.html">Noticias</a>
+    <a class="placa" href="html/contacto.html">Contacto</a>
+  </nav>
+</header>
 
 <main id="contenido" class="pagina">
 <h1>Institución</h1>
@@ -49,7 +48,7 @@
   <div class="sitemap">
     <nav class="sitemap-col" aria-label="El dojo">
       <h2>El dojo</h2>
-      <a href="index.html#linaje">La historia</a>
+      <a href="index.html">Inicio</a>
       <a href="html/escuela_estilo.html">La escuela</a>
       <a href="html/sintesis_historica.html">Historia del estilo</a>
       <a href="html/como_llegar.html">Cómo llegar</a>
