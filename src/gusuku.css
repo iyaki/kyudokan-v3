@@ -242,7 +242,6 @@ main { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
 .linaje .nota {
   color: var(--tinta);
   font-size: 16px;
-  max-width: 62ch;
   margin: 8px 0 34px;
 }
 .pared {
