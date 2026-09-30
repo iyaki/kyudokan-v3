@@ -494,6 +494,24 @@ CARTELA = ('<div class="falta"><strong>Falta en el archivo</strong>'
            'es recuperable del servidor original.<br><code>{name}</code></div>')
 
 
+_IMG_DIMS = {}
+
+
+def img_dims(path):
+    """Dimensiones intrínsecas (cacheadas) para reservar espacio (CLS=0)."""
+    if path in _IMG_DIMS:
+        return _IMG_DIMS[path]
+    dims = ('', '')
+    try:
+        from PIL import Image
+        with Image.open(path) as im:
+            dims = (str(im.width), str(im.height))
+    except Exception:
+        pass
+    _IMG_DIMS[path] = dims
+    return dims
+
+
 def figure_html(page, img, lazy=True, alt_override=None, caption=None):
     src = img_src(img)
     page.links_out.add(src)
@@ -506,7 +524,9 @@ def figure_html(page, img, lazy=True, alt_override=None, caption=None):
     page.imgs_ok += 1
     alt = orto_fix(alt_override if alt_override is not None else collapse(img.attrs.get('alt', '')).strip())
     ldy = ' loading="lazy"' if lazy else ''
-    fig = [f'<figure class="lamina"><img src="{esc(src)}"{ldy} alt="{esc(alt)}">']
+    w, h = img_dims(page.path.parent / src)
+    dim = f' width="{w}" height="{h}"' if w else ''
+    fig = [f'<figure class="lamina"><img src="{esc(src)}"{ldy}{dim} alt="{esc(alt)}">']
     cap = caption if caption is not None else alt
     if cap:
         fig.append(f'<figcaption>{esc(orto_fix(cap))}</figcaption>')
@@ -949,7 +969,7 @@ def template(page, main_html, html_dir_prefix, activa='inicio'):
 
 <header class="masthead">
   <div class="masthead-inner">
-    <img class="crest" src="{r}assets/marca/kyudokan-crest.png" alt="Kyudokan">
+    <img class="crest" src="{r}assets/marca/kyudokan-crest.png" width="103" height="265" alt="Kyudokan">
     <div class="titular">
       <p class="sobre">Karate Dojo Campana - Centro de enseñanza de Karate Do y Kobudo</p>
       <h1>Okinawa Shorin-Ryu Karate-Do Kyudokan Federation Argentina</h1>
