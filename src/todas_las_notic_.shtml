@@ -59,26 +59,65 @@
     <nav class="sitemap-col" aria-label="El dojo">
       <h2>El dojo</h2>
       <a href="index.html">Inicio</a>
-      <a href="html/escuela_estilo.html">La escuela</a>
-      <a href="html/sintesis_historica.html">Historia del estilo</a>
-      <a href="html/como_llegar.html">Cómo llegar</a>
+      <a href="html/presentacion.html">Presentacin</a>
+      <a href="html/centro_de_ensenanza.html">Centro de Enseanza</a>
+      <a href="html/horarios.html">Horarios</a>
+      <a href="html/como_llegar.html">Como llegar</a>
+      <a href="html/servicios.html">Servicios</a>
+      <a href="html/promociones.html">Promociones</a>
+      <a href="html/cupon_de_descuento.html">Cupn de descuento</a>
       <a href="html/contacto.html">Contacto</a>
+    </nav>
+    <nav class="sitemap-col" aria-label="Historia y estilo">
+      <h2>Historia y estilo</h2>
+      <a href="html/sintesis_historica.html">Sintesis histrica</a>
+      <a href="html/arbol_genealogico.html">Arbol genealgico</a>
+      <a href="html/biograf__jintatsu_higa.html">Jintatsu Higa</a>
+      <a href="html/la_familia_higa.html">La familia Higa</a>
+      <a href="html/okinawa.html">Okinawa</a>
+      <a href="html/escuela_estilo.html">Escuela y estilo</a>
+      <a href="html/katas_esc__kyudokan.html">Katas de la escuela</a>
+      <a href="html/que_es_karate.html">Qu es Karate</a>
+      <a href="html/karate_deportivo.html">Karate deportivo</a>
+      <a href="html/karate_tradicional.html">Karate tradicional</a>
+      <a href="html/acondicionamiento_fisico.html">Acondicionamiento fsico</a>
+      <a href="html/el_karate_y_el_nino.html">El karate y el nio</a>
+      <a href="html/el_karate_y_la_mujer.html">El karate y la mujer</a>
+      <a href="html/credo_del_samurai.html">Credo del samurai</a>
+      <a href="html/ventana_bushido.html">Ventana Bushido</a>
+      <a href="html/pensamiento.html">Pensamiento</a>
     </nav>
     <nav class="sitemap-col" aria-label="El archivo">
       <h2>El archivo</h2>
+      <a href="html/fotos.html">Fotos</a>
       <a href="html/fotos_de_torneos.html">Torneos <small>1988–2000</small></a>
       <a href="html/fotos_de_exhibiciones.html">Exhibiciones</a>
       <a href="html/fotos_de_katas.html">Katas</a>
-      <a href="html/afiches.html">Afiches</a>
-      <a href="html/la_familia_higa.html">La familia Higa</a>
-      <a href="html/el_karate_y_el_nino.html">El karate y el niño</a>
-      <a href="html/el_karate_y_la_mujer.html">El karate y la mujer</a>
       <a href="html/fotos_de_okinawa.html">Okinawa</a>
+      <a href="html/fotos_con_maestros.html">Con maestros</a>
+      <a href="html/fotos_acod__fisico.html">Acondicionamiento fsico</a>
+      <a href="html/fotos_sintesis_historica.html">Sintesis histrica</a>
+      <a href="html/fotos_recr__y_semin_.html">Recitales y seminarios</a>
+      <a href="html/afiches.html">Afiches</a>
+      <a href="html/otras_fotos.html">Otras fotos</a>
+    </nav>
+    <nav class="sitemap-col" aria-label="Noticias">
+      <h2>Noticias</h2>
+      <a href="html/noticias.html">Noticias</a>
+      <a href="todas_las_notic_.shtml">Todas las noticias</a>
+      <a href="nacionales.shtml">Nacionales</a>
+      <a href="internacionales.shtml">Internacionales</a>
+      <a href="institucion.shtml">Institucin</a>
+      <a href="html/links.html">Links</a>
+      <a href="html/libro_de_visitas.html">Libro de visitas</a>
     </nav>
     <div class="sitemap-col">
       <h2>El dojo en Campana</h2>
       <p>Jean Jaures 983 · Campana · Bs. As.</p>
+      <p>Tel: (54) (03489) 431664</p>
       <p><a href="mailto:cristian@karatelugani.com.ar">cristian@karatelugani.com.ar</a></p>
+      <a href="https://www.facebook.com/DojoCampana/">Facebook</a>
+      <a href="https://www.instagram.com/karatedojocampana/">Instagram</a>
     </div>
   </div>
   <div class="legal">
