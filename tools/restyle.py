@@ -607,7 +607,7 @@ def page_main(page, inner, vuelta_href=None, vuelta_label=BACK_LABEL):
     if vuelta_href is None:
         vuelta_href = f'{page.rel}index.html'
     return (f'<main id="contenido" class="pagina">\n'
-            f'<h1>{esc(page.title or page.name)}</h1>\n'
+            f'<h2 class="pagina-titulo">{esc(page.title or page.name)}</h2>\n'
             f'<div class="cuerpo">\n{inner}\n</div>\n'
             f'<p class="vuelta"><a href="{esc(vuelta_href)}">← {esc(vuelta_label)}</a></p>\n</main>')
 
@@ -717,12 +717,12 @@ def template(page, main_html, html_dir_prefix, activa='inicio'):
 
 <a class="skip" href="#contenido">Saltar al contenido</a>
 
-<header class="masthead masthead-interno">
+<header class="masthead">
   <div class="masthead-inner">
-    <a href="{r}index.html"><img class="crest" src="{r}assets/marca/kyudokan-crest.png" alt="Kyudokan"></a>
+    <img class="crest" src="{r}assets/marca/kyudokan-crest.png" alt="Kyudokan">
     <div class="titular">
       <p class="sobre">CENTRO DE ENSEANZA DE KARATE DO</p>
-      <p class="titulo-pagina"><a href="{r}index.html">Kyudokan · Campana</a></p>
+      <h1>Estilo Shorinryu Kyudokan de Okinawa</h1>
       <p class="ficha">Sensei Cristian Lugani (8° Dan Kyoshi) - Campana - Bs. As. - Argentina</p>
     </div>
   </div>
