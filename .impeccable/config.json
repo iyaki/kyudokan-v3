@@ -14,7 +14,6 @@
         "rule": "cream-palette",
         "value": "*",
         "files": [
-          "src/*.shtml",
           "src/*.html",
           "src/index.html",
           "src/gusuku.css"
@@ -26,7 +25,6 @@
         "rule": "wide-tracking",
         "value": "*",
         "files": [
-          "src/*.shtml",
           "src/*.html",
           "src/index.html",
           "src/_includes/base.html",
@@ -39,7 +37,6 @@
         "rule": "all-caps-body",
         "value": "*",
         "files": [
-          "src/*.shtml",
           "src/*.html",
           "src/index.html",
           "src/_includes/base.html"
@@ -51,7 +48,6 @@
         "rule": "design-system-color",
         "value": "*",
         "files": [
-          "src/*.shtml",
           "src/*.html",
           "src/index.html",
           "src/gusuku.css"

@@ -1,10 +1,10 @@
 [
   { "url": "/", "label": "Inicio" },
-  { "url": "/presentacion.html", "label": "Presentación" },
-  { "url": "/que_es_karate.html", "label": "Qué es Karate" },
-  { "url": "/sintesis_historica.html", "label": "Historia" },
-  { "url": "/centro_de_ensenanza.html", "label": "Centro de Enseñanza" },
-  { "url": "/horarios.html", "label": "Horarios" },
-  { "url": "/como_llegar.html", "label": "Cómo llegar" },
-  { "url": "/contacto.html", "label": "Contacto" }
+  { "url": "/presentacion/", "label": "Presentación" },
+  { "url": "/que_es_karate/", "label": "Qué es Karate" },
+  { "url": "/sintesis_historica/", "label": "Historia" },
+  { "url": "/centro_de_ensenanza/", "label": "Centro de Enseñanza" },
+  { "url": "/horarios/", "label": "Horarios" },
+  { "url": "/como_llegar/", "label": "Cómo llegar" },
+  { "url": "/contacto/", "label": "Contacto" }
 ]

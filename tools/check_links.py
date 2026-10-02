@@ -9,15 +9,25 @@ ATTR = re.compile(r'(?:href|src)="([^"]+)"', re.I)
 
 broken = []
 checked = 0
-for f in sorted(SRC.glob('*.html')) + sorted(SRC.glob('*.shtml')):
+
+def resuelve(base, u):
+    """Un ref local resuelve a archivo, a directorio con index.html, o a foo.html (URL /foo/)."""
+    u = re.sub(r'[?#].*$', '', u).rstrip('/')
+    t = (SRC / u.lstrip('/')) if u.startswith('/') else (base / u)
+    if t.is_file():
+        return True
+    if t.is_dir() and (t / 'index.html').is_file():
+        return True
+    return t.suffix == '' and t.with_suffix('.html').is_file()
+
+for f in sorted(SRC.glob('*.html')):
     base = f.parent
     for m in ATTR.finditer(f.read_text(encoding='utf-8')):
         u = m.group(1).strip()
         if not u or u.startswith(('http://', 'https://', 'mailto:', '#', 'javascript:')):
             continue
         checked += 1
-        target = base / re.sub(r'[?#].*$', '', u)
-        if not target.exists():
+        if not resuelve(base, u):
             broken.append(f'{f.relative_to(SRC)}: {u}')
 
 print(f'links/verificados: {checked}  rotos: {len(broken)}')
