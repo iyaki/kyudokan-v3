@@ -6,3 +6,5 @@ resources/
 src/assets/texturas/_sheet.png
 *.pyc
 .swp
+node_modules/
+_site/
