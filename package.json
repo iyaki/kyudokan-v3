@@ -1,0 +1,15 @@
+{
+  "name": "kyudokan-v3",
+  "scripts": {
+    "build": "rm -rf ./_site && npx @11ty/eleventy",
+    "serve": "npx @11ty/eleventy --serve"
+  },
+  "author": "iyaki",
+  "engines": {
+    "node": "24"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.6"
+  }
+}
