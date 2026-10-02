@@ -9,7 +9,7 @@ ATTR = re.compile(r'(?:href|src)="([^"]+)"', re.I)
 
 broken = []
 checked = 0
-for f in sorted(SRC.glob('html/*.html')) + sorted(SRC.glob('*.shtml')) + [SRC / 'index.html']:
+for f in sorted(SRC.glob('*.html')) + sorted(SRC.glob('*.shtml')):
     base = f.parent
     for m in ATTR.finditer(f.read_text(encoding='utf-8')):
         u = m.group(1).strip()

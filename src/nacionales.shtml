@@ -30,13 +30,13 @@
 <nav class="riel" aria-label="Secciones">
   <div class="riel-inner">
     <a href="index.html">Inicio</a>
-    <a href="html/presentacion.html">Presentación</a>
-    <a href="html/que_es_karate.html">Qué es Karate</a>
-    <a href="html/sintesis_historica.html">Historia</a>
-    <a href="html/centro_de_ensenanza.html">Centro de Enseñanza</a>
-    <a href="html/horarios.html">Horarios</a>
-    <a href="html/como_llegar.html">Cómo llegar</a>
-    <a href="html/contacto.html">Contacto</a>
+    <a href="presentacion.html">Presentación</a>
+    <a href="que_es_karate.html">Qué es Karate</a>
+    <a href="sintesis_historica.html">Historia</a>
+    <a href="centro_de_ensenanza.html">Centro de Enseñanza</a>
+    <a href="horarios.html">Horarios</a>
+    <a href="como_llegar.html">Cómo llegar</a>
+    <a href="contacto.html">Contacto</a>
   </div>
 </nav>
 
@@ -55,28 +55,28 @@
     <nav class="sitemap-col" aria-label="El dojo">
       <h2>El dojo</h2>
       <a href="index.html">Inicio</a>
-      <a href="html/presentacion.html">Presentación</a>
-      <a href="html/centro_de_ensenanza.html">Centro de Enseñanza</a>
-      <a href="html/horarios.html">Horarios</a>
-      <a href="html/como_llegar.html">Cómo llegar</a>
-      <a href="html/contacto.html">Contacto</a>
+      <a href="presentacion.html">Presentación</a>
+      <a href="centro_de_ensenanza.html">Centro de Enseñanza</a>
+      <a href="horarios.html">Horarios</a>
+      <a href="como_llegar.html">Cómo llegar</a>
+      <a href="contacto.html">Contacto</a>
     </nav>
     <nav class="sitemap-col" aria-label="Historia y estilo">
       <h2>Historia y estilo</h2>
-      <a href="html/sintesis_historica.html">Síntesis histórica</a>
-      <a href="html/arbol_genealogico.html">Árbol genealógico</a>
-      <a href="html/biograf__jintatsu_higa.html">Jintatsu Higa</a>
-      <a href="html/la_familia_higa.html">La familia Higa</a>
-      <a href="html/okinawa.html">Okinawa</a>
-      <a href="html/escuela_estilo.html">Escuela y estilo</a>
-      <a href="html/katas_esc__kyudokan.html">Katas de la escuela</a>
-      <a href="html/que_es_karate.html">Qu es Karate</a>
-      <a href="html/karate_deportivo.html">Karate deportivo</a>
-      <a href="html/karate_tradicional.html">Karate tradicional</a>
-      <a href="html/acondicionamiento_fisico.html">Acondicionamiento físico</a>
-      <a href="html/el_karate_y_el_nino.html">El karate y el niño</a>
-      <a href="html/el_karate_y_la_mujer.html">El karate y la mujer</a>
-      <a href="html/pensamiento.html">Pensamiento</a>
+      <a href="sintesis_historica.html">Síntesis histórica</a>
+      <a href="arbol_genealogico.html">Árbol genealógico</a>
+      <a href="biograf__jintatsu_higa.html">Jintatsu Higa</a>
+      <a href="la_familia_higa.html">La familia Higa</a>
+      <a href="okinawa.html">Okinawa</a>
+      <a href="escuela_estilo.html">Escuela y estilo</a>
+      <a href="katas_esc__kyudokan.html">Katas de la escuela</a>
+      <a href="que_es_karate.html">Qu es Karate</a>
+      <a href="karate_deportivo.html">Karate deportivo</a>
+      <a href="karate_tradicional.html">Karate tradicional</a>
+      <a href="acondicionamiento_fisico.html">Acondicionamiento físico</a>
+      <a href="el_karate_y_el_nino.html">El karate y el niño</a>
+      <a href="el_karate_y_la_mujer.html">El karate y la mujer</a>
+      <a href="pensamiento.html">Pensamiento</a>
     </nav>
     <div class="sitemap-col">
       <h2>El dojo en Campana</h2>

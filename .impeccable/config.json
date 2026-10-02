@@ -15,7 +15,7 @@
         "value": "*",
         "files": [
           "src/*.shtml",
-          "src/html/*.html",
+          "src/*.html",
           "src/index.html",
           "src/gusuku.css"
         ],
@@ -27,7 +27,7 @@
         "value": "*",
         "files": [
           "src/*.shtml",
-          "src/html/*.html",
+          "src/*.html",
           "src/index.html",
           "src/_includes/base.html",
           "src/gusuku.css"
@@ -40,7 +40,7 @@
         "value": "*",
         "files": [
           "src/*.shtml",
-          "src/html/*.html",
+          "src/*.html",
           "src/index.html",
           "src/_includes/base.html"
         ],
@@ -52,7 +52,7 @@
         "value": "*",
         "files": [
           "src/*.shtml",
-          "src/html/*.html",
+          "src/*.html",
           "src/index.html",
           "src/gusuku.css"
         ],
