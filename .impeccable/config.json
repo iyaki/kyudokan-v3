@@ -29,6 +29,7 @@
           "src/*.shtml",
           "src/html/*.html",
           "src/index.html",
+          "src/_includes/base.html",
           "src/gusuku.css"
         ],
         "createdAt": "2026-09-30T00:00:00.000Z",
@@ -40,19 +41,11 @@
         "files": [
           "src/*.shtml",
           "src/html/*.html",
-          "src/index.html"
+          "src/index.html",
+          "src/_includes/base.html"
         ],
         "createdAt": "2026-09-30T00:00:00.000Z",
         "reason": "Direction contract (DESIGN.md 'Gótica Sello'): es el sello de 5 palabras del masthead (CENTRO DE ENSEANZA DE KARATE DO, contenido verbatim del sitio 2001), no un pasaje de texto corrido — el uppercase es el dispositivo del sello"
-      },
-      {
-        "rule": "aphoristic-cadence",
-        "value": "*",
-        "files": [
-          "src/html/credo_del_samurai.html"
-        ],
-        "createdAt": "2026-09-30T00:00:00.000Z",
-        "reason": "Contenido legacy verbatim (mandato 100% preservación): el Credo del Samurái es material histórico del sitio 2001, no copy propio"
       },
       {
         "rule": "design-system-color",
