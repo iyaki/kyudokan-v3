@@ -8,4 +8,5 @@ src/assets/texturas/_sheet.png
 .swp
 node_modules/
 .wrangler/
+.jampack/
 _site/
