@@ -122,6 +122,33 @@ img { max-width: 100%; display: block; }
   margin-top: 14px;
 }
 
+/* --- fantasmas de muro: la marca de cada sala como agua de fondo --- */
+.pagina { position: relative; }
+.pagina.wm-fenix::before,
+.pagina.wm-shisa-izq::before,
+.pagina.wm-shisa-der::before,
+.pagina.wm-kanjis::before,
+.pagina.wm-castillo::before,
+.pagina.wm-emblema::before,
+.pagina.wm-kyudokan::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: min(44%, 340px);
+  background: no-repeat right bottom / contain;
+  opacity: 0.08;
+  pointer-events: none;
+  z-index: -1;
+}
+.pagina.wm-fenix::before { aspect-ratio: 440 / 230; background-image: url('assets/marca/fenix-shuri.png'); }
+.pagina.wm-shisa-izq::before { aspect-ratio: 258 / 408; background-image: url('assets/marca/shisa-izq.png'); }
+.pagina.wm-shisa-der::before { aspect-ratio: 258 / 408; background-image: url('assets/marca/shisa-der.png'); }
+.pagina.wm-kanjis::before { aspect-ratio: 98.88 / 254.4; background-image: url('assets/marca/kyudokan_kanjis.svg'); }
+.pagina.wm-castillo::before { width: min(56%, 440px); aspect-ratio: 1536 / 1022; background-image: url('assets/marca/castillo-shuri.png'); }
+.pagina.wm-emblema::before { aspect-ratio: 680 / 678; background-image: url('assets/marca/emblema-shorinryu.png'); }
+.pagina.wm-kyudokan::before { width: min(16%, 120px); aspect-ratio: 103 / 265; background-image: url('assets/marca/kyudokan-vertical.png'); }
+
 /* --- masthead: el muro con el nombre --- */
 .masthead { border-bottom: 1px solid var(--pelo); }
 .masthead-inner {
@@ -411,6 +438,12 @@ footer .pie-inner { text-align: center; padding-bottom: 42px; }
   text-decoration: none;
 }
 .sitemap-col a:hover { color: var(--teja); }
+.sitemap-col .social {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px 18px;
+  margin-top: 16px;
+}
 .sitemap-col p a {
   display: inline;
 }
@@ -425,7 +458,7 @@ footer .pie-inner { text-align: center; padding-bottom: 42px; }
   color: #3f3831;
 }
 .legal .fuente { margin-top: 4px; font-size: 12px; color: #3f3831; }
-.legal .fuente a { color: #8f2f10; font-weight: 700; }
+.legal .fuente a { color: #8f2f10; font-weight: 700; text-decoration: none; }
 
 /* --- páginas internas: el mismo muro, salas contiguas --- */
 .skip {
@@ -571,13 +604,28 @@ footer .pie-inner { text-align: center; padding-bottom: 42px; }
 .cuerpo .lamina.flota-der { float: right; margin: 6px 0 22px 28px; }
 .cuerpo .lamina.flota-izq { float: left; margin: 6px 28px 22px 0; }
 .cierre {
-  clear: both;
   font-family: 'Shippori Mincho', serif;
   font-weight: 600;
   font-size: clamp(21px, 3vw, 26px);
   text-align: left;
   max-width: 30ch;
+  margin: 0;
+}
+/* firma de página: cierre + sello del dojo, el papel se funde con multiply */
+.firma {
+  clear: both;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
   margin: 30px 0 0;
+}
+.firma .cierre { flex: 1 1 280px; max-width: none; }
+.sello-dojo {
+  width: 220px;
+  height: auto;
+  mix-blend-mode: multiply;
 }
 .accion { text-align: left; margin: 32px 0 4px; }
 .accion a {
@@ -773,6 +821,8 @@ footer .pie-inner { text-align: center; padding-bottom: 42px; }
 /* --- móvil --- */
 @media (max-width: 760px) {
   body { font-size: var(--fs-cuerpo); }
+  .pagina[class*="wm-"]::before { width: min(56%, 250px); }
+  .pagina.wm-kyudokan::before { width: min(22%, 90px); }
   .masthead-inner { flex-direction: row; gap: 20px; padding: 26px 20px 20px; }
   .crest { width: 64px; height: auto; }
   .riel-inner, main, .linaje-inner, footer .pie-inner { padding-left: 20px; padding-right: 20px; }
