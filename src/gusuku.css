@@ -599,10 +599,7 @@ footer .pie-inner { text-align: center; padding-bottom: 42px; }
 .torneo + .torneo { margin-top: 44px; padding-top: 36px; border-top: 1px solid var(--pelo); }
 .torneo > h3:first-of-type {
   font-size: 27px;
-  color: var(--teja);
   margin: 0 0 22px;
-  padding-bottom: 12px;
-  border-bottom: 2px solid var(--teja);
 }
 @media (max-width: 760px) {
   .kata { grid-template-columns: 1fr; }
