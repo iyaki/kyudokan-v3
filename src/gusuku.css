@@ -558,6 +558,14 @@ footer .pie-inner { text-align: center; padding-bottom: 42px; }
 .sedes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
 .sedes .mapa-osm { width: 100%; margin: 0; }
 .sedes .mapa-osm iframe { height: 320px; }
+.sedes figcaption span {
+  display: block;
+  margin-top: 6px;
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 0;
+  color: var(--tinta);
+}
 .ficha p { margin-bottom: 10px; }
 @media (max-width: 760px) {
   .sedes { grid-template-columns: 1fr; }
