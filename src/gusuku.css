@@ -608,13 +608,14 @@ footer .pie-inner { text-align: center; padding-bottom: 42px; }
   margin: 40px 0 44px;
 }
 .kanji-par {
+  width: 170px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 14px;
 }
-.kanji-par .lamina { margin: 0; }
-.kanji-par p { margin: 0; text-align: center; }
+.kanji-par .lamina { margin: 0; max-width: 100%; }
+.kanji-par p { margin: 0; text-align: center; font-size: 14px; line-height: 1.5; }
 .dojo-kun {
   border-top: 1px solid var(--pelo);
   padding-top: 34px;
