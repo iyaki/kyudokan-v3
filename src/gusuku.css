@@ -273,9 +273,9 @@ main { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
   position: absolute;
   left: 50%;
   top: 40px;
-  width: 208px;
+  width: 220px;
   height: 74px;
-  margin-left: -104px;
+  margin-left: -110px;
   opacity: 0;
   transform: translateY(-8px);
   pointer-events: none;
