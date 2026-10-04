@@ -607,6 +607,13 @@ footer .pie-inner { text-align: center; padding-bottom: 42px; }
 }
 .kata-ficha p { margin-bottom: 10px; }
 .kata-ficha p:last-child { margin-bottom: 0; }
+/* h4 de subsección: un escalón bajo el h3 de sección */
+.cuerpo h4 {
+  font-family: 'Shippori Mincho', serif;
+  font-weight: 600;
+  font-size: 17px;
+  margin: 28px 0 12px;
+}
 .torneo + .torneo { margin-top: 44px; border-top: 1px solid var(--pelo); }
 
 /* --- pensamiento: serie de kanjis y Dojo Kun --- */
