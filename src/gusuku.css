@@ -433,9 +433,6 @@ footer .pie-inner { text-align: center; padding-bottom: 42px; }
 .cuerpo p { margin-bottom: 16px; max-width: 68ch; text-wrap: pretty; }
 .cuerpo b, .cuerpo strong { font-weight: 700; }
 .cuerpo ul, .cuerpo ol { margin: 0 0 16px 22px; }
-.vuelta { margin-top: 34px; font-size: 14px; font-weight: 700; letter-spacing: 0.04em; }
-.vuelta a { color: var(--mar); text-decoration: none; display: inline-block; padding: 4px 0; }
-.vuelta a:hover { color: var(--teja); }
 
 .hoja-foto { max-width: 920px; margin: 0 auto; padding: 48px 28px 46px; }
 .hoja-foto .lamina { margin: 0 auto; max-width: 640px; }
@@ -496,6 +493,81 @@ footer .pie-inner { text-align: center; padding-bottom: 42px; }
   margin-bottom: 6px;
 }
 .falta code { font-size: 12px; color: var(--tinta-2); overflow-wrap: anywhere; }
+
+/* --- presentación: el linaje en cartelas (foto arriba, ficha debajo) --- */
+.genealogia {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  max-width: 720px;
+  margin: 26px auto 0;
+}
+.genealogia .lamina { width: auto; margin: 0; padding: 14px 14px 16px; display: flex; flex-direction: column; }
+.cartela-link .lamina { height: 100%; }
+.marco {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.marco img { height: 100%; width: auto; }
+.genealogia .lamina figcaption,
+.cartela-sensei figcaption {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1.55;
+  letter-spacing: 0;
+  max-width: none;
+  color: var(--tinta);
+  text-align: center;
+  padding-top: 12px;
+  margin-top: auto;
+}
+.rol {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #8f2f10; /* teja-horno: la teja de sello, como en el sitemap */
+  margin-bottom: 5px;
+}
+.cartela-link { display: block; text-decoration: none; color: inherit; }
+.cartela-link .lamina { transition: border-color 0.2s ease, box-shadow 0.2s ease; }
+.cartela-link:hover .lamina { border-color: var(--teja); }
+.cartela-link:focus-visible { outline: 2px solid var(--teja); outline-offset: 3px; }
+.cartela-sensei { max-width: 460px; margin: 24px auto 0; }
+.cartela-sensei img { width: 100%; height: auto; max-height: none; }
+.cartela-sensei .marco { height: auto; }
+
+/* --- centro de enseñanza: lectura con láminas flotadas --- */
+.centro .rol { font-size: 15px; letter-spacing: 0.14em; margin: 0 0 18px; }
+.cuerpo .lamina.flota-der { float: right; margin: 6px 0 22px 28px; }
+.cuerpo .lamina.flota-izq { float: left; margin: 6px 28px 22px 0; }
+.cierre-wrap { clear: both; }
+.cierre-wrap .teja-flourish { margin: 30px 0 18px; }
+.cierre {
+  font-family: 'Shippori Mincho', serif;
+  font-weight: 600;
+  font-size: clamp(21px, 3vw, 26px);
+  text-align: left;
+  max-width: 30ch;
+  margin: 0;
+}
+.accion { text-align: left; margin: 32px 0 4px; }
+.accion a {
+  display: inline-block;
+  border: 1px solid var(--teja);
+  color: var(--tinta);
+  font-size: var(--fs-label);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 14px 22px;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.accion a:hover { background: var(--teja); color: var(--hueso); }
+.accion a:focus-visible { outline: 2px solid var(--teja); outline-offset: 3px; }
 
 .tabla-notacion {
   display: block;
@@ -589,7 +661,6 @@ footer .pie-inner { text-align: center; padding-bottom: 42px; }
   .riel a[aria-current] { border-bottom-color: var(--teja); }
   .subnav a { padding: 8px 2px; }
   .hoja-foto nav a { padding: 8px 2px; }
-  .vuelta a { display: inline-block; padding: 8px 0; }
   .bienvenida { padding: 44px 0 16px; }
   .bienvenida .display { font-size: clamp(38px, 11vw, 52px); gap: 12px; }
   .shisa { width: 36px; }
@@ -601,4 +672,11 @@ footer .pie-inner { text-align: center; padding-bottom: 42px; }
   .sitemap { grid-template-columns: 1fr; gap: 26px; }
   .legal { padding: 14px 20px 30px; }
   .secuencia { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 18px; }
+  .genealogia { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+  .genealogia .lamina { padding: 10px 10px 12px; }
+  .marco { height: auto; }
+  .cartela-sensei { margin: 20px auto 0; }
+  .marco img { height: auto; width: 100%; max-height: none; }
+  .cuerpo .lamina.flota-der, .cuerpo .lamina.flota-izq { float: none; margin: 20px auto; max-width: min(100%, 320px); }
+  .cuerpo .lamina.flota-der img, .cuerpo .lamina.flota-izq img { width: 100%; }
 }
