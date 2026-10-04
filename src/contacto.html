@@ -31,3 +31,157 @@ title: "Visitanos — Kyudokan Campana"
 </section>
 </div>
 </main>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "{{ sitio.url }}/#organizacion",
+      "name": "Centro de Enseñanza de Karate Do — Estilo Shorinryu Kyudokan de Okinawa, Filial Campana",
+      "url": "{{ sitio.url }}/",
+      "telephone": "+54 3489 35-9493",
+      "email": "cristianlugani@hotmail.com",
+      "sameAs": [
+        "https://www.facebook.com/DojoCampana/",
+        "https://www.instagram.com/karatedojocampana/",
+        "https://www.youtube.com/channel/UCj0M5SDOXR79as5RuvXgCBw",
+        "https://karatecampana.blogspot.com/"
+      ]
+    },
+    {
+      "@type": "SportsActivityLocation",
+      "@id": "{{ sitio.url }}/#sede-rawson",
+      "name": "Kyudokan Campana — Sede Rawson 327",
+      "description": "Clases de karate para niños avanzados y adultos.",
+      "parentOrganization": { "@id": "{{ sitio.url }}/#organizacion" },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rawson 327",
+        "addressLocality": "Campana",
+        "addressRegion": "Buenos Aires",
+        "addressCountry": "AR"
+      },
+      "geo": { "@type": "GeoCoordinates", "latitude": -34.1626126, "longitude": -58.9614978 },
+      "telephone": "+54 3489 35-9493"
+    },
+    {
+      "@type": "SportsActivityLocation",
+      "@id": "{{ sitio.url }}/#sede-jaures",
+      "name": "Kyudokan Campana — Sede Jean Jaurés 983",
+      "description": "Clases de karate para niños principiantes.",
+      "parentOrganization": { "@id": "{{ sitio.url }}/#organizacion" },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jean Jaurés 983",
+        "postalCode": "B2804AUK",
+        "addressLocality": "Campana",
+        "addressRegion": "Buenos Aires",
+        "addressCountry": "AR"
+      },
+      "geo": { "@type": "GeoCoordinates", "latitude": -34.1648298, "longitude": -58.9634832 },
+      "telephone": "+54 3489 35-9493"
+    },
+    {
+      "@type": "Person",
+      "@id": "{{ sitio.url }}/#sensei-cristian",
+      "name": "Cristian Lugani",
+      "jobTitle": "Sensei",
+      "description": "8° Dan Kyoshi. Representante para la ciudad de Campana de la Escuela Shorinryu Kyudokan de Okinawa.",
+      "worksFor": { "@id": "{{ sitio.url }}/#sede-rawson" }
+    },
+    {
+      "@type": "Person",
+      "@id": "{{ sitio.url }}/#sensei-daniela",
+      "name": "Daniela Soledad Bustos",
+      "jobTitle": "Sensei",
+      "description": "6 Dan Renshi. Dicta las clases de la sede Jean Jaurés 983.",
+      "worksFor": { "@id": "{{ sitio.url }}/#sede-jaures" }
+    },
+    {
+      "@type": "Event",
+      "name": "Clase de karate (sábado)",
+      "location": { "@id": "{{ sitio.url }}/#sede-rawson" },
+      "performer": { "@id": "{{ sitio.url }}/#sensei-cristian" },
+      "eventSchedule": {
+        "@type": "Schedule",
+        "repeatFrequency": "P1W",
+        "byDay": ["Saturday"],
+        "startTime": "10:00"
+      }
+    },
+    {
+      "@type": "Event",
+      "name": "Clase de karate — niños avanzados",
+      "location": { "@id": "{{ sitio.url }}/#sede-rawson" },
+      "performer": { "@id": "{{ sitio.url }}/#sensei-cristian" },
+      "eventSchedule": {
+        "@type": "Schedule",
+        "repeatFrequency": "P1W",
+        "byDay": ["Monday", "Wednesday"],
+        "startTime": "18:00"
+      }
+    },
+    {
+      "@type": "Event",
+      "name": "Clase de kobudo — principiantes",
+      "location": { "@id": "{{ sitio.url }}/#sede-rawson" },
+      "performer": { "@id": "{{ sitio.url }}/#sensei-cristian" },
+      "eventSchedule": {
+        "@type": "Schedule",
+        "repeatFrequency": "P1W",
+        "byDay": ["Friday"],
+        "startTime": "18:00"
+      }
+    },
+    {
+      "@type": "Event",
+      "name": "Clase de karate — niños principiantes",
+      "location": { "@id": "{{ sitio.url }}/#sede-jaures" },
+      "performer": { "@id": "{{ sitio.url }}/#sensei-daniela" },
+      "eventSchedule": {
+        "@type": "Schedule",
+        "repeatFrequency": "P1W",
+        "byDay": ["Tuesday", "Thursday"],
+        "startTime": "18:30"
+      }
+    },
+    {
+      "@type": "Event",
+      "name": "Clase de karate — adultos kyus",
+      "location": { "@id": "{{ sitio.url }}/#sede-rawson" },
+      "performer": { "@id": "{{ sitio.url }}/#sensei-cristian" },
+      "eventSchedule": {
+        "@type": "Schedule",
+        "repeatFrequency": "P1W",
+        "byDay": ["Monday", "Wednesday"],
+        "startTime": "19:30"
+      }
+    },
+    {
+      "@type": "Event",
+      "name": "Clase de kobudo — avanzados",
+      "location": { "@id": "{{ sitio.url }}/#sede-rawson" },
+      "performer": { "@id": "{{ sitio.url }}/#sensei-cristian" },
+      "eventSchedule": {
+        "@type": "Schedule",
+        "repeatFrequency": "P1W",
+        "byDay": ["Friday"],
+        "startTime": "19:30"
+      }
+    },
+    {
+      "@type": "Event",
+      "name": "Clase de karate — adultos danes",
+      "location": { "@id": "{{ sitio.url }}/#sede-rawson" },
+      "performer": { "@id": "{{ sitio.url }}/#sensei-cristian" },
+      "eventSchedule": {
+        "@type": "Schedule",
+        "repeatFrequency": "P1W",
+        "byDay": ["Monday", "Wednesday"],
+        "startTime": "21:00"
+      }
+    }
+  ]
+}
+</script>
