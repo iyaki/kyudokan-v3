@@ -13,6 +13,7 @@ Pasos manuales restantes (dashboard Cloudflare):
 1. Workers & Pages → Create → Pages → **Connect to Git** → repo `iyaki/kyudokan-v3`, rama `main`. Confirmar build `npm run build` / output `_site`.
 2. Custom domain: agregar `karatekyudokan.com.ar` al proyecto.
 3. **Cutover DNS**: cambiar los nameservers en el registrar cuando se decida reemplazar el sitio 2001. Hasta entonces, validar en `kyudokan-v3.pages.dev`.
+4. **Quitar el `noindex`** de `src/_includes/base.html` en el mismo push del cutover DNS — hasta entonces los motores no indexan el sitio.
 
 Externo (SEO): dar de alta el dominio en Google Search Console y Bing Webmaster, enviar `https://karatekyudokan.com.ar/sitemap.xml`.
 
