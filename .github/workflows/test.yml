@@ -1,0 +1,49 @@
+name: Test build
+
+permissions:
+  contents: read
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - 'main'
+    paths:
+      - 'src/**'
+      - '.github/workflows/test.yml'
+      - '.eleventy'
+      - '.eleventy.js'
+      - 'package-lock.json'
+      - 'package.json'
+  pull_request:
+    branches:
+      - 'main'
+    paths:
+      - 'src/**'
+      - '.github/workflows/test.yml'
+      - '.eleventy'
+      - '.eleventy.js'
+      - 'package-lock.json'
+      - 'package.json'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: 'npm'
+          cache-dependency-path: 'package-lock.json'
+      - name: Cache jampack
+        uses: actions/cache@v6
+        with:
+          path: .jampack
+          key: v1-jampack
+      - name: Build
+        run: |
+          npm install --save-exact
+          npm run build
+      - name: Verificación de enlaces
+        run: python3 tools/check_links.py
