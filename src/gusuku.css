@@ -432,7 +432,7 @@ footer .pie-inner { text-align: center; padding-bottom: 42px; }
 }
 .sitemap-col a {
   display: block;
-  padding: 6px 0;
+  padding: 10px 0;
   font-size: 14.5px;
   color: var(--tinta);
   text-decoration: none;
@@ -445,7 +445,8 @@ footer .pie-inner { text-align: center; padding-bottom: 42px; }
   margin-top: 16px;
 }
 .sitemap-col p a {
-  display: inline;
+  display: inline-block;
+  padding: 10px 0;
 }
 .sitemap-col a small { color: var(--tinta-2); font-size: 12.5px; }
 .sitemap-col p { font-size: 14.5px; margin-bottom: 8px; }
@@ -458,7 +459,7 @@ footer .pie-inner { text-align: center; padding-bottom: 42px; }
   color: #3f3831;
 }
 .legal .fuente { margin-top: 4px; font-size: 12px; color: #3f3831; }
-.legal .fuente a { color: #8f2f10; font-weight: 700; text-decoration: none; }
+.legal .fuente a { color: #8f2f10; font-weight: 700; text-decoration: none; display: inline-block; padding: 13px 0; }
 
 /* --- páginas internas: el mismo muro, salas contiguas --- */
 .skip {
@@ -876,5 +877,4 @@ footer .pie-inner { text-align: center; padding-bottom: 42px; }
   .cuerpo .lamina.flota-der img, .cuerpo .lamina.flota-izq img { width: 100%; }
   .lamina figcaption, .retrato figcaption { font-size: 13.5px; }
   .rol { font-size: 12px; }
-  .legal .fuente a { display: inline-block; padding: 6px 0; }
 }
