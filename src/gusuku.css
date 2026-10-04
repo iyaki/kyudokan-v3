@@ -81,7 +81,9 @@ html { scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) {
   .shisa { animation: none; }
   .callig, .callig.trazado { -webkit-mask-image: none; mask-image: none; transition: none; }
-  .callig-wrap .accion a::after { display: none; }
+  .callig-wrap .accion .cinturon { transition: none; }
+  .callig-wrap .accion a, .callig-wrap .accion a .alza { transition: none; }
+  .callig-wrap .accion a:hover, .callig-wrap .accion a:hover .alza { transform: none; }
 }
 
 body {
@@ -248,26 +250,38 @@ main { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
 /* CTA principal del sitio: teja llena, presencia de sello */
 .callig-wrap .accion a {
   position: relative;
-  overflow: hidden;
   background: var(--teja);
   color: var(--hueso);
   font-size: 15px;
   padding: 18px 44px;
   box-shadow: var(--sombra);
-  transition: background-color 0.2s cubic-bezier(0.2, 0.7, 0.3, 1);
+  transition: background-color 0.2s cubic-bezier(0.2, 0.7, 0.3, 1), transform 0.25s cubic-bezier(0.2, 0.7, 0.3, 1), box-shadow 0.25s cubic-bezier(0.2, 0.7, 0.3, 1);
 }
-.callig-wrap .accion a:hover { background: #8f2f10; }
-/* barrido: el sol pasa sobre el muro; una banda de luz cruza el sello */
-.callig-wrap .accion a::after {
-  content: "";
+.callig-wrap .accion a:hover {
+  background: #8f2f10;
+  transform: translateY(-3px) scale(1.04);
+  box-shadow: 0 6px 18px rgba(42, 37, 32, 0.22), 0 14px 40px rgba(42, 37, 32, 0.14);
+}
+.callig-wrap .accion a .alza {
+  display: inline-block;
+  transition: transform 0.25s cubic-bezier(0.2, 0.7, 0.3, 1);
+}
+.callig-wrap .accion a:hover .alza { transform: translateY(-1px); }
+/* el cinturón negro se anuda y sus puntas caen por fuera del botón */
+.callig-wrap .accion .nudo { position: relative; display: inline-block; }
+.callig-wrap .accion .cinturon {
   position: absolute;
-  inset: -40px;
-  background: linear-gradient(105deg, transparent 42%, rgba(246, 241, 230, 0.32) 50%, transparent 58%);
-  transform: translateX(-65%);
-  transition: transform 0.5s cubic-bezier(0.2, 0.7, 0.3, 1);
+  left: 50%;
+  top: 40px;
+  width: 208px;
+  height: 74px;
+  margin-left: -104px;
+  opacity: 0;
+  transform: translateY(-8px);
   pointer-events: none;
+  transition: opacity 0.22s cubic-bezier(0.2, 0.7, 0.3, 1), transform 0.22s cubic-bezier(0.2, 0.7, 0.3, 1);
 }
-.callig-wrap .accion a:hover::after { transform: translateX(65%); }
+.callig-wrap .accion .nudo:hover .cinturon { opacity: 1; transform: none; }
 .callig {
   mix-blend-mode: multiply;
   display: inline-block;
