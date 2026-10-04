@@ -51,6 +51,7 @@ Direct local representation (sucursal Campana) of the Kyudokan school — the Ka
 - `legacy/` — complete 2001 site: all text content and ~250 pages.
 - `legacy/assets/images/` — photo archive: portraits of the Higa masters (Yuchoku, Jintatsu, Minoru, Oscar, Benito), Chibana Chosin, Cristian Lugani; kanji calligraphy; tournament/exhibition/Okinawa/Hombu photos in `legacy/html/fotos_*.html` galleries; tournament posters (afiches).
 - Absence that future work must not fabricate: no testimonials, no current news, no verified credentials beyond the legacy record.
+- Owner decision (2026-10-04): in the unified `/contacto/`, the two missing 2001 map photos (`mapa_comollegar.jpg`, `mapa_comollegar2.jpg`) are replaced by an OpenStreetMap embed instead of `.falta` cartelas — standing exception to the placeholder policy for these two files.
 - **Photo archive recovery status (2026 pass):** of 196 locally-missing image references, 157 remain — the rest were restored: 16 more originals recovered this pass from Wayback Machine captures of `karatelugani.com.ar` (2001 snapshots, 8 more files inherited from the previous pass's recovery), plus 23 NOF thumbnails re-derived locally (ffmpeg) from recovered originals. Remaining references render as honest labeled placeholders (`.falta`), naming the original file; they are recoverable from the original server if it ever returns.
 
 ## Product Principles

@@ -4,7 +4,5 @@
   { "url": "/que_es_karate/", "label": "Qué es Karate" },
   { "url": "/sintesis_historica/", "label": "Historia" },
   { "url": "/centro_de_ensenanza/", "label": "Centro de Enseñanza" },
-  { "url": "/horarios/", "label": "Horarios" },
-  { "url": "/como_llegar/", "label": "Cómo llegar" },
   { "url": "/contacto/", "label": "Contacto" }
 ]
