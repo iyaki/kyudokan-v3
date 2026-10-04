@@ -618,14 +618,24 @@ footer .pie-inner { text-align: center; padding-bottom: 42px; }
   padding-top: 34px;
 }
 .dojo-kun ul {
-  margin: 18px 0 0;
-  padding-left: 22px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+  margin: 26px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 26px 40px;
 }
-.dojo-kun li { padding-left: 4px; }
-.dojo-kun li::marker { color: var(--teja); }
+.dojo-kun li strong {
+  display: block;
+  font-family: 'Shippori Mincho', serif;
+  font-size: 17px;
+  letter-spacing: 0.04em;
+  margin-bottom: 6px;
+}
+.dojo-kun li p, .dojo-kun li { color: var(--tinta); }
+@media (max-width: 760px) {
+  .dojo-kun ul { grid-template-columns: 1fr; gap: 20px; }
+}
 .torneo > h3:first-of-type {
   font-size: 27px;
   margin: 0 0 22px;
