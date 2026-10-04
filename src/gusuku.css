@@ -596,6 +596,7 @@ footer .pie-inner { text-align: center; padding-bottom: 42px; }
 }
 .kata-ficha p { margin-bottom: 10px; }
 .kata-ficha p:last-child { margin-bottom: 0; }
+.torneo + .torneo { margin-top: 44px; padding-top: 36px; border-top: 1px solid var(--pelo); }
 @media (max-width: 760px) {
   .kata { grid-template-columns: 1fr; }
 }
