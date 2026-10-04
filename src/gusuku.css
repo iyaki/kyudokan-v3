@@ -479,6 +479,7 @@ footer .pie-inner { text-align: center; padding-bottom: 42px; }
 }
 .genealogia .lamina { width: auto; margin: 0; padding: 14px 14px 16px; display: flex; flex-direction: column; }
 .cartela-link .lamina { height: 100%; }
+.genealogia .cartela.centro { justify-self: center; }
 .marco {
   height: 200px;
   display: flex;
