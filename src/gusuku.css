@@ -597,6 +597,35 @@ footer .pie-inner { text-align: center; padding-bottom: 42px; }
 .kata-ficha p { margin-bottom: 10px; }
 .kata-ficha p:last-child { margin-bottom: 0; }
 .torneo + .torneo { margin-top: 44px; padding-top: 36px; border-top: 1px solid var(--pelo); }
+
+/* --- pensamiento: serie de kanjis y Dojo Kun --- */
+.kanjis {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  margin: 40px 0 44px;
+}
+.kanji-par {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 8px 32px;
+  align-items: center;
+}
+.kanji-par .lamina { margin: 0; }
+.kanji-par p { margin: 0; }
+.dojo-kun {
+  border-top: 1px solid var(--pelo);
+  padding-top: 34px;
+}
+.dojo-kun ul {
+  margin: 18px 0 0;
+  padding-left: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.dojo-kun li { padding-left: 4px; }
+.dojo-kun li::marker { color: var(--teja); }
 .torneo > h3:first-of-type {
   font-size: 27px;
   margin: 0 0 22px;
