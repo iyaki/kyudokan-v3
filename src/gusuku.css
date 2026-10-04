@@ -167,7 +167,7 @@ img { max-width: 100%; display: block; }
   color: var(--teja);
   text-transform: uppercase;
 }
-.titular h1 {
+.titular .razon-social {
   font-family: 'Shippori Mincho', serif;
   font-weight: 600;
   font-size: var(--fs-titulo);

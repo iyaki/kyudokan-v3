@@ -6,7 +6,19 @@
 <!-- Quitar este noindex en el cutover DNS (ver docs/pendientes.md) -->
 <meta name="robots" content="noindex">
 <title>{{ title }}</title>
-{% if description %}<meta name="description" content="{{ description }}">{% endif %}
+<meta name="description" content="{{ description }}">
+<link rel="canonical" href="{{ sitio.url }}{{ page.url }}">
+<meta property="og:site_name" content="Kyudokan Campana">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ sitio.url }}{{ page.url }}">
+<meta property="og:title" content="{{ title }}">
+<meta property="og:description" content="{{ description }}">
+<meta property="og:image" content="{{ sitio.url }}/assets/marca/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Kanjis del Kyudokan y nombre Karate Dojo Campana sobre fondo encalado">
+<meta property="og:locale" content="es_AR">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/shippori-mincho-600.woff2">
 <link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/zen-kaku-400.woff2">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
@@ -23,7 +35,7 @@
     <img decoding="async" class="crest" src="/assets/marca/kyudokan-crest.png" width="103" height="265" alt="Kyudokan">
     <div class="titular">
       <p class="sobre">Centro de enseñanza de Karate Do y Kobudo</p>
-      <h1>Okinawa Shorin-Ryu Karate-Do Kyudokan Federation Argentina</h1>
+      <p class="razon-social">Okinawa Shorin-Ryu Karate-Do Kyudokan Federation Argentina</p>
       <p class="ficha">Sensei Cristian Lugani (8° Dan Kyoshi) - Campana - Bs. As. - Argentina</p>
     </div>
   </div>
