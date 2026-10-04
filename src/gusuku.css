@@ -874,4 +874,7 @@ footer .pie-inner { text-align: center; padding-bottom: 42px; }
   .marco img { height: auto; width: 100%; max-height: none; }
   .cuerpo .lamina.flota-der, .cuerpo .lamina.flota-izq { float: none; margin: 20px auto; max-width: min(100%, 320px); }
   .cuerpo .lamina.flota-der img, .cuerpo .lamina.flota-izq img { width: 100%; }
+  .lamina figcaption, .retrato figcaption { font-size: 13.5px; }
+  .rol { font-size: 12px; }
+  .legal .fuente a { display: inline-block; padding: 6px 0; }
 }
