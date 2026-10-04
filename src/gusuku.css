@@ -578,6 +578,7 @@ footer .pie-inner { text-align: center; padding-bottom: 42px; }
   margin-bottom: 20px;
   box-shadow: var(--sombra);
 }
+.tabla-nota { font-size: 13px; color: var(--tinta-2); margin: -6px 0 20px; }
 .tabla-notacion {
   width: 100%;
   min-width: 780px;
