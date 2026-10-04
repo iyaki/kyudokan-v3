@@ -556,6 +556,7 @@ footer .pie-inner { text-align: center; padding-bottom: 42px; }
 .cuerpo section:first-child h3 { margin-top: 0; }
 .mapa-osm { width: min(100%, 640px); padding: 8px; }
 .mapa-osm iframe { display: block; width: 100%; height: 400px; border: 0; }
+.mapa-okinawa { display: block; width: 100%; height: 360px; border: 0; margin: 0 0 26px; }
 .sedes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
 .sedes .mapa-osm { width: 100%; margin: 0; }
 .sedes .mapa-osm iframe { height: 320px; }
