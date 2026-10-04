@@ -81,6 +81,7 @@ html { scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) {
   .shisa { animation: none; }
   .callig, .callig.trazado { -webkit-mask-image: none; mask-image: none; transition: none; }
+  .callig-wrap .accion a::after { display: none; }
 }
 
 body {
@@ -243,6 +244,30 @@ main { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
 .retrato figcaption b { color: var(--tinta); }
 
 .callig-wrap { text-align: center; padding: 0 0 64px; }
+.callig-wrap .accion { text-align: center; margin: 44px 0 0; }
+/* CTA principal del sitio: teja llena, presencia de sello */
+.callig-wrap .accion a {
+  position: relative;
+  overflow: hidden;
+  background: var(--teja);
+  color: var(--hueso);
+  font-size: 15px;
+  padding: 18px 44px;
+  box-shadow: var(--sombra);
+  transition: background-color 0.2s cubic-bezier(0.2, 0.7, 0.3, 1);
+}
+.callig-wrap .accion a:hover { background: #8f2f10; }
+/* barrido: el sol pasa sobre el muro; una banda de luz cruza el sello */
+.callig-wrap .accion a::after {
+  content: "";
+  position: absolute;
+  inset: -40px;
+  background: linear-gradient(105deg, transparent 42%, rgba(246, 241, 230, 0.32) 50%, transparent 58%);
+  transform: translateX(-65%);
+  transition: transform 0.5s cubic-bezier(0.2, 0.7, 0.3, 1);
+  pointer-events: none;
+}
+.callig-wrap .accion a:hover::after { transform: translateX(65%); }
 .callig {
   mix-blend-mode: multiply;
   display: inline-block;
