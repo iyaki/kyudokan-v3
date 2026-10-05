@@ -4,16 +4,19 @@
 
 ## Despliegue en Cloudflare Pages
 
-Ya commiteado: `.nvmrc`, `wrangler.toml`, `src/_headers`, `src/_redirects`, `.eleventy.js` (passthrough) — commit `b8a5204`; más `src/_data/sitio.json`, `src/robots.txt.liquid`, `src/sitemap.xml.liquid` y el JSON-LD de `/contacto/` — commit `10c674f`.
+**Estado (2026-10-05):** `https://kyudokan-v3.pages.dev` está **vivo** vía Direct Upload (deploy manual con wrangler OAuth local; proyecto `kyudokan-v3`). El sitio sigue con `noindex` hasta el cutover DNS.
 
-**Garantía de actualización en cada push a `main`:** con la Git integration de Cloudflare Pages, CADA push a la rama de producción (`main`) dispara build y deploy automáticos — no requiere CI ni workflows en el repo. La config ya vive en `wrangler.toml` (build `npm run build`, output `_site`). Un segundo canal de deploy (GitHub Action con wrangler) crearía divergencia: solo agregarlo si no se puede conectar el repo a Cloudflare.
+**Canales, uno de los dos hay que matar:**
 
-Pasos manuales restantes (dashboard Cloudflare):
+- `karate-kyudokan-argetnina` (Git integration, nombre con typo): construye en cada push a `main` pero el deploy falla con `Authentication error 10000` — un `CLOUDFLARE_API_TOKEN` sin permiso de Pages pisa al auto-inyectado. El build en sí está verde (eleventy + jampack, −972 KB).
+- `kyudokan-v3` (Direct Upload): funciona, pero el deploy es manual desde la máquina local.
 
-1. Workers & Pages → Create → Pages → **Connect to Git** → repo `iyaki/kyudokan-v3`, rama `main`. Confirmar build `npm run build` / output `_site`.
-2. Custom domain: agregar `karatekyudokan.com.ar` al proyecto.
-3. **Cutover DNS**: cambiar los nameservers en el registrar cuando se decida reemplazar el sitio 2001. Hasta entonces, validar en `kyudokan-v3.pages.dev`.
-4. **Quitar el `noindex`** de `src/_includes/base.html` en el mismo push del cutover DNS — hasta entonces los motores no indexan el sitio.
+**Decisión recomendada:** consolidar en `kyudokan-v3` con workflow de GitHub Actions (`npx wrangler pages deploy` + secret `CLOUDFLARE_API_TOKEN` con permiso Account → Cloudflare Pages → Edit, aún sin crear) y borrar el proyecto Git roto. Alternativa sin GitHub: deploys manuales desde local.
+
+Pasos pendientes (dashboard Cloudflare):
+
+1. **Cutover DNS**: cambiar los nameservers en el registrar cuando se decida reemplazar el sitio 2001. Agregar `karatekyudokan.com.ar` como custom domain del proyecto elegido.
+2. **Quitar el `noindex`** de `src/_includes/base.html` en el mismo push del cutover DNS — hasta entonces los motores no indexan el sitio.
 
 Externo (SEO): dar de alta el dominio en Google Search Console y Bing Webmaster, enviar `https://karatekyudokan.com.ar/sitemap.xml`.
 
