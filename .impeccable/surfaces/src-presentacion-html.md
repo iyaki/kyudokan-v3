@@ -19,7 +19,7 @@ Restaurar la estructura semántica de la fuente 2001 — grilla de cartelas (fot
 ## Contenido y fidelidad
 - Texto del cuerpo 2001 verbatim (solo ortografía: «Sudamérica»). `<strong>` de nombres conserva la posición exacta de la fuente por ficha.
 - Fotos autogen propias de la página (103–125px de ancho): son el registro; se despliegan acotadas (marco ~206px alto desktop, 2 columnas en mobile ≈ tamaño nativo) para no inflar el upscale.
-- Jintatsu enlaza a /biograf__jintatsu_higa/ (como la fuente y la v3 previa); hover/focus de cartela en teja.
+- Jintatsu enlaza a /biografia_jintatsu_higa/ (como la fuente y la v3 previa); hover/focus de cartela en teja.
 
 ## Fuera de alcance
 Mundo visual (Gusuku committed), riel, pie, masthead, otras páginas. No se agregan claims, ranks nuevos ni enlaces externos muertos de 2001 (oikko.org, yudokarate.com, translate.google ya estaban descartados).
