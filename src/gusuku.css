@@ -159,7 +159,9 @@ img { max-width: 100%; display: block; }
   align-items: center;
   gap: 30px;
 }
-.crest { width: 84px; height: auto; flex: none; filter: drop-shadow(0 2px 6px rgba(42, 37, 32, 0.25)); }
+.crest, .aniversario { height: auto; flex: none; filter: drop-shadow(0 2px 6px rgba(42, 37, 32, 0.25)); }
+.crest { width: 84px; }
+.aniversario { width: 140px; margin-left: auto; }
 .titular .sobre {
   font-weight: 700;
   font-size: 12.5px;
@@ -824,8 +826,11 @@ footer .pie-inner { text-align: center; padding-bottom: 42px; }
   body { font-size: var(--fs-cuerpo); }
   .pagina[class*="wm-"]::before { width: min(56%, 250px); }
   .pagina.wm-kyudokan::before { width: min(22%, 90px); }
-  .masthead-inner { flex-direction: row; gap: 20px; padding: 26px 20px 20px; }
-  .crest { width: 64px; height: auto; }
+  /* crest y sello del 70.º apilados a la izquierda; el titular ocupa las dos filas */
+  .masthead-inner { display: grid; grid-template-columns: 64px 1fr; gap: 16px 20px; padding: 26px 20px 20px; }
+  .crest { width: 64px; align-self: end; }
+  .aniversario { width: 64px; align-self: start; }
+  .titular { grid-column: 2; grid-row: 1 / span 2; }
   .riel-inner, main, .linaje-inner, footer .pie-inner { padding-left: 20px; padding-right: 20px; }
   .riel { position: sticky; top: 0; z-index: 5; background: var(--hueso); box-shadow: 0 1px 0 var(--pelo); }
   .riel-inner {

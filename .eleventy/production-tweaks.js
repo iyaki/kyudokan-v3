@@ -5,7 +5,7 @@ import htmlSyntax from 'postcss-html'
 import { minify as minifyHtml } from 'html-minifier-terser'
 import { load as cheerioLoad } from 'cheerio'
 
-// ponytail: portado de iyaki.github.io; exclusiones above-fold propias (crest y shisas)
+// ponytail: portado de iyaki.github.io; exclusiones above-fold propias (crest, sello 70.º y shisas)
 function getPostCss() {
 	const postCssConfig = [
 		postcssPresetEnv({
@@ -72,8 +72,8 @@ export default function (eleventyConfig) {
 		}
 
 		const $ = cheerioLoad(content, null, false)
-		// crest y shisas son above-fold: lazy ahí empeora el LCP
-		$('img:not([loading]):not(.crest):not(.shisa)').attr('loading', 'lazy')
+		// crest, sello 70.º y shisas son above-fold: lazy ahí empeora el LCP
+		$('img:not([loading]):not(.crest):not(.aniversario):not(.shisa)').attr('loading', 'lazy')
 		return $.html()
 	})
 

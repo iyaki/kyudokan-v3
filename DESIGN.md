@@ -33,6 +33,9 @@ Higa, y nada de esto lo puede declarar un gimnasio vecino. El contenido del siti
 - **Caligrafía 空手道** (`kanji_kara_te_do_bu_do.JPG`) integrada con
   `mix-blend-mode: multiply` — el papel del JPG desaparece sobre el encalado, la tinta
   queda.
+- **Sello del 70.º aniversario** (`marca/kyudokan-70.png`, del logo dorado sobre negro de
+  la federación: alfa por luma, tinta negra pura como el crest, sin fondo) — par del crest
+  en el masthead, mismo drop-shadow: crest a la izquierda, sello a la derecha.
 
 ## Reglas
 
@@ -51,12 +54,13 @@ Higa, y nada de esto lo puede declarar un gimnasio vecino. El contenido del siti
 
 ## Estructura
 
-Home: masthead (crest + nombre + ficha) → riel de navegación → Bienvenidos (shisas) →
+Home: masthead (crest + nombre + ficha + sello 70.º) → riel de navegación → Bienvenidos (shisas) →
 La Escuela (texto verbatim + tarjeta de Lugani en Shuri + 空手道) → banda de mar bajo
 tejas → pared del linaje (retratos Higa + fénix) → pie de muro con tejas.
 Internas: mismo masthead, riel con estación activa en teja, subnav de subsecciones bajo el
 título, contenido y pie de muro con sitemap (El dojo / Historia y estilo / El dojo en Campana).
-Mobile: riel sticky deslizable con fade de affordance. FHD+: escala tipográfica +1.5px.
+Mobile: crest y sello 70.º apilados a la izquierda del titular; riel sticky deslizable con fade
+de affordance. FHD+: escala tipográfica +1.5px.
 
 ## Anti-referencias (mundos rechazados)
 
