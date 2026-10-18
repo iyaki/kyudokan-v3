@@ -126,7 +126,7 @@ img { max-width: 100%; display: block; }
 .pagina { position: relative; }
 .pagina.wm-fenix::before,
 .pagina.wm-shisa-izq::before,
-.pagina.wm-shisa-der::before,
+.pagina.wm-campana-30::before,
 .pagina.wm-kanjis::before,
 .pagina.wm-castillo::before,
 .pagina.wm-emblema::before,
@@ -143,7 +143,8 @@ img { max-width: 100%; display: block; }
 }
 .pagina.wm-fenix::before { aspect-ratio: 440 / 230; background-image: url('assets/marca/fenix-shuri.png'); }
 .pagina.wm-shisa-izq::before { aspect-ratio: 258 / 408; background-image: url('assets/marca/shisa-izq.png'); }
-.pagina.wm-shisa-der::before { aspect-ratio: 258 / 408; background-image: url('assets/marca/shisa-der.png'); }
+/* amarillo sobre encalado: a 0.08 casi no hay contraste de luminancia, pide más opacidad */
+.pagina.wm-campana-30::before { aspect-ratio: 520 / 545; background-image: url('assets/marca/campana-30.png'); opacity: 0.16; }
 .pagina.wm-kanjis::before { aspect-ratio: 98.88 / 254.4; background-image: url('assets/marca/kyudokan_kanjis.svg'); }
 .pagina.wm-castillo::before { width: min(56%, 440px); aspect-ratio: 1536 / 1022; background-image: url('assets/marca/castillo-shuri.png'); }
 .pagina.wm-emblema::before { aspect-ratio: 680 / 678; background-image: url('assets/marca/emblema-shorinryu.png'); }

@@ -36,6 +36,10 @@ Higa, y nada de esto lo puede declarar un gimnasio vecino. El contenido del siti
 - **Sello del 70.º aniversario** (`marca/kyudokan-70.png`, del logo dorado sobre negro de
   la federación: alfa por luma, tinta negra pura como el crest, sin fondo) — par del crest
   en el masthead, mismo drop-shadow: crest a la izquierda, sello a la derecha.
+- **Fantasma de Contacto**: logo de los 30 años del Karate Dojo Campana
+  (`marca/campana-30.png`, lienzo calado por color-to-alpha) en su amarillo original, decisión
+  del dueño. Opacity 0.16, no 0.08: el amarillo casi no contrasta en luminancia con el encalado,
+  y por encima de 0.16 los enlaces en mar sobre el disco (mobile) bajan de 4.5:1.
 
 ## Reglas
 
