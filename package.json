@@ -21,7 +21,7 @@
     "minify-xml": "^4.5.2",
     "postcss": "^8.5.32",
     "postcss-html": "^2.0.0",
-    "postcss-preset-env": "^11.5.0"
+    "postcss-preset-env": "^11.6.1"
   },
   "allowScripts": {
     "esbuild@0.20.2": true,
